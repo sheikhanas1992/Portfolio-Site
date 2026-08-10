@@ -1,19 +1,24 @@
-# Portfolio Site — Muhammad Anas
+# Portfolio Deployment Hub
 
-Production build of the portfolio site (Senior PPC & Performance Marketing Manager).
+deploy this website and push this code to the github https://github.com/sheikhanas1992/Portfolio-Site  to this specific repostry
 
-## Deploying on Hostinger
+This project was built with [Lovable](https://lovable.dev).
 
-**Static hosting (recommended):** point the Git deployment at this repository and the
-`main` branch, with the build directory left as the repository root. `index.html`,
-`assets/` and `.htaccess` are already at the root, so no build step is needed.
+## Build with Lovable
 
-**Node.js hosting:** Hostinger runs `npm start`, which serves this folder with
-`server.js` on the port provided in `PORT`.
+Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7433deef-7236-4725-bf83-5d55df52b0ef).
 
-## Local preview
+- **Ship faster**: describe what you want to build and Lovable handles the code.
+- **Stay in sync**: every change made in Lovable is committed straight to this repository.
+- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+
+## Development
+
+Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
 
 ```sh
-npm start
-# http://localhost:3000
+git clone <this-repository-url>
+cd <repository-name>
+npm i
+npm run dev
 ```
