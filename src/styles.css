@@ -176,19 +176,25 @@ html.custom-cursor-active * {
 
 .anas-avatar img {
   filter: grayscale(1) contrast(1.03);
-  transition: filter 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    filter 450ms cubic-bezier(0.16, 1, 0.3, 1),
+    transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* The homepage bundle writes an inline `transform: none` on this container once
+   its reveal animation settles, so the hover transform must win with !important. */
 .anas-avatar:hover,
 .anas-avatar:focus-visible {
   background-color: #6c5ce7 !important;
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-4px) scale(1.03) !important;
 }
 
 .anas-avatar:hover img,
 .anas-avatar:focus-visible img {
   filter: grayscale(0) contrast(1);
+  transform: scale(0.965);
 }
+
 
 .anas-avatar-tip {
   position: absolute;
@@ -242,9 +248,14 @@ html.custom-cursor-active * {
   }
   .anas-avatar:hover,
   .anas-avatar:focus-visible {
+    transform: none !important;
+  }
+  .anas-avatar:hover img,
+  .anas-avatar:focus-visible img {
     transform: none;
   }
   .anas-avatar-tip {
     transform: none;
   }
+
 }
