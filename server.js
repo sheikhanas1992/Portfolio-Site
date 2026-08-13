@@ -1,4 +1,4 @@
-// app.js - Hostinger Node.js Entry Point Wrapper
+// server.js - Hostinger Node.js Entry Point Wrapper
 // Supports Phusion Passenger / Hostinger Node.js Application Manager
 
 if (process.env.PORT && isNaN(Number(process.env.PORT))) {
