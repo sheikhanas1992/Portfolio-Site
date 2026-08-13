@@ -30,6 +30,36 @@ export function MetricStrip({
   );
 }
 
+/** A raw screenshot, framed to match the rest of the case-page components. */
+export function Screenshot({ src, alt, caption }: { src: string; alt: string; caption?: string }) {
+  return (
+    <figure className="overflow-hidden rounded-[20px] border border-white/[0.08] bg-[#151517]">
+      <img src={src} alt={alt} loading="lazy" className="block w-full" />
+      {caption && (
+        <figcaption className="border-t border-white/[0.08] px-6 py-4 text-[0.8rem] leading-relaxed text-[#7d7d82]">
+          {caption}
+        </figcaption>
+      )}
+    </figure>
+  );
+}
+
+/** A row of smaller screenshots side by side (product photography, etc.) */
+export function ScreenshotRow({ items }: { items: { src: string; alt: string }[] }) {
+  return (
+    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
+      {items.map((it) => (
+        <div
+          key={it.src}
+          className="overflow-hidden rounded-[16px] border border-white/[0.08] bg-[#151517] p-4"
+        >
+          <img src={it.src} alt={it.alt} loading="lazy" className="mx-auto block max-h-[220px] w-auto" />
+        </div>
+      ))}
+    </div>
+  );
+}
+
 /** Horizontal bar that draws in via scaleX on entry. */
 export function Bar({ label, pct, note }: { label: string; pct: number; note?: string }) {
   const { ref, seen } = useInViewOnce<HTMLDivElement>();

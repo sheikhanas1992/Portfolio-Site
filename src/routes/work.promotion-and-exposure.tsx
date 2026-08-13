@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CasePage, CaseHeader, Section, CaseFooter } from "@/components/case/CaseLayout";
-import { MetricStrip, Bar } from "@/components/case/CaseBits";
+import { MetricStrip, Bar, Screenshot, ScreenshotRow } from "@/components/case/CaseBits";
 import { clientLabel } from "@/config/disclosure";
+
+const IMG = "/case-images/promotion-and-exposure";
 
 const TITLE = "Promotion and exposure: 42% growth, and where it came from";
 const DESCRIPTION =
@@ -43,6 +45,10 @@ function PromotionAndExposure() {
         />
       </div>
 
+      <Section title="The daily sales trend" caption="Seller Central's own daily trend chart, unedited.">
+        <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
+      </Section>
+
       <Section
         title="Awareness spend versus direct-response spend"
         caption="A celebrity-fronted video campaign ran at more than 3× the ACOS of the account's hero campaigns. On paper that reads as underperformance. In practice, video and direct-response campaigns are rarely comparable on ACOS alone, one is selling on the spot, the other is building recognition that pays off in searches it doesn't get credited for."
@@ -51,6 +57,9 @@ function PromotionAndExposure() {
           <Bar label="Hero campaign ACOS (lowest of two)" pct={10.4} />
           <Bar label="Hero campaign ACOS (second)" pct={11.0} />
           <Bar label="Celebrity-endorsement video campaign ACOS" pct={37.8} />
+        </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/campaigns.png`} alt="Top PPC campaigns by sales" />
         </div>
       </Section>
 
@@ -61,6 +70,25 @@ function PromotionAndExposure() {
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
           <Bar label="Top three SKUs' share of total revenue" pct={49} />
           <Bar label="Share of period sales from the four-day promotion" pct={40} />
+        </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/top-products.png`} alt="Top products by ordered product sales" />
+        </div>
+      </Section>
+
+      <Section title="From the account" caption="Seller Central and Advertising Console, as pulled for this read.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Screenshot src={`${IMG}/snapshot.png`} alt="Sales snapshot" />
+          <Screenshot src={`${IMG}/ads-overview.png`} alt="Advertising performance overview" />
+        </div>
+        <div className="mt-6">
+          <ScreenshotRow
+            items={[
+              { src: `${IMG}/product-1.png`, alt: "Hero product packaging" },
+              { src: `${IMG}/product-2.png`, alt: "Second product packaging" },
+              { src: `${IMG}/product-3.png`, alt: "Third product packaging" },
+            ]}
+          />
         </div>
       </Section>
 

@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CasePage, CaseHeader, Section, CaseFooter } from "@/components/case/CaseLayout";
-import { MetricStrip, Bar } from "@/components/case/CaseBits";
+import { MetricStrip, Bar, Screenshot, ScreenshotRow } from "@/components/case/CaseBits";
 import { clientLabel } from "@/config/disclosure";
+
+const IMG = "/case-images/scale-and-concentration";
 
 const TITLE = "Scale and concentration: a 10.4× revenue year, and its risk";
 const DESCRIPTION =
@@ -43,6 +45,10 @@ function ScaleAndConcentration() {
         />
       </div>
 
+      <Section title="The daily sales trend" caption="Seller Central's own daily trend chart, unedited.">
+        <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
+      </Section>
+
       <Section
         title="Where the revenue actually sits"
         caption="Three SKUs out of a much larger catalogue carried nearly three-quarters of total revenue. That's not unusual for a fast-scaling account, but it changes what 'risk' means: a stockout or a rank drop on any one of these three does more damage than the same event anywhere else in the catalogue."
@@ -50,6 +56,9 @@ function ScaleAndConcentration() {
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
           <Bar label="Top three SKUs' share of total revenue" pct={72} />
           <Bar label="Everything else in the catalogue, combined" pct={28} />
+        </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/top-products.png`} alt="Top products by ordered product sales" />
         </div>
       </Section>
 
@@ -60,6 +69,25 @@ function ScaleAndConcentration() {
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
           <Bar label="Brand-defense campaign ACOS" pct={26.88} />
           <Bar label="Core product-line ACOS" pct={15} />
+        </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/campaigns.png`} alt="Top PPC campaigns by sales" />
+        </div>
+      </Section>
+
+      <Section title="From the account" caption="Seller Central and Advertising Console, as pulled for this read.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Screenshot src={`${IMG}/snapshot.png`} alt="Sales snapshot" />
+          <Screenshot src={`${IMG}/ads-overview.png`} alt="Advertising performance overview" />
+        </div>
+        <div className="mt-6">
+          <ScreenshotRow
+            items={[
+              { src: `${IMG}/product-1.png`, alt: "Hero product packaging" },
+              { src: `${IMG}/product-2.png`, alt: "Second product packaging" },
+              { src: `${IMG}/product-3.png`, alt: "Third product packaging" },
+            ]}
+          />
         </div>
       </Section>
 

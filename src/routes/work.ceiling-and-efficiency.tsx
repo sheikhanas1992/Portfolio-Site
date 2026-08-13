@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CasePage, CaseHeader, Section, CaseFooter } from "@/components/case/CaseLayout";
-import { MetricStrip, Bar } from "@/components/case/CaseBits";
+import { MetricStrip, Bar, Screenshot } from "@/components/case/CaseBits";
 import { clientLabel } from "@/config/disclosure";
+
+const IMG = "/case-images/ceiling-and-efficiency";
 
 const TITLE = "Ceiling and efficiency: an efficient account capped by its own budget";
 const DESCRIPTION =
@@ -43,6 +45,10 @@ function CeilingAndEfficiency() {
         />
       </div>
 
+      <Section title="The daily sales trend" caption="Seller Central's own daily trend chart, unedited.">
+        <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
+      </Section>
+
       <Section
         title="The account was profitable and starved at the same time"
         caption="82% of active campaigns, including the single largest one, were regularly running out of budget before the end of the day. A campaign that's capped isn't a campaign that failed, it's a campaign that was never given the chance to spend what it could have spent profitably."
@@ -50,6 +56,9 @@ function CeilingAndEfficiency() {
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
           <Bar label="Campaigns flagged as budget-limited" pct={82} />
           <Bar label="Return on the spend that did go out" pct={100} note="3.79×" />
+        </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/campaigns.png`} alt="Top PPC campaigns by sales, including the competitor-conquest campaign" />
         </div>
       </Section>
 
@@ -62,6 +71,9 @@ function CeilingAndEfficiency() {
           <Bar label="Top three SKUs' share of total revenue" pct={79} />
           <Bar label="Competitor-conquest campaign ACOS" pct={15.5} />
         </div>
+        <div className="mt-6">
+          <Screenshot src={`${IMG}/top-products.png`} alt="Top products by ordered product sales" />
+        </div>
       </Section>
 
       <Section
@@ -71,6 +83,13 @@ function CeilingAndEfficiency() {
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
           <Bar label="Buy Box share, earlier month" pct={97.5} />
           <Bar label="Buy Box share, later month" pct={90.6} />
+        </div>
+      </Section>
+
+      <Section title="From the account" caption="Seller Central and Advertising Console, as pulled for this read.">
+        <div className="grid gap-6 md:grid-cols-2">
+          <Screenshot src={`${IMG}/snapshot.png`} alt="Sales snapshot" />
+          <Screenshot src={`${IMG}/ads-overview.png`} alt="Advertising performance overview" />
         </div>
       </Section>
 
