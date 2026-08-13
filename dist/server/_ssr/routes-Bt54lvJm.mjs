@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DWusofxb.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-Bt54lvJm.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -38,20 +38,6 @@ function AvatarEnhancer() {
 	return null;
 }
 var CARDS = [
-	{
-		to: "/work/traffic-and-conversion",
-		label: "a DTC body-care brand on Amazon US",
-		period: "12 months, measured against the prior year",
-		metric: "2.11× revenue",
-		context: "Traffic and conversion contributed in almost equal measure: 1.46 × 1.38 = 2.01 on units."
-	},
-	{
-		to: "/work/launch-and-hold",
-		label: "an outdoor electrical and EV accessories brand",
-		period: "6 months",
-		metric: "18.3% of account revenue",
-		context: "A listing launched from zero finished as the account's strongest converter at 29.79%."
-	},
 	{
 		to: "/work/scale-and-concentration",
 		label: "a Korean skincare brand scaling fast off one hero anti-aging line",
@@ -169,7 +155,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-Qfc3d5Jd.js";
+		script.src = "/assets/index-CbPKOLlw.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [

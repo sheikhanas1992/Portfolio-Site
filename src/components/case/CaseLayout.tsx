@@ -58,7 +58,7 @@ export function Section({
         </div>
         <div className="mt-7">{children}</div>
         {caption && (
-          <p className="mt-7 max-w-[70ch] border-t border-white/[0.07] pt-6 text-[0.9rem] font-medium leading-relaxed text-[#9a9a9e]">
+          <p className="mt-7 max-w-[70ch] border-t border-white/[0.09] pt-6 text-[0.95rem] font-medium leading-relaxed text-[#c7c7cc]">
             {caption}
           </p>
         )}
@@ -85,7 +85,7 @@ export function CaseFooter() {
           <span aria-hidden>→</span>
         </Link>
       </div>
-      <p className="mt-8 max-w-[70ch] text-[0.78rem] font-medium leading-relaxed text-[#7d7d82]">
+      <p className="mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#9a9a9e]">
         {DISCLOSURE_FOOTER}
       </p>
     </Reveal>

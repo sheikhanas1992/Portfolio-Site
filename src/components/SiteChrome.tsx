@@ -39,28 +39,28 @@ export function SiteHeader() {
         >
           S. Anas
         </a>
-        <div className="hidden items-center gap-8 md:flex">
+        <div className="hidden items-center gap-2 md:flex">
           <a
             href="/#work"
-            className="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]"
+            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
           >
             Work
           </a>
           <a
             href="/#about"
-            className="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]"
+            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
           >
             About
           </a>
           <a
             href="/#experience"
-            className="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]"
+            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
           >
             Experience
           </a>
           <Link
             to="/audit"
-            className="font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]"
+            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
           >
             Get an audit
           </Link>

@@ -1,14 +1,14 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, o as Screenshot, r as CaseHeader, s as ScreenshotRow, t as Bar } from "./CaseBits-NWroIntv.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-CMNveb7_.js
+import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, o as Screenshot, r as CaseHeader, s as ScreenshotRow, t as Bar } from "./CaseBits-CUhQIcec.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.promotion-and-exposure-DXhBDx1O.js
 var import_jsx_runtime = require_jsx_runtime();
-var IMG = "/case-images/scale-and-concentration";
-function ScaleAndConcentration() {
+var IMG = "/case-images/promotion-and-exposure";
+function PromotionAndExposure() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CasePage, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseHeader, {
-			label: clientLabel("caseC"),
+			label: clientLabel("caseD"),
 			period: "12 months, measured against the prior year",
-			headline: "10.4× revenue growth on one hero product line",
+			headline: "42% revenue growth built on one high-intensity promotion",
 			note: "Managed as part of my work at Sohomax"
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -16,45 +16,45 @@ function ScaleAndConcentration() {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MetricStrip, { items: [
 				{
 					label: "Revenue growth, year over year",
-					value: "10.4×",
-					countTo: 10.4,
+					value: "+42.4%",
+					countTo: 42.4,
 					decimals: 1,
-					suffix: "×"
+					suffix: "%",
+					prefix: "+"
 				},
 				{
 					label: "Units sold, year over year",
-					value: "11.7×",
-					countTo: 11.7,
+					value: "+61.4%",
+					countTo: 61.4,
 					decimals: 1,
-					suffix: "×"
+					suffix: "%",
+					prefix: "+"
 				},
 				{
 					label: "Return on ad spend",
-					value: "4.33×",
-					countTo: 4.33,
+					value: "4.50×",
+					countTo: 4.5,
 					decimals: 2,
 					suffix: "×"
 				},
 				{
 					label: "Blended ACOS",
-					value: "23.12%",
-					countTo: 23.12,
-					decimals: 2,
-					suffix: "%"
-				},
-				{
-					label: "Featured offer share",
-					value: "88.5%",
-					countTo: 88.5,
+					value: "22.2%",
+					countTo: 22.2,
 					decimals: 1,
 					suffix: "%"
 				},
 				{
-					label: "Product page views, year over year",
-					value: "+266%",
-					countTo: 266,
-					suffix: "%",
-					prefix: "+"
+					label: "Best-performing hero campaign ACOS",
+					value: "10.4%",
+					countTo: 10.4,
+					decimals: 1,
+					suffix: "%"
+				},
+				{
+					label: "Share of period sales from one promotional event",
+					value: "40%",
+					countTo: 40
 				}
 			] })
 		}),
@@ -67,42 +67,49 @@ function ScaleAndConcentration() {
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
-			title: "Where the revenue actually sits",
-			caption: "Three SKUs out of a much larger catalogue carried nearly three-quarters of total revenue. That's not unusual for a fast-scaling account, but it changes what 'risk' means: a stockout or a rank drop on any one of these three does more damage than the same event anywhere else in the catalogue.",
+			title: "Awareness spend versus direct-response spend",
+			caption: "A celebrity-fronted video campaign ran at more than 3× the ACOS of the account's hero campaigns. On paper that reads as underperformance. In practice, video and direct-response campaigns are rarely comparable on ACOS alone, one is selling on the spot, the other is building recognition that pays off in searches it doesn't get credited for.",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+						label: "Hero campaign ACOS (lowest of two)",
+						pct: 10.4
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+						label: "Hero campaign ACOS (second)",
+						pct: 11
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+						label: "Celebrity-endorsement video campaign ACOS",
+						pct: 37.8
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-6",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Screenshot, {
+					src: `${IMG}/campaigns.png`,
+					alt: "Top PPC campaigns by sales"
+				})
+			})]
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
+			title: "Concentration and timing risk",
+			caption: "Just under half of revenue sat in three SKUs, and 40% of the period's total sales landed inside a single four-day promotional window. One slower month, outside the promotion, finished 36% behind the prior year, which is the clearest evidence that this account's calendar matters as much as its campaign structure.",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
 					label: "Top three SKUs' share of total revenue",
-					pct: 72
+					pct: 49
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-					label: "Everything else in the catalogue, combined",
-					pct: 28
+					label: "Share of period sales from the four-day promotion",
+					pct: 40
 				})]
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 				className: "mt-6",
 				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Screenshot, {
 					src: `${IMG}/top-products.png`,
 					alt: "Top products by ordered product sales"
-				})
-			})]
-		}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
-			title: "Two kinds of spend, two different jobs",
-			caption: "Brand-defense campaigns exist to stop competitors from sitting on your own product pages. They cost more to run than they'll ever 'earn' on paper, and comparing their ACOS to a core campaign's ACOS misreads what each one is for.",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-					label: "Brand-defense campaign ACOS",
-					pct: 26.88
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-					label: "Core product-line ACOS",
-					pct: 15
-				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-6",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Screenshot, {
-					src: `${IMG}/campaigns.png`,
-					alt: "Top PPC campaigns by sales"
 				})
 			})]
 		}),
@@ -140,18 +147,18 @@ function ScaleAndConcentration() {
 			title: "What I looked at",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
-				children: "The growth number was never in question here, the account had already found a hero product and demand was doing a lot of the work. What needed a second pair of eyes was the spend behind it: whether the brand-defense budget was sized to the actual threat and not just left running at whatever level it started at, and whether the newer, lower-margin SKUs in the same product family were being fed enough traffic to build their own review base instead of permanently living off the flagship's halo. I split reporting by SKU tier so brand-defense, hero-product and supporting-product spend stopped being read as one blended number, and set ACOS targets per tier instead of one account-wide target that made the defense campaigns look \"inefficient\" when they were doing their job."
+				children: "The question worth answering wasn't whether the promotion worked, the sales spike made that obvious. It was whether the rest of the calendar was pulling its weight. I compared on-promotion and off-promotion weeks side by side and flagged the video campaign separately from the direct-response campaigns so leadership could judge each on the right terms, instead of one blended ACOS number making the awareness spend look like a mistake. I also flagged the single down month as a seasonality note rather than folding it into the year-over-year headline, since averaging it away would have hidden a real gap in the non-promotional months."
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "Limits of this read",
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
-				children: "A 10.4× year is partly a market story: this category was growing fast on its own, and not every account riding a hot category gets to keep this growth rate once demand normalizes. The concentration in three SKUs is the number I'd watch most closely going into the next twelve months, since it's the one structural risk that doesn't fix itself with more ad spend."
+				children: "This is a promotion-driven number as much as a PPC one. Take out the four-day event and the growth story looks meaningfully smaller, which is worth saying plainly rather than letting the headline number carry more weight than it should. The next twelve months are a better test of the account's structure than this one was."
 			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseFooter, {})
 	] });
 }
 //#endregion
-export { ScaleAndConcentration as component };
+export { PromotionAndExposure as component };

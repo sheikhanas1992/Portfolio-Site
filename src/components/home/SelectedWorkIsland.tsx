@@ -3,22 +3,6 @@ import { createPortal } from "react-dom";
 
 const CARDS = [
   {
-    to: "/work/traffic-and-conversion",
-    label: "a DTC body-care brand on Amazon US",
-    period: "12 months, measured against the prior year",
-    metric: "2.11× revenue",
-    context:
-      "Traffic and conversion contributed in almost equal measure: 1.46 × 1.38 = 2.01 on units.",
-  },
-  {
-    to: "/work/launch-and-hold",
-    label: "an outdoor electrical and EV accessories brand",
-    period: "6 months",
-    metric: "18.3% of account revenue",
-    context:
-      "A listing launched from zero finished as the account's strongest converter at 29.79%.",
-  },
-  {
     to: "/work/scale-and-concentration",
     label: "a Korean skincare brand scaling fast off one hero anti-aging line",
     period: "12 months, measured against the prior year",

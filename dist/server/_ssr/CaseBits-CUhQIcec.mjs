@@ -1,18 +1,10 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { r as PageShell } from "./SiteChrome-D6tesNoe.mjs";
+import { r as PageShell } from "./SiteChrome-C-JBbSCb.mjs";
 import { i as usePrefersReducedMotion, n as Reveal, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-NWroIntv.js
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-CUhQIcec.js
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
-	caseA: {
-		nameApproved: false,
-		name: ""
-	},
-	caseB: {
-		nameApproved: false,
-		name: ""
-	},
 	caseC: {
 		nameApproved: false,
 		name: ""
@@ -27,8 +19,6 @@ var disclosure = {
 	}
 };
 var ANON_LABELS = {
-	caseA: "a DTC body-care brand on Amazon US",
-	caseB: "an outdoor electrical and EV accessories brand",
 	caseC: "a Korean skincare brand scaling fast off one hero anti-aging line",
 	caseD: "a Korean regenerative-skincare brand built around a single flagship ampoule",
 	caseE: "a Korean skincare brand growing against a fixed daily ad budget"
@@ -86,7 +76,7 @@ function Section({ title, caption, children }) {
 					children
 				}),
 				caption && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-7 max-w-[70ch] border-t border-white/[0.07] pt-6 text-[0.9rem] font-medium leading-relaxed text-[#9a9a9e]",
+					className: "mt-7 max-w-[70ch] border-t border-white/[0.09] pt-6 text-[0.95rem] font-medium leading-relaxed text-[#c7c7cc]",
 					children: caption
 				})
 			]
@@ -118,7 +108,7 @@ function CaseFooter() {
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "mt-8 max-w-[70ch] text-[0.78rem] font-medium leading-relaxed text-[#7d7d82]",
+			className: "mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#9a9a9e]",
 			children: DISCLOSURE_FOOTER
 		})]
 	});
