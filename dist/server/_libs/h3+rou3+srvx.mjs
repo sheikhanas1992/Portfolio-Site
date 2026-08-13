@@ -3,7 +3,7 @@ import { PassThrough, Readable } from "node:stream";
 import "node:stream/promises";
 import "node:https";
 import "node:http2";
-//#region node_modules/rou3/dist/index.mjs
+//#region node_modules/h3/node_modules/rou3/dist/index.mjs
 var NullProtoObj = /* @__PURE__ */ (() => {
 	const e = function() {};
 	return e.prototype = Object.create(null), Object.freeze(e.prototype), e;

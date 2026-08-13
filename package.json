@@ -2,10 +2,13 @@
   "name": "sheikhanas-portfolio",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "node -e \"console.log('Prebuilt output is committed in dist/ — nothing to build.')\"",
-    "start": "node dist/server/index.mjs",
+    "build:bundle": "NITRO_PRESET=node-server vite build && cp -r .output/* dist/ && cp public/.htaccess dist/public/.htaccess",
+    "start": "node app.js",
     "postinstall": "node -e \"0\""
   },
   "dependencies": {}
