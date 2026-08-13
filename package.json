@@ -6,9 +6,9 @@
     "node": ">=18"
   },
   "scripts": {
-    "build": "node -e \"console.log('Prebuilt output is committed in dist/ — nothing to build.')\"",
+    "build": "node -e \"console.log('Prebuilt output is committed in dist/: nothing to build.')\"",
     "build:bundle": "NITRO_PRESET=node-server vite build && cp -r .output/* dist/ && cp public/.htaccess dist/public/.htaccess",
-    "start": "node server.js",
+    "start": "node index.js",
     "postinstall": "node -e \"0\""
   },
   "dependencies": {}

@@ -26,7 +26,7 @@ export function AvatarEnhancer() {
       const tip = document.createElement("div");
       tip.className = "anas-avatar-tip";
       tip.setAttribute("aria-hidden", "true");
-      tip.textContent = "I'm open to work — DM me or book a call";
+      tip.textContent = "Open for new Amazon PPC accounts: DM me or book a call";
       container.appendChild(tip);
     };
 

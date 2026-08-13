@@ -4,11 +4,17 @@
 export const disclosure = {
   caseA: { nameApproved: false, name: "" },
   caseB: { nameApproved: false, name: "" },
+  caseC: { nameApproved: false, name: "" },
+  caseD: { nameApproved: false, name: "" },
+  caseE: { nameApproved: false, name: "" },
 } as const;
 
 export const ANON_LABELS = {
   caseA: "a DTC body-care brand on Amazon US",
   caseB: "an outdoor electrical and EV accessories brand",
+  caseC: "a Korean skincare brand scaling fast off one hero anti-aging line",
+  caseD: "a Korean regenerative-skincare brand built around a single flagship ampoule",
+  caseE: "a Korean skincare brand growing against a fixed daily ad budget",
 } as const;
 
 export function clientLabel(key: keyof typeof disclosure): string {

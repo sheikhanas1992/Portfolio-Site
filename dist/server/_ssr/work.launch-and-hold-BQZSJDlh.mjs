@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { c as TodoBlock, i as CasePage, l as clientLabel, n as CaseFooter, o as MetricStrip, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-DGb5PIFI.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.launch-and-hold-BixmfgMl.js
+import { c as clientLabel, i as CasePage, n as CaseFooter, o as MetricStrip, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-BszbluZs.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.launch-and-hold-BQZSJDlh.js
 var import_jsx_runtime = require_jsx_runtime();
 function LaunchAndHold() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CasePage, { children: [
@@ -76,11 +76,17 @@ function LaunchAndHold() {
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "What I did",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TodoBlock, { title: "What I did" })
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				children: "A launch with zero history is the one place I don't trust automated targeting to find the right audience fast enough on its own. I built the campaign structure around exact and close-variant terms already proven on the account's other two listings, then layered in broader discovery targeting once the new listing had enough of its own order and review history to hold its own bids. Featured offer share on the older listings was the thing most likely to slip while attention went to the launch, so it stayed on its own watch with alerts rather than a manual daily check."
+			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "Limits of this read",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TodoBlock, { title: "Limits of this read" })
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				children: "A 29.79% conversion rate this early is unusually high, and part of that is a genuinely strong product-market fit that no campaign structure creates on its own. The harder test is whether that rate holds once the listing is competing on a full review count and organic rank rather than launch-period momentum."
+			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseFooter, {})
 	] });

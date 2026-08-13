@@ -1,1 +1,1 @@
-import "./server.js";
+import "./hostinger-entry.js";

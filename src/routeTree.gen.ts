@@ -10,8 +10,12 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuditRouteImport } from './routes/audit'
 import { Route as BookRouteImport } from './routes/book'
+import { Route as WorkCeilingAndEfficiencyRouteImport } from './routes/work.ceiling-and-efficiency'
 import { Route as WorkLaunchAndHoldRouteImport } from './routes/work.launch-and-hold'
+import { Route as WorkPromotionAndExposureRouteImport } from './routes/work.promotion-and-exposure'
+import { Route as WorkScaleAndConcentrationRouteImport } from './routes/work.scale-and-concentration'
 import { Route as WorkTrafficAndConversionRouteImport } from './routes/work.traffic-and-conversion'
 
 const IndexRoute = IndexRouteImport.update({
@@ -19,16 +23,39 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuditRoute = AuditRouteImport.update({
+  id: '/audit',
+  path: '/audit',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkCeilingAndEfficiencyRoute =
+  WorkCeilingAndEfficiencyRouteImport.update({
+    id: '/work/ceiling-and-efficiency',
+    path: '/work/ceiling-and-efficiency',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WorkLaunchAndHoldRoute = WorkLaunchAndHoldRouteImport.update({
   id: '/work/launch-and-hold',
   path: '/work/launch-and-hold',
   getParentRoute: () => rootRouteImport,
 } as any)
+const WorkPromotionAndExposureRoute =
+  WorkPromotionAndExposureRouteImport.update({
+    id: '/work/promotion-and-exposure',
+    path: '/work/promotion-and-exposure',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const WorkScaleAndConcentrationRoute =
+  WorkScaleAndConcentrationRouteImport.update({
+    id: '/work/scale-and-concentration',
+    path: '/work/scale-and-concentration',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WorkTrafficAndConversionRoute =
   WorkTrafficAndConversionRouteImport.update({
     id: '/work/traffic-and-conversion',
@@ -38,41 +65,76 @@ const WorkTrafficAndConversionRoute =
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/launch-and-hold': typeof WorkLaunchAndHoldRoute
+  '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
+  '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
   '/work/traffic-and-conversion': typeof WorkTrafficAndConversionRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/launch-and-hold': typeof WorkLaunchAndHoldRoute
+  '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
+  '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
   '/work/traffic-and-conversion': typeof WorkTrafficAndConversionRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/launch-and-hold': typeof WorkLaunchAndHoldRoute
+  '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
+  '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
   '/work/traffic-and-conversion': typeof WorkTrafficAndConversionRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
-    '/' | '/book' | '/work/launch-and-hold' | '/work/traffic-and-conversion'
+    | '/'
+    | '/audit'
+    | '/book'
+    | '/work/ceiling-and-efficiency'
+    | '/work/launch-and-hold'
+    | '/work/promotion-and-exposure'
+    | '/work/scale-and-concentration'
+    | '/work/traffic-and-conversion'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/book' | '/work/launch-and-hold' | '/work/traffic-and-conversion'
+  to:
+    | '/'
+    | '/audit'
+    | '/book'
+    | '/work/ceiling-and-efficiency'
+    | '/work/launch-and-hold'
+    | '/work/promotion-and-exposure'
+    | '/work/scale-and-concentration'
+    | '/work/traffic-and-conversion'
   id:
     | '__root__'
     | '/'
+    | '/audit'
     | '/book'
+    | '/work/ceiling-and-efficiency'
     | '/work/launch-and-hold'
+    | '/work/promotion-and-exposure'
+    | '/work/scale-and-concentration'
     | '/work/traffic-and-conversion'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuditRoute: typeof AuditRoute
   BookRoute: typeof BookRoute
+  WorkCeilingAndEfficiencyRoute: typeof WorkCeilingAndEfficiencyRoute
   WorkLaunchAndHoldRoute: typeof WorkLaunchAndHoldRoute
+  WorkPromotionAndExposureRoute: typeof WorkPromotionAndExposureRoute
+  WorkScaleAndConcentrationRoute: typeof WorkScaleAndConcentrationRoute
   WorkTrafficAndConversionRoute: typeof WorkTrafficAndConversionRoute
 }
 
@@ -85,6 +147,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/audit': {
+      id: '/audit'
+      path: '/audit'
+      fullPath: '/audit'
+      preLoaderRoute: typeof AuditRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/book': {
       id: '/book'
       path: '/book'
@@ -92,11 +161,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BookRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/work/ceiling-and-efficiency': {
+      id: '/work/ceiling-and-efficiency'
+      path: '/work/ceiling-and-efficiency'
+      fullPath: '/work/ceiling-and-efficiency'
+      preLoaderRoute: typeof WorkCeilingAndEfficiencyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/work/launch-and-hold': {
       id: '/work/launch-and-hold'
       path: '/work/launch-and-hold'
       fullPath: '/work/launch-and-hold'
       preLoaderRoute: typeof WorkLaunchAndHoldRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/promotion-and-exposure': {
+      id: '/work/promotion-and-exposure'
+      path: '/work/promotion-and-exposure'
+      fullPath: '/work/promotion-and-exposure'
+      preLoaderRoute: typeof WorkPromotionAndExposureRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/work/scale-and-concentration': {
+      id: '/work/scale-and-concentration'
+      path: '/work/scale-and-concentration'
+      fullPath: '/work/scale-and-concentration'
+      preLoaderRoute: typeof WorkScaleAndConcentrationRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/traffic-and-conversion': {
@@ -111,8 +201,12 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuditRoute: AuditRoute,
   BookRoute: BookRoute,
+  WorkCeilingAndEfficiencyRoute: WorkCeilingAndEfficiencyRoute,
   WorkLaunchAndHoldRoute: WorkLaunchAndHoldRoute,
+  WorkPromotionAndExposureRoute: WorkPromotionAndExposureRoute,
+  WorkScaleAndConcentrationRoute: WorkScaleAndConcentrationRoute,
   WorkTrafficAndConversionRoute: WorkTrafficAndConversionRoute,
 }
 export const routeTree = rootRouteImport

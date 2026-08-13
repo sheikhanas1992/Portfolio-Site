@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { PageShell, ContactRow } from "@/components/SiteChrome";
 import { CONTACT } from "@/config/contact";
 
-const TITLE = "Book a call — Muhammad Anas, Amazon PPC";
+const TITLE = "Book a call: Sheikh Anas, Amazon PPC";
 const DESCRIPTION =
   "Book a twenty-minute call about Amazon PPC, account structure and profitable scaling.";
 

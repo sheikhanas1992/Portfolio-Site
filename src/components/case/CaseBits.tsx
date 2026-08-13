@@ -56,14 +56,3 @@ export function Bar({ label, pct, note }: { label: string; pct: number; note?: s
     </div>
   );
 }
-
-export function TodoBlock({ title }: { title: string }) {
-  return (
-    <div className="rounded-[16px] border border-dashed border-white/[0.12] bg-[#131315] p-6">
-      {/* TODO: copy needed — to be written by Muhammad Anas. */}
-      <p className="text-[0.85rem] leading-relaxed text-[#7d7d82]">
-        {title} — copy to follow.
-      </p>
-    </div>
-  );
-}

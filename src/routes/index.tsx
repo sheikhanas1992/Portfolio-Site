@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import { AvatarEnhancer } from "@/components/home/AvatarEnhancer";
 import { SelectedWorkIsland } from "@/components/home/SelectedWorkIsland";
 
-const TITLE = "Muhammad Anas — Senior PPC & Performance Marketing Manager";
+const TITLE = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
 const DESCRIPTION =
-  "Senior PPC & Performance Marketing Manager. Amazon advertising, search-term optimisation and profitable account scaling for global ecommerce brands.";
+  "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0d0d0f" },
     ],
-    links: [{ rel: "stylesheet", href: "/assets/index-BHHXTpWw.css" }],
+    links: [{ rel: "stylesheet", href: "/assets/index-Kt-a8JqQ.css" }],
   }),
   component: Index,
 });
@@ -32,7 +32,7 @@ function Index() {
     script.id = "portfolio-bundle";
     script.type = "module";
     script.crossOrigin = "anonymous";
-    script.src = "/assets/index-jjHCjgPz.js";
+    script.src = "/assets/index-BsNcgEEK.js";
     document.body.appendChild(script);
   }, []);
 

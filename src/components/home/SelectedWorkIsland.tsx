@@ -8,7 +8,7 @@ const CARDS = [
     period: "12 months, measured against the prior year",
     metric: "2.11× revenue",
     context:
-      "Traffic and conversion contributed in almost equal measure — 1.46 × 1.38 = 2.01 on units.",
+      "Traffic and conversion contributed in almost equal measure: 1.46 × 1.38 = 2.01 on units.",
   },
   {
     to: "/work/launch-and-hold",
@@ -17,6 +17,27 @@ const CARDS = [
     metric: "18.3% of account revenue",
     context:
       "A listing launched from zero finished as the account's strongest converter at 29.79%.",
+  },
+  {
+    to: "/work/scale-and-concentration",
+    label: "a Korean skincare brand scaling fast off one hero anti-aging line",
+    period: "12 months, measured against the prior year",
+    metric: "10.4× revenue",
+    context: "Growth was real, but three SKUs out of a much larger catalogue carried 72% of it.",
+  },
+  {
+    to: "/work/promotion-and-exposure",
+    label: "a Korean regenerative-skincare brand built around a single flagship ampoule",
+    period: "12 months, measured against the prior year",
+    metric: "+42.4% revenue",
+    context: "40% of the period's sales landed inside a single four-day promotional window.",
+  },
+  {
+    to: "/work/ceiling-and-efficiency",
+    label: "a Korean skincare brand growing against a fixed daily ad budget",
+    period: "12 months, measured against the prior year",
+    metric: "3.79× return on ad spend",
+    context: "82% of campaigns, including the largest, were regularly capped by daily budget.",
   },
 ];
 
@@ -33,7 +54,7 @@ function Cards() {
         <h2 className="text-[clamp(2.4rem,9vw,6rem)] font-black uppercase leading-[0.85] tracking-[-0.03em] text-[#EDE8E0]">
           Selected work
         </h2>
-        <div className="mt-12 grid gap-5 md:grid-cols-2">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {CARDS.map((c, i) => (
             <a
               key={c.to}
@@ -51,8 +72,8 @@ function Cards() {
               <h3 className="mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] leading-none tabular-nums text-[#EDE8E0]">
                 {c.metric}
               </h3>
-              <p className="mt-4 text-[0.95rem] text-[#EDE8E0]">{c.label}</p>
-              <p className="mt-3 max-w-[46ch] text-[0.9rem] leading-relaxed text-[#9a9a9e]">
+              <p className="mt-4 text-[0.95rem] font-medium text-[#EDE8E0]">{c.label}</p>
+              <p className="mt-3 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
                 {c.context}
               </p>
               <span className="mt-6 inline-block font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[#F5C542] transition-opacity group-hover:opacity-70">

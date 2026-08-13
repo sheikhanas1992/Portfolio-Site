@@ -1,9 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CasePage, CaseHeader, Section, CaseFooter } from "@/components/case/CaseLayout";
-import { MetricStrip, Bar, TodoBlock } from "@/components/case/CaseBits";
+import { MetricStrip, Bar } from "@/components/case/CaseBits";
 import { clientLabel } from "@/config/disclosure";
 
-const TITLE = "Launch and hold — a launch that took 18.3% of account revenue";
+const TITLE = "Launch and hold: a launch that took 18.3% of account revenue";
 const DESCRIPTION =
   "A six-month read on launching a listing from zero and holding featured offer share above 99%. Figures shown as ratios and percentages.";
 
@@ -87,13 +87,24 @@ function LaunchAndHold() {
       </Section>
 
       <Section title="What I did">
-        {/* TODO: copy needed */}
-        <TodoBlock title="What I did" />
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          A launch with zero history is the one place I don't trust automated targeting to find
+          the right audience fast enough on its own. I built the campaign structure around exact
+          and close-variant terms already proven on the account's other two listings, then layered
+          in broader discovery targeting once the new listing had enough of its own order and
+          review history to hold its own bids. Featured offer share on the older listings was the
+          thing most likely to slip while attention went to the launch, so it stayed on its own
+          watch with alerts rather than a manual daily check.
+        </p>
       </Section>
 
       <Section title="Limits of this read">
-        {/* TODO: copy needed */}
-        <TodoBlock title="Limits of this read" />
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          A 29.79% conversion rate this early is unusually high, and part of that is a genuinely
+          strong product-market fit that no campaign structure creates on its own. The harder
+          test is whether that rate holds once the listing is competing on a full review count
+          and organic rank rather than launch-period momentum.
+        </p>
       </Section>
 
       <CaseFooter />

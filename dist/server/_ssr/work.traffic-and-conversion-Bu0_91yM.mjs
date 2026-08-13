@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as CountUp, c as TodoBlock, d as usePrefersReducedMotion, i as CasePage, l as clientLabel, n as CaseFooter, o as MetricStrip, r as CaseHeader, s as Section, t as Bar, u as useInViewOnce } from "./CaseBits-DGb5PIFI.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.traffic-and-conversion-C-772v32.js
+import { a as CountUp, c as clientLabel, i as CasePage, l as useInViewOnce, n as CaseFooter, o as MetricStrip, r as CaseHeader, s as Section, t as Bar, u as usePrefersReducedMotion } from "./CaseBits-BszbluZs.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.traffic-and-conversion-Bu0_91yM.js
 var import_jsx_runtime = require_jsx_runtime();
 function Decomposition() {
 	const { ref, seen } = useInViewOnce();
@@ -188,11 +188,17 @@ function TrafficAndConversion() {
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "What I did",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TodoBlock, { title: "What I did" })
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				children: "I broke the growth number down into sessions and conversion rate before touching a single bid, because \"revenue is up\" doesn't tell you what to do next and \"sessions are up but conversion is flat\" does. That split showed two SKUs pulling in opposite ways: one had turned into the catalogue's front door on traffic alone, the other was converting nearly three times better than it had the year before with no meaningful change in sessions. I moved budget toward the traffic-led SKU's top terms, since it was proving it could absorb more spend, and left the conversion-led SKU's campaigns mostly alone rather than \"optimising\" a listing that had already found what worked."
+			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "Limits of this read",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(TodoBlock, { title: "Limits of this read" })
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				children: "Two SKUs did almost all of the work here, and one of them jumped from under 5% conversion to nearly 13% inside the year, most likely from a listing or pricing change that sits outside PPC reporting. I can show what happened to the numbers with confidence. I can't fully separate how much of that conversion jump was the ad account versus the page it was sending traffic to."
+			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseFooter, {})
 	] });

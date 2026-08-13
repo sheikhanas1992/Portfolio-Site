@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { r as PageShell } from "./SiteChrome-D1q4eCFd.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-DGb5PIFI.js
+import { r as PageShell } from "./SiteChrome-ChobPlJu.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-BszbluZs.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
@@ -13,11 +13,26 @@ var disclosure = {
 	caseB: {
 		nameApproved: false,
 		name: ""
+	},
+	caseC: {
+		nameApproved: false,
+		name: ""
+	},
+	caseD: {
+		nameApproved: false,
+		name: ""
+	},
+	caseE: {
+		nameApproved: false,
+		name: ""
 	}
 };
 var ANON_LABELS = {
 	caseA: "a DTC body-care brand on Amazon US",
-	caseB: "an outdoor electrical and EV accessories brand"
+	caseB: "an outdoor electrical and EV accessories brand",
+	caseC: "a Korean skincare brand scaling fast off one hero anti-aging line",
+	caseD: "a Korean regenerative-skincare brand built around a single flagship ampoule",
+	caseE: "a Korean skincare brand growing against a fixed daily ad budget"
 };
 function clientLabel(key) {
 	const entry = disclosure[key];
@@ -198,14 +213,5 @@ function Bar({ label, pct, note }) {
 		})]
 	});
 }
-function TodoBlock({ title }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "rounded-[16px] border border-dashed border-white/[0.12] bg-[#131315] p-6",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-			className: "text-[0.85rem] leading-relaxed text-[#7d7d82]",
-			children: [title, " — copy to follow."]
-		})
-	});
-}
 //#endregion
-export { CountUp as a, TodoBlock as c, usePrefersReducedMotion as d, CasePage as i, clientLabel as l, CaseFooter as n, MetricStrip as o, CaseHeader as r, Section as s, Bar as t, useInViewOnce as u };
+export { CountUp as a, clientLabel as c, CasePage as i, useInViewOnce as l, CaseFooter as n, MetricStrip as o, CaseHeader as r, Section as s, Bar as t, usePrefersReducedMotion as u };

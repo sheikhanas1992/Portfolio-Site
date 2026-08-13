@@ -1,0 +1,223 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/SiteChrome-ChobPlJu.js
+var import_jsx_runtime = require_jsx_runtime();
+var CONTACT = {
+	linkedin: "https://www.linkedin.com/in/muhammad-anas-amz-brand-manager-ppc-expert/",
+	email: "mailto:sheikhanas1992@gmail.com?subject=Enquiry%20from%20sheikhanas.com",
+	emailAddress: "sheikhanas1992@gmail.com",
+	whatsapp: "https://wa.me/923177748484?text=Hi%20Anas%2C%20I%20found%20your%20portfolio%20and%20wanted%20to%20get%20in%20touch.",
+	phone: "tel:+923177748484",
+	phoneDisplay: "+92 317 7748484",
+	calendly: "https://calendly.com/sheikhanas1992/30min"
+};
+var ext = {
+	target: "_blank",
+	rel: "noopener noreferrer"
+};
+function LinkedInIcon(props) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+		viewBox: "0 0 24 24",
+		fill: "currentColor",
+		...props,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.5 8.25h4.75V23H.5V8.25ZM8.5 8.25h4.55v2.01h.06c.63-1.2 2.18-2.47 4.49-2.47 4.8 0 5.7 3.16 5.7 7.27V23h-4.75v-6.98c0-1.66-.03-3.8-2.32-3.8-2.32 0-2.68 1.81-2.68 3.68V23H8.5V8.25Z" })
+	});
+}
+function GmailIcon(props) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+		viewBox: "0 0 24 24",
+		fill: "none",
+		stroke: "currentColor",
+		strokeWidth: "1.6",
+		...props,
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+			x: "2",
+			y: "4.5",
+			width: "20",
+			height: "15",
+			rx: "2"
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+			d: "M3 6.5 12 13 21 6.5",
+			strokeLinecap: "round",
+			strokeLinejoin: "round"
+		})]
+	});
+}
+function WhatsAppIcon(props) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+		viewBox: "0 0 24 24",
+		fill: "currentColor",
+		...props,
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M12.02 2C6.5 2 2.04 6.46 2.04 11.98c0 1.85.5 3.58 1.36 5.07L2 22l5.1-1.34a9.96 9.96 0 0 0 4.92 1.3h.01c5.52 0 9.98-4.46 9.98-9.98C21.99 6.46 17.54 2 12.02 2Zm5.86 14.13c-.25.7-1.24 1.28-2.03 1.45-.55.12-1.26.21-3.66-.78-2.98-1.24-4.9-4.26-5.05-4.46-.15-.2-1.2-1.6-1.2-3.05 0-1.45.76-2.16 1.03-2.46.25-.28.55-.35.73-.35s.37 0 .53.01c.17.01.4-.06.62.48.25.6.85 2.08.92 2.23.07.15.12.32.02.52-.1.2-.15.32-.3.5-.15.17-.31.39-.44.52-.15.15-.3.31-.13.6.17.3.76 1.26 1.64 2.04 1.13 1 2.08 1.32 2.38 1.47.3.15.47.12.65-.08.17-.2.74-.86.94-1.16.2-.3.4-.25.65-.15.27.1 1.7.8 1.99.95.3.15.5.22.57.35.07.13.07.75-.18 1.45Z" })
+	});
+}
+function SiteHeader() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
+		className: "fixed inset-x-0 top-0 z-40 border-b border-white/[0.08] bg-[#0d0d0f]/80 backdrop-blur-md",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+			className: "mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					href: "/",
+					className: "font-mono text-[0.72rem] uppercase tracking-[0.16em] text-[#EDE8E0]",
+					children: "S. Anas"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "hidden items-center gap-8 md:flex",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "/#work",
+							className: "font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]",
+							children: "Work"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "/#about",
+							className: "font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]",
+							children: "About"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "/#experience",
+							className: "font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]",
+							children: "Experience"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+							to: "/audit",
+							className: "font-mono text-[0.68rem] font-medium uppercase tracking-[0.14em] text-[#b4b4b8] transition-colors hover:text-[#EDE8E0]",
+							children: "Get an audit"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/book",
+					className: "rounded-full border border-white/[0.14] px-4 py-2 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+					children: "Book a call"
+				})
+			]
+		})
+	});
+}
+function ContactRow() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "flex flex-wrap items-center gap-3",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+				href: CONTACT.whatsapp,
+				...ext,
+				"aria-label": "Message Sheikh Anas on WhatsApp",
+				className: "rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]",
+				children: "WhatsApp"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+				href: CONTACT.email,
+				"aria-label": "Email Sheikh Anas",
+				className: "rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]",
+				children: "Email"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+				href: CONTACT.linkedin,
+				...ext,
+				"aria-label": "Sheikh Anas on LinkedIn",
+				className: "rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]",
+				children: "LinkedIn"
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "ml-1 flex items-center gap-2.5",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: CONTACT.linkedin,
+						...ext,
+						"aria-label": "Sheikh Anas on LinkedIn",
+						className: "flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LinkedInIcon, { className: "h-[15px] w-[15px]" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: CONTACT.email,
+						"aria-label": "Email Sheikh Anas",
+						className: "flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GmailIcon, { className: "h-[16px] w-[16px]" })
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: CONTACT.whatsapp,
+						...ext,
+						"aria-label": "Message Sheikh Anas on WhatsApp",
+						className: "flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(WhatsAppIcon, { className: "h-[16px] w-[16px]" })
+					})
+				]
+			})
+		]
+	});
+}
+function SiteFooter() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("footer", {
+		className: "mx-auto mt-24 flex max-w-[1100px] flex-col items-center gap-5 border-t border-white/[0.08] px-6 py-8 text-[0.76rem] font-medium text-[#9a9a9e] md:flex-row md:justify-between md:px-10",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+			className: "font-mono uppercase tracking-[0.12em]",
+			children: [
+				"© ",
+				(/* @__PURE__ */ new Date()).getFullYear(),
+				" Sheikh Anas"
+			]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "flex flex-wrap items-center gap-5 font-mono uppercase tracking-[0.12em]",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/audit",
+					className: "transition-colors hover:text-[#EDE8E0]",
+					children: "Get an audit"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/book",
+					className: "transition-colors hover:text-[#EDE8E0]",
+					children: "Book a call"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					href: CONTACT.phone,
+					"aria-label": "Call Sheikh Anas",
+					className: "transition-colors hover:text-[#EDE8E0]",
+					children: "Phone"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-2.5",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: CONTACT.linkedin,
+							...ext,
+							"aria-label": "Sheikh Anas on LinkedIn",
+							className: "flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LinkedInIcon, { className: "h-[14px] w-[14px]" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: CONTACT.email,
+							"aria-label": "Email Sheikh Anas",
+							className: "flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GmailIcon, { className: "h-[15px] w-[15px]" })
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: CONTACT.whatsapp,
+							...ext,
+							"aria-label": "Message Sheikh Anas on WhatsApp",
+							className: "flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(WhatsAppIcon, { className: "h-[15px] w-[15px]" })
+						})
+					]
+				})
+			]
+		})]
+	});
+}
+function PageShell({ children }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "min-h-screen bg-[#0d0d0f] text-[#EDE8E0] antialiased",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteHeader, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "pt-28",
+				children
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(SiteFooter, {})
+		]
+	});
+}
+//#endregion
+export { ContactRow as n, PageShell as r, CONTACT as t };

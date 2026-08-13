@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DoDSo8U4.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-CEBPN0a3.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -27,7 +27,7 @@ function AvatarEnhancer() {
 			const tip = document.createElement("div");
 			tip.className = "anas-avatar-tip";
 			tip.setAttribute("aria-hidden", "true");
-			tip.textContent = "I'm open to work — DM me or book a call";
+			tip.textContent = "Open for new Amazon PPC accounts: DM me or book a call";
 			container.appendChild(tip);
 		};
 		enhance();
@@ -37,19 +37,43 @@ function AvatarEnhancer() {
 	}, []);
 	return null;
 }
-var CARDS = [{
-	to: "/work/traffic-and-conversion",
-	label: "a DTC body-care brand on Amazon US",
-	period: "12 months, measured against the prior year",
-	metric: "2.11× revenue",
-	context: "Traffic and conversion contributed in almost equal measure — 1.46 × 1.38 = 2.01 on units."
-}, {
-	to: "/work/launch-and-hold",
-	label: "an outdoor electrical and EV accessories brand",
-	period: "6 months",
-	metric: "18.3% of account revenue",
-	context: "A listing launched from zero finished as the account's strongest converter at 29.79%."
-}];
+var CARDS = [
+	{
+		to: "/work/traffic-and-conversion",
+		label: "a DTC body-care brand on Amazon US",
+		period: "12 months, measured against the prior year",
+		metric: "2.11× revenue",
+		context: "Traffic and conversion contributed in almost equal measure: 1.46 × 1.38 = 2.01 on units."
+	},
+	{
+		to: "/work/launch-and-hold",
+		label: "an outdoor electrical and EV accessories brand",
+		period: "6 months",
+		metric: "18.3% of account revenue",
+		context: "A listing launched from zero finished as the account's strongest converter at 29.79%."
+	},
+	{
+		to: "/work/scale-and-concentration",
+		label: "a Korean skincare brand scaling fast off one hero anti-aging line",
+		period: "12 months, measured against the prior year",
+		metric: "10.4× revenue",
+		context: "Growth was real, but three SKUs out of a much larger catalogue carried 72% of it."
+	},
+	{
+		to: "/work/promotion-and-exposure",
+		label: "a Korean regenerative-skincare brand built around a single flagship ampoule",
+		period: "12 months, measured against the prior year",
+		metric: "+42.4% revenue",
+		context: "40% of the period's sales landed inside a single four-day promotional window."
+	},
+	{
+		to: "/work/ceiling-and-efficiency",
+		label: "a Korean skincare brand growing against a fixed daily ad budget",
+		period: "12 months, measured against the prior year",
+		metric: "3.79× return on ad spend",
+		context: "82% of campaigns, including the largest, were regularly capped by daily budget."
+	}
+];
 function Cards() {
 	const [shown, setShown] = (0, import_react.useState)(false);
 	(0, import_react.useEffect)(() => {
@@ -65,7 +89,7 @@ function Cards() {
 				className: "text-[clamp(2.4rem,9vw,6rem)] font-black uppercase leading-[0.85] tracking-[-0.03em] text-[#EDE8E0]",
 				children: "Selected work"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-12 grid gap-5 md:grid-cols-2",
+				className: "mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3",
 				children: CARDS.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 					href: c.to,
 					className: "group block rounded-[20px] border border-white/[0.08] bg-[#151517] p-7 transition-colors hover:border-[#F5C542]/40",
@@ -84,11 +108,11 @@ function Cards() {
 							children: c.metric
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 text-[0.95rem] text-[#EDE8E0]",
+							className: "mt-4 text-[0.95rem] font-medium text-[#EDE8E0]",
 							children: c.label
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-3 max-w-[46ch] text-[0.9rem] leading-relaxed text-[#9a9a9e]",
+							className: "mt-3 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]",
 							children: c.context
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
@@ -138,7 +162,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-jjHCjgPz.js";
+		script.src = "/assets/index-BsNcgEEK.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
