@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-BIWp8kbG.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-v1TGIEdP.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -155,7 +155,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-DsHvJ3LE.js";
+		script.src = "/assets/index-CvwBBh1I.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
