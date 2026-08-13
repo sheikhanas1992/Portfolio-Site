@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CEBPN0a3.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DWusofxb.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -89,10 +89,10 @@ function Cards() {
 				className: "text-[clamp(2.4rem,9vw,6rem)] font-black uppercase leading-[0.85] tracking-[-0.03em] text-[#EDE8E0]",
 				children: "Selected work"
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3",
+				className: "mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5",
 				children: CARDS.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 					href: c.to,
-					className: "group block rounded-[20px] border border-white/[0.08] bg-[#151517] p-7 transition-colors hover:border-[#F5C542]/40",
+					className: "group relative block overflow-hidden rounded-[20px] border border-white/[0.1] bg-[#151517] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F5C542]/50 hover:bg-[#1a1a1d] hover:shadow-[0_20px_40px_-16px_rgba(0,0,0,0.7)]",
 					style: {
 						opacity: shown ? 1 : 0,
 						transform: shown ? "none" : "translateY(18px)",
@@ -100,24 +100,31 @@ function Cards() {
 					},
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-							className: "font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#F5C542]",
+							"aria-hidden": true,
+							className: "pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#F5C542] transition-transform duration-300 group-hover:scale-x-100"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542]",
 							children: c.period
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-							className: "mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] leading-none tabular-nums text-[#EDE8E0]",
+							className: "mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] font-medium leading-none tabular-nums text-[#EDE8E0]",
 							children: c.metric
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 text-[0.95rem] font-medium text-[#EDE8E0]",
+							className: "mt-4 text-[0.95rem] font-semibold text-[#EDE8E0]",
 							children: c.label
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mt-3 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]",
 							children: c.context
 						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-							className: "mt-6 inline-block font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[#F5C542] transition-opacity group-hover:opacity-70",
-							children: "Read the case study →"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+							className: "mt-6 inline-flex items-center gap-1.5 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542] transition-all duration-200 group-hover:gap-2.5",
+							children: ["Read the case study", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"aria-hidden": true,
+								children: "→"
+							})]
 						})
 					]
 				}, c.to))
@@ -162,7 +169,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-BsNcgEEK.js";
+		script.src = "/assets/index-Qfc3d5Jd.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [

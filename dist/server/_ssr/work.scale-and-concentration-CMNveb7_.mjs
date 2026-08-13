@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { c as ScreenshotRow, i as CasePage, l as Section, n as CaseFooter, o as MetricStrip, r as CaseHeader, s as Screenshot, t as Bar, u as clientLabel } from "./CaseBits-2DN4L45f.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-DP6uuybT.js
+import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, o as Screenshot, r as CaseHeader, s as ScreenshotRow, t as Bar } from "./CaseBits-NWroIntv.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-CMNveb7_.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/scale-and-concentration";
 function ScaleAndConcentration() {
@@ -8,7 +8,8 @@ function ScaleAndConcentration() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseHeader, {
 			label: clientLabel("caseC"),
 			period: "12 months, measured against the prior year",
-			headline: "10.4× revenue growth on one hero product line"
+			headline: "10.4× revenue growth on one hero product line",
+			note: "Managed as part of my work at Sohomax"
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 			className: "px-6 md:px-10",

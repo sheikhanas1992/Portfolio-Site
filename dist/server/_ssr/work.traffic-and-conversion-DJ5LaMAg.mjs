@@ -1,6 +1,7 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as CountUp, d as useInViewOnce, f as usePrefersReducedMotion, i as CasePage, l as Section, n as CaseFooter, o as MetricStrip, r as CaseHeader, t as Bar, u as clientLabel } from "./CaseBits-2DN4L45f.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.traffic-and-conversion-KlnKdwL9.js
+import { i as usePrefersReducedMotion, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
+import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, r as CaseHeader, t as Bar } from "./CaseBits-NWroIntv.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.traffic-and-conversion-DJ5LaMAg.js
 var import_jsx_runtime = require_jsx_runtime();
 function Decomposition() {
 	const { ref, seen } = useInViewOnce();

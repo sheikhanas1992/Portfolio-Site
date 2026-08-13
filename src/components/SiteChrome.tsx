@@ -67,7 +67,7 @@ export function SiteHeader() {
         </div>
         <Link
           to="/book"
-          className="rounded-full border border-white/[0.14] px-4 py-2 font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+          className="rounded-full bg-[#F5C542] px-5 py-2.5 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_4px_14px_-4px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]"
         >
           Book a call
         </Link>
@@ -83,14 +83,14 @@ export function ContactRow() {
         href={CONTACT.whatsapp}
         {...ext}
         aria-label="Message Sheikh Anas on WhatsApp"
-        className="rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]"
+        className="rounded-full border border-white/[0.16] px-5 py-3 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.13em] text-[#EDE8E0] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/70 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
       >
         WhatsApp
       </a>
       <a
         href={CONTACT.email}
         aria-label="Email Sheikh Anas"
-        className="rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]"
+        className="rounded-full border border-white/[0.16] px-5 py-3 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.13em] text-[#EDE8E0] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/70 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
       >
         Email
       </a>
@@ -98,7 +98,7 @@ export function ContactRow() {
         href={CONTACT.linkedin}
         {...ext}
         aria-label="Sheikh Anas on LinkedIn"
-        className="rounded-full border border-white/[0.14] px-5 py-2.5 font-mono text-[0.66rem] uppercase tracking-[0.13em] text-[#EDE8E0] transition-colors hover:border-[#F5C542]/60 hover:text-[#F5C542]"
+        className="rounded-full border border-white/[0.16] px-5 py-3 font-mono text-[0.7rem] font-semibold uppercase tracking-[0.13em] text-[#EDE8E0] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/70 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
       >
         LinkedIn
       </a>
@@ -107,24 +107,24 @@ export function ContactRow() {
           href={CONTACT.linkedin}
           {...ext}
           aria-label="Sheikh Anas on LinkedIn"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.16] text-[#b4b4b8] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
         >
-          <LinkedInIcon className="h-[15px] w-[15px]" />
+          <LinkedInIcon className="h-[16px] w-[16px]" />
         </a>
         <a
           href={CONTACT.email}
           aria-label="Email Sheikh Anas"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.16] text-[#b4b4b8] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
         >
-          <GmailIcon className="h-[16px] w-[16px]" />
+          <GmailIcon className="h-[17px] w-[17px]" />
         </a>
         <a
           href={CONTACT.whatsapp}
           {...ext}
           aria-label="Message Sheikh Anas on WhatsApp"
-          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.14] text-[#b4b4b8] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/[0.16] text-[#b4b4b8] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
         >
-          <WhatsAppIcon className="h-[16px] w-[16px]" />
+          <WhatsAppIcon className="h-[17px] w-[17px]" />
         </a>
       </div>
     </div>
@@ -133,21 +133,21 @@ export function ContactRow() {
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto mt-24 flex max-w-[1100px] flex-col items-center gap-5 border-t border-white/[0.08] px-6 py-8 text-[0.76rem] font-medium text-[#9a9a9e] md:flex-row md:justify-between md:px-10">
-      <span className="font-mono uppercase tracking-[0.12em]">
+    <footer className="mx-auto mt-24 flex max-w-[1100px] flex-col items-center gap-6 border-t border-white/[0.1] px-6 py-10 text-[0.8rem] font-semibold text-[#b4b4b8] md:flex-row md:justify-between md:px-10">
+      <span className="font-mono uppercase tracking-[0.12em] text-[#9a9a9e]">
         © {new Date().getFullYear()} Sheikh Anas
       </span>
-      <div className="flex flex-wrap items-center gap-5 font-mono uppercase tracking-[0.12em]">
-        <Link to="/audit" className="transition-colors hover:text-[#EDE8E0]">
+      <div className="flex flex-wrap items-center gap-6 font-mono uppercase tracking-[0.12em]">
+        <Link to="/audit" className="transition-colors hover:text-[#F5C542]">
           Get an audit
         </Link>
-        <Link to="/book" className="transition-colors hover:text-[#EDE8E0]">
+        <Link to="/book" className="transition-colors hover:text-[#F5C542]">
           Book a call
         </Link>
         <a
           href={CONTACT.phone}
           aria-label="Call Sheikh Anas"
-          className="transition-colors hover:text-[#EDE8E0]"
+          className="transition-colors hover:text-[#F5C542]"
         >
           Phone
         </a>
@@ -156,24 +156,24 @@ export function SiteFooter() {
             href={CONTACT.linkedin}
             {...ext}
             aria-label="Sheikh Anas on LinkedIn"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#9a9a9e] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
           >
-            <LinkedInIcon className="h-[14px] w-[14px]" />
+            <LinkedInIcon className="h-[15px] w-[15px]" />
           </a>
           <a
             href={CONTACT.email}
             aria-label="Email Sheikh Anas"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#9a9a9e] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
           >
-            <GmailIcon className="h-[15px] w-[15px]" />
+            <GmailIcon className="h-[16px] w-[16px]" />
           </a>
           <a
             href={CONTACT.whatsapp}
             {...ext}
             aria-label="Message Sheikh Anas on WhatsApp"
-            className="flex h-8 w-8 items-center justify-center rounded-full border border-white/[0.14] text-[#9a9a9e] transition-colors hover:border-[#F5C542]/50 hover:text-[#F5C542]"
+            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#9a9a9e] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
           >
-            <WhatsAppIcon className="h-[15px] w-[15px]" />
+            <WhatsAppIcon className="h-[16px] w-[16px]" />
           </a>
         </div>
       </div>

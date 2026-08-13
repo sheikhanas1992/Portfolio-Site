@@ -54,30 +54,35 @@ function Cards() {
         <h2 className="text-[clamp(2.4rem,9vw,6rem)] font-black uppercase leading-[0.85] tracking-[-0.03em] text-[#EDE8E0]">
           Selected work
         </h2>
-        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
           {CARDS.map((c, i) => (
             <a
               key={c.to}
               href={c.to}
-              className="group block rounded-[20px] border border-white/[0.08] bg-[#151517] p-7 transition-colors hover:border-[#F5C542]/40"
+              className="group relative block overflow-hidden rounded-[20px] border border-white/[0.1] bg-[#151517] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F5C542]/50 hover:bg-[#1a1a1d] hover:shadow-[0_20px_40px_-16px_rgba(0,0,0,0.7)]"
               style={{
                 opacity: shown ? 1 : 0,
                 transform: shown ? "none" : "translateY(18px)",
                 transition: `opacity 700ms ${i * 100}ms ease, transform 700ms ${i * 100}ms cubic-bezier(0.16,1,0.3,1)`,
               }}
             >
-              <div className="font-mono text-[0.6rem] uppercase tracking-[0.14em] text-[#F5C542]">
+              <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#F5C542] transition-transform duration-300 group-hover:scale-x-100"
+              />
+              <div className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542]">
                 {c.period}
               </div>
-              <h3 className="mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] leading-none tabular-nums text-[#EDE8E0]">
+              <h3 className="mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] font-medium leading-none tabular-nums text-[#EDE8E0]">
                 {c.metric}
               </h3>
-              <p className="mt-4 text-[0.95rem] font-medium text-[#EDE8E0]">{c.label}</p>
+              <p className="mt-4 text-[0.95rem] font-semibold text-[#EDE8E0]">{c.label}</p>
               <p className="mt-3 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
                 {c.context}
               </p>
-              <span className="mt-6 inline-block font-mono text-[0.62rem] uppercase tracking-[0.14em] text-[#F5C542] transition-opacity group-hover:opacity-70">
-                Read the case study →
+              <span className="mt-6 inline-flex items-center gap-1.5 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542] transition-all duration-200 group-hover:gap-2.5">
+                Read the case study
+                <span aria-hidden>→</span>
               </span>
             </a>
           ))}

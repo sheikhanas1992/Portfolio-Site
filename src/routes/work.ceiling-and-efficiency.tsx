@@ -30,6 +30,7 @@ function CeilingAndEfficiency() {
         label={clientLabel("caseE")}
         period="12 months, measured against the prior year"
         headline="41 of 50 campaigns capped by budget, on a 3.79× return"
+        note="Managed as part of my work at Sohomax"
       />
 
       <div className="px-6 md:px-10">

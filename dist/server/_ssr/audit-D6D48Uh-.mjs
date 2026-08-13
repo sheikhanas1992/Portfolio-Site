@@ -1,7 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { r as PageShell, t as CONTACT } from "./SiteChrome-ChobPlJu.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-C_XukcP5.js
+import { r as PageShell, t as CONTACT } from "./SiteChrome-D6tesNoe.mjs";
+import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-D6D48Uh-.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -50,41 +51,56 @@ function toggle(list, value) {
 }
 function FieldLabel({ children, required }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-		className: "block text-[0.95rem] font-medium text-[#EDE8E0]",
+		className: "block text-[0.98rem] font-semibold text-[#EDE8E0]",
 		children: [children, required && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 			className: "ml-1 text-[#F5C542]",
 			children: "*"
 		})]
 	});
 }
-var inputClasses = "mt-2.5 w-full rounded-[12px] border border-white/[0.14] bg-[#151517] px-4 py-3 text-[0.95rem] text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60";
+var inputClasses = "mt-2.5 w-full rounded-[12px] border border-white/[0.16] bg-[#151517] px-4 py-3.5 text-[0.95rem] font-medium text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60 focus:bg-[#1a1a1d]";
+var optionBase = "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
+var optionOn = "border-[#F5C542]/50 bg-[#F5C542]/[0.08] text-[#EDE8E0]";
+var optionOff = "border-white/[0.12] bg-[#151517] text-[#b4b4b8] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
 function CheckboxGrid({ options, selected, onToggle }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "mt-3 grid gap-2.5 sm:grid-cols-2",
-		children: options.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-			className: "flex cursor-pointer items-center gap-3 rounded-[10px] border border-white/[0.1] bg-[#151517] px-4 py-3 text-[0.9rem] font-medium text-[#b4b4b8] transition-colors hover:border-white/[0.22]",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-				type: "checkbox",
-				checked: selected.includes(opt),
-				onChange: () => onToggle(opt),
-				className: "h-4 w-4 accent-[#F5C542]"
-			}), opt]
-		}, opt))
+		children: options.map((opt) => {
+			const on = selected.includes(opt);
+			return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+				className: `${optionBase} ${on ? optionOn : optionOff}`,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+					type: "checkbox",
+					checked: on,
+					onChange: () => onToggle(opt),
+					className: "h-4 w-4 accent-[#F5C542]"
+				}), opt]
+			}, opt);
+		})
 	});
 }
 function RadioGrid({ name, options, selected, onChange }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "mt-3 grid gap-2.5 sm:grid-cols-2",
-		children: options.map((opt) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
-			className: "flex cursor-pointer items-center gap-3 rounded-[10px] border border-white/[0.1] bg-[#151517] px-4 py-3 text-[0.9rem] font-medium text-[#b4b4b8] transition-colors hover:border-white/[0.22]",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-				type: "radio",
-				name,
-				checked: selected === opt,
-				onChange: () => onChange(opt),
-				className: "h-4 w-4 accent-[#F5C542]"
-			}), opt]
-		}, opt))
+		children: options.map((opt) => {
+			const on = selected === opt;
+			return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("label", {
+				className: `${optionBase} ${on ? optionOn : optionOff}`,
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+					type: "radio",
+					name,
+					checked: on,
+					onChange: () => onChange(opt),
+					className: "h-4 w-4 accent-[#F5C542]"
+				}), opt]
+			}, opt);
+		})
+	});
+}
+function StepNumber({ n }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+		className: "flex h-9 w-9 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.8rem] font-bold text-[#F5C542]",
+		children: n
 	});
 }
 function AuditForm() {
@@ -151,15 +167,18 @@ function AuditForm() {
 	};
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 		onSubmit: handleSubmit,
-		className: "mt-10 flex flex-col gap-10",
+		className: "mt-10 flex flex-col gap-6",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-					children: "1. Client information"
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "1" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+						children: "Client information"
+					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "mt-6 grid gap-5 sm:grid-cols-2",
+					className: "mt-7 grid gap-5 sm:grid-cols-2",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
 							required: true,
@@ -202,15 +221,19 @@ function AuditForm() {
 					]
 				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				delay: 60,
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-						children: "2. Amazon account details"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "2" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+							children: "Amazon account details"
+						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-						className: "mt-6",
+						className: "mt-7",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
 							required: true,
 							children: "Amazon marketplace"
@@ -262,28 +285,42 @@ function AuditForm() {
 					})
 				]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-					children: "3. What would you like us to audit?"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
-					options: AUDIT_TYPES,
-					selected: auditTypes,
-					onToggle: (v) => setAuditTypes((s) => toggle(s, v))
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				delay: 90,
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "3" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+						children: "What would you like us to audit?"
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-7",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
+						options: AUDIT_TYPES,
+						selected: auditTypes,
+						onToggle: (v) => setAuditTypes((s) => toggle(s, v))
+					})
 				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				delay: 120,
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-						children: "4. What would you like us to improve?"
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-4",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+							children: "What would you like us to improve?"
+						})]
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
-						options: IMPROVEMENT_GOALS,
-						selected: improvements,
-						onToggle: (v) => setImprovements((s) => toggle(s, v))
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-7",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
+							options: IMPROVEMENT_GOALS,
+							selected: improvements,
+							onToggle: (v) => setImprovements((s) => toggle(s, v))
+						})
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-4",
@@ -296,38 +333,49 @@ function AuditForm() {
 					})
 				]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-					children: "5. Anything specific you want us to look at?"
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				delay: 150,
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+						children: "Anything specific you want us to look at?"
+					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
-					className: `${inputClasses} min-h-[140px] resize-y`,
+					className: `${inputClasses} mt-7 min-h-[140px] resize-y`,
 					value: notes,
 					onChange: (e) => setNotes(e.target.value),
 					placeholder: "Optional: tell me about a specific ASIN, campaign, or problem you keep running into."
 				})]
 			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-					className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]",
-					children: "6. Preferred contact method"
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGrid, {
-					name: "contactMethod",
-					options: CONTACT_METHODS,
-					selected: contactMethod,
-					onChange: setContactMethod
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+				delay: 180,
+				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-4",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "6" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
+						children: "Preferred contact method"
+					})]
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-7",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGrid, {
+						name: "contactMethod",
+						options: CONTACT_METHODS,
+						selected: contactMethod,
+						onChange: setContactMethod
+					})
 				})]
 			}),
 			error && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-3 text-[0.9rem] font-medium text-[#e08d74]",
+				className: "rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]",
 				children: error
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 				type: "submit",
-				className: "self-start rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-medium uppercase tracking-[0.14em] text-[#0d0d0f] transition-opacity hover:opacity-85",
-				children: "Request My Audit"
+				className: "mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
+				children: "Request My Audit →"
 			})
 		]
 	});
@@ -336,33 +384,47 @@ function AuditPage() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PageShell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
 		className: "mx-auto max-w-[900px] px-6 md:px-10",
 		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "font-mono text-[0.68rem] uppercase tracking-[0.16em] text-[#F5C542]",
-				children: "Free account audit"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
-				className: "mt-5 max-w-[20ch] text-[clamp(2.4rem,7vw,4.4rem)] font-black uppercase leading-[0.92] tracking-[-0.03em] text-[#EDE8E0]",
-				children: "Find out what's actually wrong with your account"
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-6 max-w-[62ch] text-[1.02rem] font-medium leading-relaxed text-[#b4b4b8]",
-				children: "Most accounts I look at don't have a traffic problem. They have a structure problem: spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start being a cost. Before I take on any account, I run a free audit so you know exactly what's working, what's wasting money, and what to fix first, with no obligation to hire me afterward."
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-10",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-					href: "#request-form",
-					className: "inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-7 py-3.5 font-mono text-[0.74rem] font-medium uppercase tracking-[0.14em] text-[#0d0d0f] transition-opacity hover:opacity-85",
-					children: "Request a audit"
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, { children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+					className: "inline-flex items-center gap-2 rounded-full border border-[#F5C542]/30 bg-[#F5C542]/[0.06] px-4 py-1.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#F5C542]",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": true,
+						className: "h-1.5 w-1.5 rounded-full bg-[#F5C542]"
+					}), "Free account audit"]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+					className: "mt-6 max-w-[20ch] text-[clamp(2.4rem,7vw,4.4rem)] font-black uppercase leading-[0.92] tracking-[-0.03em] text-[#EDE8E0]",
+					children: "Find out what's actually wrong with your account"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]",
+					children: "Most accounts I look at don't have a traffic problem. They have a structure problem: spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start being a cost. Before I take on any account, I run a free audit so you know exactly what's working, what's wasting money, and what to fix first, with no obligation to hire me afterward."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-10",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+						href: "#request-form",
+						className: "inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
+						children: ["Request a audit", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": true,
+							children: "→"
+						})]
+					})
 				})
-			}),
+			] }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "mt-20 border-t border-white/[0.08] pt-14",
+				className: "mt-24 border-t border-white/[0.1] pt-14",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#7d7d82]",
-						children: "How I audit an account"
-					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": true,
+							className: "h-px w-6 bg-[#F5C542]"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]",
+							children: "How I audit an account"
+						})]
+					}) }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						className: "mt-8 grid gap-6 sm:grid-cols-3",
 						children: [
@@ -381,40 +443,47 @@ function AuditPage() {
 								title: "Scale",
 								copy: "Once ACOS and TACOS are stable, reallocate budget toward what's proven to convert and expand into new targeting with a system, not guesswork."
 							}
-						].map((s) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "rounded-[20px] border border-white/[0.08] bg-[#151517] p-6",
+						].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+							delay: i * 90,
+							className: "group rounded-[20px] border border-white/[0.1] bg-[#151517] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C542]/30 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]",
 							children: [
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "font-mono text-[0.7rem] text-[#F5C542]",
+									className: "flex h-10 w-10 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.78rem] font-bold text-[#F5C542] transition-colors group-hover:bg-[#F5C542]/[0.2]",
 									children: s.step
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "mt-3 text-[1.05rem] font-semibold text-[#EDE8E0]",
+									className: "mt-4 text-[1.15rem] font-bold text-[#EDE8E0]",
 									children: s.title
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-3 text-[0.9rem] font-medium leading-relaxed text-[#b4b4b8]",
+									className: "mt-3 text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]",
 									children: s.copy
 								})
 							]
 						}, s.step))
 					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-8 max-w-[62ch] text-[0.95rem] font-medium leading-relaxed text-[#b4b4b8]",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]",
 						children: "The audit itself covers PPC, listing copy, creative and overall account health, depending on what you ask for below. You'll get a clear read on ACOS control, TACOS stability and where the account's biggest opportunities actually are."
-					})
+					}) })
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				id: "request-form",
-				className: "mt-20 scroll-mt-24 border-t border-white/[0.08] pt-14",
+				className: "mt-24 scroll-mt-24 border-t border-white/[0.1] pt-14",
 				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#7d7d82]",
-						children: "Request your free audit"
-					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": true,
+							className: "h-px w-6 bg-[#F5C542]"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]",
+							children: "Request your free audit"
+						})]
+					}) }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 max-w-[62ch] text-[0.95rem] font-medium leading-relaxed text-[#b4b4b8]",
+						className: "mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]",
 						children: "Fill this in and it opens a pre-filled email to me. I read every one myself and usually reply within a day or two."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuditForm, {})

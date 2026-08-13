@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from "react";
 
 export function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(false);
@@ -27,6 +27,36 @@ export function useInViewOnce<T extends HTMLElement>() {
     return () => io.disconnect();
   }, [seen]);
   return { ref, seen };
+}
+
+/** Fades and lifts children into place once they scroll into view. */
+export function Reveal({
+  children,
+  delay = 0,
+  distance = 20,
+  className = "",
+  as: Tag = "div",
+}: {
+  children: ReactNode;
+  delay?: number;
+  distance?: number;
+  className?: string;
+  as?: "div" | "section" | "li";
+}) {
+  const { ref, seen } = useInViewOnce<HTMLDivElement>();
+  const reduced = usePrefersReducedMotion();
+  const style: CSSProperties = {
+    opacity: seen ? 1 : 0,
+    transform: seen || reduced ? "none" : `translateY(${distance}px)`,
+    transition: reduced
+      ? "opacity 300ms linear"
+      : `opacity 800ms ${delay}ms cubic-bezier(0.16,1,0.3,1), transform 800ms ${delay}ms cubic-bezier(0.16,1,0.3,1)`,
+  };
+  return (
+    <Tag ref={ref as never} className={className} style={style}>
+      {children}
+    </Tag>
+  );
 }
 
 /** Count-up figure. Monospace + tabular-nums, animates once on scroll into view. */

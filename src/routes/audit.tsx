@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, type FormEvent } from "react";
 import { PageShell } from "@/components/SiteChrome";
+import { Reveal } from "@/components/CountUp";
 import { CONTACT } from "@/config/contact";
 
 const TITLE = "Free Amazon account audit: Sheikh Anas";
@@ -47,7 +48,7 @@ function toggle(list: string[], value: string) {
 
 function FieldLabel({ children, required }: { children: string; required?: boolean }) {
   return (
-    <label className="block text-[0.95rem] font-medium text-[#EDE8E0]">
+    <label className="block text-[0.98rem] font-semibold text-[#EDE8E0]">
       {children}
       {required && <span className="ml-1 text-[#F5C542]">*</span>}
     </label>
@@ -55,7 +56,12 @@ function FieldLabel({ children, required }: { children: string; required?: boole
 }
 
 const inputClasses =
-  "mt-2.5 w-full rounded-[12px] border border-white/[0.14] bg-[#151517] px-4 py-3 text-[0.95rem] text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60";
+  "mt-2.5 w-full rounded-[12px] border border-white/[0.16] bg-[#151517] px-4 py-3.5 text-[0.95rem] font-medium text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60 focus:bg-[#1a1a1d]";
+
+const optionBase =
+  "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
+const optionOn = "border-[#F5C542]/50 bg-[#F5C542]/[0.08] text-[#EDE8E0]";
+const optionOff = "border-white/[0.12] bg-[#151517] text-[#b4b4b8] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
 
 function CheckboxGrid({
   options,
@@ -68,20 +74,20 @@ function CheckboxGrid({
 }) {
   return (
     <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
-      {options.map((opt) => (
-        <label
-          key={opt}
-          className="flex cursor-pointer items-center gap-3 rounded-[10px] border border-white/[0.1] bg-[#151517] px-4 py-3 text-[0.9rem] font-medium text-[#b4b4b8] transition-colors hover:border-white/[0.22]"
-        >
-          <input
-            type="checkbox"
-            checked={selected.includes(opt)}
-            onChange={() => onToggle(opt)}
-            className="h-4 w-4 accent-[#F5C542]"
-          />
-          {opt}
-        </label>
-      ))}
+      {options.map((opt) => {
+        const on = selected.includes(opt);
+        return (
+          <label key={opt} className={`${optionBase} ${on ? optionOn : optionOff}`}>
+            <input
+              type="checkbox"
+              checked={on}
+              onChange={() => onToggle(opt)}
+              className="h-4 w-4 accent-[#F5C542]"
+            />
+            {opt}
+          </label>
+        );
+      })}
     </div>
   );
 }
@@ -99,22 +105,30 @@ function RadioGrid({
 }) {
   return (
     <div className="mt-3 grid gap-2.5 sm:grid-cols-2">
-      {options.map((opt) => (
-        <label
-          key={opt}
-          className="flex cursor-pointer items-center gap-3 rounded-[10px] border border-white/[0.1] bg-[#151517] px-4 py-3 text-[0.9rem] font-medium text-[#b4b4b8] transition-colors hover:border-white/[0.22]"
-        >
-          <input
-            type="radio"
-            name={name}
-            checked={selected === opt}
-            onChange={() => onChange(opt)}
-            className="h-4 w-4 accent-[#F5C542]"
-          />
-          {opt}
-        </label>
-      ))}
+      {options.map((opt) => {
+        const on = selected === opt;
+        return (
+          <label key={opt} className={`${optionBase} ${on ? optionOn : optionOff}`}>
+            <input
+              type="radio"
+              name={name}
+              checked={on}
+              onChange={() => onChange(opt)}
+              className="h-4 w-4 accent-[#F5C542]"
+            />
+            {opt}
+          </label>
+        );
+      })}
     </div>
+  );
+}
+
+function StepNumber({ n }: { n: string }) {
+  return (
+    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.8rem] font-bold text-[#F5C542]">
+      {n}
+    </span>
   );
 }
 
@@ -187,12 +201,13 @@ function AuditForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-10">
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          1. Client information
-        </h2>
-        <div className="mt-6 grid gap-5 sm:grid-cols-2">
+    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
+      <Reveal className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="1" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Client information</h2>
+        </div>
+        <div className="mt-7 grid gap-5 sm:grid-cols-2">
           <div>
             <FieldLabel required>Name</FieldLabel>
             <input
@@ -232,14 +247,15 @@ function AuditForm() {
             />
           </div>
         </div>
-      </div>
+      </Reveal>
 
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          2. Amazon account details
-        </h2>
+      <Reveal delay={60} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="2" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Amazon account details</h2>
+        </div>
 
-        <div className="mt-6">
+        <div className="mt-7">
           <FieldLabel required>Amazon marketplace</FieldLabel>
           <CheckboxGrid
             options={MARKETPLACES}
@@ -290,28 +306,34 @@ function AuditForm() {
             onChange={setPpcSpend}
           />
         </div>
-      </div>
+      </Reveal>
 
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          3. What would you like us to audit?
-        </h2>
-        <CheckboxGrid
-          options={AUDIT_TYPES}
-          selected={auditTypes}
-          onToggle={(v) => setAuditTypes((s) => toggle(s, v))}
-        />
-      </div>
+      <Reveal delay={90} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="3" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like us to audit?</h2>
+        </div>
+        <div className="mt-7">
+          <CheckboxGrid
+            options={AUDIT_TYPES}
+            selected={auditTypes}
+            onToggle={(v) => setAuditTypes((s) => toggle(s, v))}
+          />
+        </div>
+      </Reveal>
 
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          4. What would you like us to improve?
-        </h2>
-        <CheckboxGrid
-          options={IMPROVEMENT_GOALS}
-          selected={improvements}
-          onToggle={(v) => setImprovements((s) => toggle(s, v))}
-        />
+      <Reveal delay={120} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="4" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like us to improve?</h2>
+        </div>
+        <div className="mt-7">
+          <CheckboxGrid
+            options={IMPROVEMENT_GOALS}
+            selected={improvements}
+            onToggle={(v) => setImprovements((s) => toggle(s, v))}
+          />
+        </div>
         <div className="mt-4">
           <FieldLabel>Other</FieldLabel>
           <input
@@ -321,43 +343,47 @@ function AuditForm() {
             placeholder="Anything not listed above"
           />
         </div>
-      </div>
+      </Reveal>
 
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          5. Anything specific you want us to look at?
-        </h2>
+      <Reveal delay={150} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="5" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Anything specific you want us to look at?</h2>
+        </div>
         <textarea
-          className={`${inputClasses} min-h-[140px] resize-y`}
+          className={`${inputClasses} mt-7 min-h-[140px] resize-y`}
           value={notes}
           onChange={(e) => setNotes(e.target.value)}
           placeholder="Optional: tell me about a specific ASIN, campaign, or problem you keep running into."
         />
-      </div>
+      </Reveal>
 
-      <div className="rounded-[20px] border border-white/[0.08] bg-[#131315] p-7 md:p-9">
-        <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          6. Preferred contact method
-        </h2>
-        <RadioGrid
-          name="contactMethod"
-          options={CONTACT_METHODS}
-          selected={contactMethod}
-          onChange={setContactMethod}
-        />
-      </div>
+      <Reveal delay={180} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div className="flex items-center gap-4">
+          <StepNumber n="6" />
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Preferred contact method</h2>
+        </div>
+        <div className="mt-7">
+          <RadioGrid
+            name="contactMethod"
+            options={CONTACT_METHODS}
+            selected={contactMethod}
+            onChange={setContactMethod}
+          />
+        </div>
+      </Reveal>
 
       {error && (
-        <p className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-3 text-[0.9rem] font-medium text-[#e08d74]">
+        <p className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]">
           {error}
         </p>
       )}
 
       <button
         type="submit"
-        className="self-start rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-medium uppercase tracking-[0.14em] text-[#0d0d0f] transition-opacity hover:opacity-85"
+        className="mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
       >
-        Request My Audit
+        Request My Audit →
       </button>
     </form>
   );
@@ -367,33 +393,42 @@ function AuditPage() {
   return (
     <PageShell>
       <section className="mx-auto max-w-[900px] px-6 md:px-10">
-        <p className="font-mono text-[0.68rem] uppercase tracking-[0.16em] text-[#F5C542]">
-          Free account audit
-        </p>
-        <h1 className="mt-5 max-w-[20ch] text-[clamp(2.4rem,7vw,4.4rem)] font-black uppercase leading-[0.92] tracking-[-0.03em] text-[#EDE8E0]">
-          Find out what's actually wrong with your account
-        </h1>
-        <p className="mt-6 max-w-[62ch] text-[1.02rem] font-medium leading-relaxed text-[#b4b4b8]">
-          Most accounts I look at don't have a traffic problem. They have a structure problem:
-          spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start
-          being a cost. Before I take on any account, I run a free audit so you know exactly
-          what's working, what's wasting money, and what to fix first, with no obligation to hire
-          me afterward.
-        </p>
+        <Reveal>
+          <p className="inline-flex items-center gap-2 rounded-full border border-[#F5C542]/30 bg-[#F5C542]/[0.06] px-4 py-1.5 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.16em] text-[#F5C542]">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[#F5C542]" />
+            Free account audit
+          </p>
+          <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,7vw,4.4rem)] font-black uppercase leading-[0.92] tracking-[-0.03em] text-[#EDE8E0]">
+            Find out what's actually wrong with your account
+          </h1>
+          <p className="mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]">
+            Most accounts I look at don't have a traffic problem. They have a structure problem:
+            spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start
+            being a cost. Before I take on any account, I run a free audit so you know exactly
+            what's working, what's wasting money, and what to fix first, with no obligation to hire
+            me afterward.
+          </p>
 
-        <div className="mt-10">
-          <a
-            href="#request-form"
-            className="inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-7 py-3.5 font-mono text-[0.74rem] font-medium uppercase tracking-[0.14em] text-[#0d0d0f] transition-opacity hover:opacity-85"
-          >
-            Request a audit
-          </a>
-        </div>
+          <div className="mt-10">
+            <a
+              href="#request-form"
+              className="inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
+            >
+              Request a audit
+              <span aria-hidden>→</span>
+            </a>
+          </div>
+        </Reveal>
 
-        <div className="mt-20 border-t border-white/[0.08] pt-14">
-          <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#7d7d82]">
-            How I audit an account
-          </h2>
+        <div className="mt-24 border-t border-white/[0.1] pt-14">
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-6 bg-[#F5C542]" />
+              <h2 className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]">
+                How I audit an account
+              </h2>
+            </div>
+          </Reveal>
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             {[
               {
@@ -411,31 +446,41 @@ function AuditPage() {
                 title: "Scale",
                 copy: "Once ACOS and TACOS are stable, reallocate budget toward what's proven to convert and expand into new targeting with a system, not guesswork.",
               },
-            ].map((s) => (
-              <div
+            ].map((s, i) => (
+              <Reveal
                 key={s.step}
-                className="rounded-[20px] border border-white/[0.08] bg-[#151517] p-6"
+                delay={i * 90}
+                className="group rounded-[20px] border border-white/[0.1] bg-[#151517] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C542]/30 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]"
               >
-                <span className="font-mono text-[0.7rem] text-[#F5C542]">{s.step}</span>
-                <h3 className="mt-3 text-[1.05rem] font-semibold text-[#EDE8E0]">{s.title}</h3>
-                <p className="mt-3 text-[0.9rem] font-medium leading-relaxed text-[#b4b4b8]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.78rem] font-bold text-[#F5C542] transition-colors group-hover:bg-[#F5C542]/[0.2]">
+                  {s.step}
+                </span>
+                <h3 className="mt-4 text-[1.15rem] font-bold text-[#EDE8E0]">{s.title}</h3>
+                <p className="mt-3 text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
                   {s.copy}
                 </p>
-              </div>
+              </Reveal>
             ))}
           </div>
-          <p className="mt-8 max-w-[62ch] text-[0.95rem] font-medium leading-relaxed text-[#b4b4b8]">
-            The audit itself covers PPC, listing copy, creative and overall account health,
-            depending on what you ask for below. You'll get a clear read on ACOS control, TACOS
-            stability and where the account's biggest opportunities actually are.
-          </p>
+          <Reveal>
+            <p className="mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]">
+              The audit itself covers PPC, listing copy, creative and overall account health,
+              depending on what you ask for below. You'll get a clear read on ACOS control, TACOS
+              stability and where the account's biggest opportunities actually are.
+            </p>
+          </Reveal>
         </div>
 
-        <div id="request-form" className="mt-20 scroll-mt-24 border-t border-white/[0.08] pt-14">
-          <h2 className="font-mono text-[0.7rem] uppercase tracking-[0.16em] text-[#7d7d82]">
-            Request your free audit
-          </h2>
-          <p className="mt-4 max-w-[62ch] text-[0.95rem] font-medium leading-relaxed text-[#b4b4b8]">
+        <div id="request-form" className="mt-24 scroll-mt-24 border-t border-white/[0.1] pt-14">
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-6 bg-[#F5C542]" />
+              <h2 className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]">
+                Request your free audit
+              </h2>
+            </div>
+          </Reveal>
+          <p className="mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]">
             Fill this in and it opens a pre-filled email to me. I read every one myself and
             usually reply within a day or two.
           </p>

@@ -30,6 +30,7 @@ function PromotionAndExposure() {
         label={clientLabel("caseD")}
         period="12 months, measured against the prior year"
         headline="42% revenue growth built on one high-intensity promotion"
+        note="Managed as part of my work at Sohomax"
       />
 
       <div className="px-6 md:px-10">

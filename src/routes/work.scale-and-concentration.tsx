@@ -30,6 +30,7 @@ function ScaleAndConcentration() {
         label={clientLabel("caseC")}
         period="12 months, measured against the prior year"
         headline="10.4× revenue growth on one hero product line"
+        note="Managed as part of my work at Sohomax"
       />
 
       <div className="px-6 md:px-10">
