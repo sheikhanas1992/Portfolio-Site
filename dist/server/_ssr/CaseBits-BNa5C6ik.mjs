@@ -2,7 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as PageShell } from "./SiteChrome-C-JBbSCb.mjs";
 import { i as usePrefersReducedMotion, n as Reveal, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-CUhQIcec.js
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-BNa5C6ik.js
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
 	caseC: {
@@ -155,21 +155,6 @@ function Screenshot({ src, alt, caption }) {
 		})]
 	});
 }
-/** A row of smaller screenshots side by side (product photography, etc.) */
-function ScreenshotRow({ items }) {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-		className: "grid grid-cols-2 gap-4 sm:grid-cols-3",
-		children: items.map((it) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-			className: "group overflow-hidden rounded-[14px] border border-white/[0.1] bg-[#151517] p-4 transition-colors duration-200 hover:border-[#F5C542]/30",
-			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-				src: it.src,
-				alt: it.alt,
-				loading: "lazy",
-				className: "mx-auto block max-h-[220px] w-auto transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-			})
-		}, it.src))
-	});
-}
 /** Horizontal bar that draws in via scaleX on entry. */
 function Bar({ label, pct, note }) {
 	const { ref, seen } = useInViewOnce();
@@ -203,4 +188,4 @@ function Bar({ label, pct, note }) {
 	});
 }
 //#endregion
-export { MetricStrip as a, Section as c, CasePage as i, clientLabel as l, CaseFooter as n, Screenshot as o, CaseHeader as r, ScreenshotRow as s, Bar as t };
+export { MetricStrip as a, clientLabel as c, CasePage as i, CaseFooter as n, Screenshot as o, CaseHeader as r, Section as s, Bar as t };

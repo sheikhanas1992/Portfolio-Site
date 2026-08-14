@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, o as Screenshot, r as CaseHeader, t as Bar } from "./CaseBits-CUhQIcec.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.ceiling-and-efficiency-BkdiD4fX.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-BNa5C6ik.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.ceiling-and-efficiency-rlruN86Y.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/ceiling-and-efficiency";
 function CeilingAndEfficiency() {

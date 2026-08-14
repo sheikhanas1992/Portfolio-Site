@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as Section, i as CasePage, l as clientLabel, n as CaseFooter, o as Screenshot, r as CaseHeader, s as ScreenshotRow, t as Bar } from "./CaseBits-CUhQIcec.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-C8BaI7GV.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-BNa5C6ik.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-BEpUyvlT.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/scale-and-concentration";
 function ScaleAndConcentration() {
@@ -106,10 +106,10 @@ function ScaleAndConcentration() {
 				})
 			})]
 		}),
-		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
+		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "From the account",
 			caption: "Seller Central and Advertising Console, as pulled for this read.",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "grid gap-6 md:grid-cols-2",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Screenshot, {
 					src: `${IMG}/snapshot.png`,
@@ -118,23 +118,7 @@ function ScaleAndConcentration() {
 					src: `${IMG}/ads-overview.png`,
 					alt: "Advertising performance overview"
 				})]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-6",
-				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ScreenshotRow, { items: [
-					{
-						src: `${IMG}/product-1.png`,
-						alt: "Hero product packaging"
-					},
-					{
-						src: `${IMG}/product-2.png`,
-						alt: "Second product packaging"
-					},
-					{
-						src: `${IMG}/product-3.png`,
-						alt: "Third product packaging"
-					}
-				] })
-			})]
+			})
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Section, {
 			title: "What I looked at",
