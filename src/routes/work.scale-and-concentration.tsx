@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CasePage, CaseHeader, Section, CaseFooter } from "@/components/case/CaseLayout";
-import { MetricStrip, Bar, Screenshot, ScreenshotRow } from "@/components/case/CaseBits";
+import { MetricStrip, Bar, Screenshot } from "@/components/case/CaseBits";
 import { clientLabel } from "@/config/disclosure";
 
 const IMG = "/case-images/scale-and-concentration";
@@ -80,15 +80,6 @@ function ScaleAndConcentration() {
         <div className="grid gap-6 md:grid-cols-2">
           <Screenshot src={`${IMG}/snapshot.png`} alt="Sales snapshot" />
           <Screenshot src={`${IMG}/ads-overview.png`} alt="Advertising performance overview" />
-        </div>
-        <div className="mt-6">
-          <ScreenshotRow
-            items={[
-              { src: `${IMG}/product-1.png`, alt: "Hero product packaging" },
-              { src: `${IMG}/product-2.png`, alt: "Second product packaging" },
-              { src: `${IMG}/product-3.png`, alt: "Third product packaging" },
-            ]}
-          />
         </div>
       </Section>
 

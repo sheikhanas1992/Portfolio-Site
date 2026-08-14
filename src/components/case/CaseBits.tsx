@@ -51,27 +51,6 @@ export function Screenshot({ src, alt, caption }: { src: string; alt: string; ca
   );
 }
 
-/** A row of smaller screenshots side by side (product photography, etc.) */
-export function ScreenshotRow({ items }: { items: { src: string; alt: string }[] }) {
-  return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3">
-      {items.map((it) => (
-        <div
-          key={it.src}
-          className="group overflow-hidden rounded-[14px] border border-white/[0.1] bg-[#151517] p-4 transition-colors duration-200 hover:border-[#F5C542]/30"
-        >
-          <img
-            src={it.src}
-            alt={it.alt}
-            loading="lazy"
-            className="mx-auto block max-h-[220px] w-auto transition-transform duration-500 ease-out group-hover:scale-[1.04]"
-          />
-        </div>
-      ))}
-    </div>
-  );
-}
-
 /** Horizontal bar that draws in via scaleX on entry. */
 export function Bar({ label, pct, note }: { label: string; pct: number; note?: string }) {
   const { ref, seen } = useInViewOnce<HTMLDivElement>();

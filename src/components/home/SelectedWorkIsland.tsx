@@ -1,26 +1,46 @@
 import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 
+const FIGURE_RE = /(\$[\d,.]+[KMB]?|\d+(?:\.\d+)?%|\d+(?:\.\d+)?×)/g;
+
+/** Splits a headline on embedded dollar/percent/multiplier figures and
+ * renders those substrings in the accent color so the numbers read first. */
+function Headline({ text }: { text: string }) {
+  const parts = text.split(FIGURE_RE);
+  return (
+    <>
+      {parts.map((part, i) =>
+        // split() with a capturing group alternates unmatched/matched text,
+        // so odd indices are always the captured figures.
+        i % 2 === 1 ? (
+          <span key={i} className="font-black text-[#F5C542]">
+            {part}
+          </span>
+        ) : (
+          <span key={i}>{part}</span>
+        ),
+      )}
+    </>
+  );
+}
+
 const CARDS = [
   {
     to: "/work/scale-and-concentration",
-    label: "a Korean skincare brand scaling fast off one hero anti-aging line",
     period: "12 months, measured against the prior year",
-    metric: "10.4× revenue",
+    headline: "How I turned $480K in Amazon sales into $5M, at a 4.33× return on ad spend.",
     context: "Growth was real, but three SKUs out of a much larger catalogue carried 72% of it.",
   },
   {
     to: "/work/promotion-and-exposure",
-    label: "a Korean regenerative-skincare brand built around a single flagship ampoule",
     period: "12 months, measured against the prior year",
-    metric: "+42.4% revenue",
+    headline: "How I grew an Amazon brand from $2M to $2.8M, turning every $1 in ads into $4.50.",
     context: "40% of the period's sales landed inside a single four-day promotional window.",
   },
   {
     to: "/work/ceiling-and-efficiency",
-    label: "a Korean skincare brand growing against a fixed daily ad budget",
     period: "12 months, measured against the prior year",
-    metric: "3.79× return on ad spend",
+    headline: "How I hit $157K in Amazon sales at 3.79× ROAS, with 80% of campaigns budget-capped.",
     context: "82% of campaigns, including the largest, were regularly capped by daily budget.",
   },
 ];
@@ -57,11 +77,10 @@ function Cards() {
               <div className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542]">
                 {c.period}
               </div>
-              <h3 className="mt-4 font-mono text-[clamp(1.6rem,3.4vw,2.2rem)] font-medium leading-none tabular-nums text-[#EDE8E0]">
-                {c.metric}
+              <h3 className="mt-4 text-[clamp(1.1rem,4.2vw,1.35rem)] font-bold normal-case leading-[1.35] text-[#EDE8E0]">
+                <Headline text={c.headline} />
               </h3>
-              <p className="mt-4 text-[0.95rem] font-semibold text-[#EDE8E0]">{c.label}</p>
-              <p className="mt-3 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
+              <p className="mt-4 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
                 {c.context}
               </p>
               <span className="mt-6 inline-flex items-center gap-1.5 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542] transition-all duration-200 group-hover:gap-2.5">
