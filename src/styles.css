@@ -227,16 +227,6 @@ html.custom-cursor-active * {
     transform 320ms cubic-bezier(0.16, 1, 0.3, 1) 80ms;
 }
 
-/* Touch has no hover state: show the tooltip permanently. */
-@media (max-width: 767px) {
-  .anas-avatar-tip {
-    opacity: 1;
-    transform: none;
-    white-space: normal;
-    max-width: 12rem;
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .anas-avatar,
   .anas-avatar img,

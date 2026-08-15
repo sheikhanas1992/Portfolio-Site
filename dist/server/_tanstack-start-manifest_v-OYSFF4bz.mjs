@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-BJ7BRKdj.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-OYSFF4bz.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/portfolio-site/src/routes/__root.tsx",
@@ -10,46 +10,46 @@ var tsrStartManifest = () => ({ routes: {
 			"/work/promotion-and-exposure",
 			"/work/scale-and-concentration"
 		],
-		preloads: ["/assets/index-B62GLg8u.js"],
+		preloads: ["/assets/index-Bb6vUs9Y.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-B62GLg8u.js"
+			src: "/assets/index-Bb6vUs9Y.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/portfolio-site/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-uY_eRH1X.js"]
+		preloads: ["/assets/routes-BuEND0Vw.js"]
 	},
 	"/audit": {
 		filePath: "/workspace/portfolio-site/src/routes/audit.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/audit-DqUA9f9D.js",
-			"/assets/SiteChrome-D98nEXHu.js",
-			"/assets/CountUp-DmiF6Asc.js"
+			"/assets/audit-H-25_Vwo.js",
+			"/assets/SiteChrome-BuRtDac9.js",
+			"/assets/CountUp-aWHUavws.js"
 		]
 	},
 	"/book": {
 		filePath: "/workspace/portfolio-site/src/routes/book.tsx",
 		children: void 0,
-		preloads: ["/assets/book-BsJ16FOB.js", "/assets/SiteChrome-D98nEXHu.js"]
+		preloads: ["/assets/book-CBlCecr7.js", "/assets/SiteChrome-BuRtDac9.js"]
 	},
 	"/work/ceiling-and-efficiency": {
 		filePath: "/workspace/portfolio-site/src/routes/work.ceiling-and-efficiency.tsx",
 		children: void 0,
-		preloads: ["/assets/work.ceiling-and-efficiency-Bp4yQFet.js", "/assets/CaseBits-CCAPcvAp.js"]
+		preloads: ["/assets/work.ceiling-and-efficiency-CxmPz8zn.js", "/assets/CaseBits-DRi5cl1m.js"]
 	},
 	"/work/promotion-and-exposure": {
 		filePath: "/workspace/portfolio-site/src/routes/work.promotion-and-exposure.tsx",
 		children: void 0,
-		preloads: ["/assets/work.promotion-and-exposure-NUL-lHKe.js", "/assets/CaseBits-CCAPcvAp.js"]
+		preloads: ["/assets/work.promotion-and-exposure-cc7T7yfb.js", "/assets/CaseBits-DRi5cl1m.js"]
 	},
 	"/work/scale-and-concentration": {
 		filePath: "/workspace/portfolio-site/src/routes/work.scale-and-concentration.tsx",
 		children: void 0,
-		preloads: ["/assets/work.scale-and-concentration-nJGkSSZE.js", "/assets/CaseBits-CCAPcvAp.js"]
+		preloads: ["/assets/work.scale-and-concentration-DHLd1sy5.js", "/assets/CaseBits-DRi5cl1m.js"]
 	}
 } });
 //#endregion
