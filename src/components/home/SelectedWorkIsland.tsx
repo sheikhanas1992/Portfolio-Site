@@ -63,7 +63,7 @@ function Cards() {
             <a
               key={c.to}
               href={c.to}
-              className="group relative block overflow-hidden rounded-[20px] border border-white/[0.1] bg-[#151517] p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-[#F5C542]/50 hover:bg-[#1a1a1d] hover:shadow-[0_20px_40px_-16px_rgba(0,0,0,0.7)]"
+              className="group relative block overflow-hidden rounded-[20px] border border-white/[0.16] bg-gradient-to-b from-[#1c1c1f] to-[#141416] p-7 shadow-[0_16px_36px_-18px_rgba(0,0,0,0.75)] transition-all duration-300 hover:-translate-y-2 hover:border-[#F5C542]/60 hover:from-[#212124] hover:to-[#18181a] hover:shadow-[0_32px_64px_-18px_rgba(0,0,0,0.85),0_0_56px_-16px_rgba(245,197,66,0.35)]"
               style={{
                 opacity: shown ? 1 : 0,
                 transform: shown ? "none" : "translateY(18px)",
@@ -72,7 +72,11 @@ function Cards() {
             >
               <div
                 aria-hidden
-                className="pointer-events-none absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-[#F5C542] transition-transform duration-300 group-hover:scale-x-100"
+                className="pointer-events-none absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-[#F5C542] via-[#F5C542]/60 to-transparent opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+              />
+              <div
+                aria-hidden
+                className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#F5C542]/0 blur-3xl transition-colors duration-500 group-hover:bg-[#F5C542]/10"
               />
               <div className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542]">
                 {c.period}
@@ -83,9 +87,11 @@ function Cards() {
               <p className="mt-4 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
                 {c.context}
               </p>
-              <span className="mt-6 inline-flex items-center gap-1.5 font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542] transition-all duration-200 group-hover:gap-2.5">
+              <span className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#F5C542]/45 bg-[#F5C542]/[0.08] px-5 py-2.5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[#F5C542] transition-all duration-300 group-hover:gap-3 group-hover:border-[#F5C542] group-hover:bg-[#F5C542] group-hover:text-[#0d0d0f] group-hover:shadow-[0_12px_28px_-8px_rgba(245,197,66,0.55)]">
                 Read the case study
-                <span aria-hidden>→</span>
+                <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">
+                  →
+                </span>
               </span>
             </a>
           ))}
