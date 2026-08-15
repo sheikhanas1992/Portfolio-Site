@@ -63,7 +63,7 @@ function BookPage() {
         <h1 className="text-[clamp(2.4rem,8vw,5rem)] font-black uppercase leading-[0.88] tracking-[-0.03em] text-[#EDE8E0]">
           Book a call
         </h1>
-        <p className="mt-6 max-w-[52ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]">
+        <p className="mt-6 max-w-[52ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
           Twenty minutes. Tell me what you're working on and I'll tell you what I'd look at
           first.
         </p>
@@ -83,7 +83,7 @@ function BookPage() {
                 aria-hidden
                 className="h-8 w-8 animate-spin rounded-full border-2 border-white/15 border-t-[#F5C542]"
               />
-              <p className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#b4b4b8]">
+              <p className="font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#c7c7cc]">
                 Loading calendar…
               </p>
             </div>
@@ -91,7 +91,7 @@ function BookPage() {
 
           {status === "failed" && (
             <div className="flex min-h-[700px] flex-col items-center justify-center gap-5 px-6 text-center">
-              <p className="max-w-[40ch] text-[0.98rem] font-medium text-[#b4b4b8]">
+              <p className="max-w-[40ch] text-[0.98rem] font-medium text-[#c7c7cc]">
                 The calendar couldn't load here. You can still book directly on Calendly.
               </p>
               <a

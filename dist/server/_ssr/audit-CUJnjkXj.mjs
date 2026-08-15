@@ -1,8 +1,8 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { r as PageShell, t as CONTACT } from "./SiteChrome-C-JBbSCb.mjs";
+import { r as PageShell, t as CONTACT } from "./SiteChrome-FFUh6CQl.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-BLE9r0d6.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-CUJnjkXj.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -61,7 +61,7 @@ function FieldLabel({ children, required }) {
 var inputClasses = "mt-2.5 w-full rounded-[12px] border border-white/[0.16] bg-[#151517] px-4 py-3.5 text-[0.95rem] font-medium text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60 focus:bg-[#1a1a1d]";
 var optionBase = "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
 var optionOn = "border-[#F5C542]/50 bg-[#F5C542]/[0.08] text-[#EDE8E0]";
-var optionOff = "border-white/[0.12] bg-[#151517] text-[#b4b4b8] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
+var optionOff = "border-white/[0.12] bg-[#151517] text-[#c7c7cc] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
 function CheckboxGrid({ options, selected, onToggle }) {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 		className: "mt-3 grid gap-2.5 sm:grid-cols-2",
@@ -397,7 +397,7 @@ function AuditPage() {
 					children: "Find out what's actually wrong with your account"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]",
+					className: "mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]",
 					children: "Most accounts I look at don't have a traffic problem. They have a structure problem: spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start being a cost. Before I take on any account, I run a free audit so you know exactly what's working, what's wasting money, and what to fix first, with no obligation to hire me afterward."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -456,14 +456,14 @@ function AuditPage() {
 									children: s.title
 								}),
 								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-3 text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]",
+									className: "mt-3 text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]",
 									children: s.copy
 								})
 							]
 						}, s.step))
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]",
+						className: "mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
 						children: "The audit itself covers PPC, listing copy, creative and overall account health, depending on what you ask for below. You'll get a clear read on ACOS control, TACOS stability and where the account's biggest opportunities actually are."
 					}) })
 				]
@@ -483,7 +483,7 @@ function AuditPage() {
 						})]
 					}) }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]",
+						className: "mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
 						children: "Fill this in and it opens a pre-filled email to me. I read every one myself and usually reply within a day or two."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuditForm, {})

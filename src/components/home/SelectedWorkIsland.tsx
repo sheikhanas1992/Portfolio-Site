@@ -56,8 +56,11 @@ function Cards() {
     <section id="selected-work" className="px-6 py-24 md:px-10 md:py-32">
       <div className="mx-auto max-w-[1100px]">
         <h2 className="text-[clamp(2.4rem,9vw,6rem)] font-black uppercase leading-[0.85] tracking-[-0.03em] text-[#EDE8E0]">
-          Selected work
+          Case studies
         </h2>
+        <p className="mt-6 max-w-[58ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
+          Three of the twenty-plus accounts I manage. The rest are under NDA or still running.
+        </p>
         <div className="mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
           {CARDS.map((c, i) => (
             <a
@@ -84,7 +87,7 @@ function Cards() {
               <h3 className="mt-4 text-[clamp(1.1rem,4.2vw,1.35rem)] font-bold normal-case leading-[1.35] text-[#EDE8E0]">
                 <Headline text={c.headline} />
               </h3>
-              <p className="mt-4 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
+              <p className="mt-4 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]">
                 {c.context}
               </p>
               <span className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#F5C542]/45 bg-[#F5C542]/[0.08] px-5 py-2.5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[#F5C542] transition-all duration-300 max-md:border-[#F5C542]/70 max-md:bg-[#F5C542]/[0.14] group-hover:gap-3 group-hover:border-[#F5C542] group-hover:bg-[#F5C542] group-hover:text-[#0d0d0f] group-hover:shadow-[0_12px_28px_-8px_rgba(245,197,66,0.55)]">
@@ -103,9 +106,8 @@ function Cards() {
 
 /**
  * The homepage is a prebuilt bundle that mounts itself into #root. This
- * component inserts a host node directly after the split-intro section and
- * portals the "Selected work" cards into it, without touching the bundle's
- * own DOM.
+ * component inserts a host node directly after the hero section and portals
+ * the "Case studies" cards into it, without touching the bundle's own DOM.
  */
 export function SelectedWorkIsland() {
   const [host, setHost] = useState<HTMLElement | null>(null);
@@ -118,9 +120,9 @@ export function SelectedWorkIsland() {
 
     const attach = () => {
       if (cancelled) return;
-      const intro = document.querySelector("#root #intro");
-      if (intro?.parentElement) {
-        intro.parentElement.insertBefore(node, intro.nextSibling);
+      const hero = document.querySelector("#root section");
+      if (hero?.parentElement) {
+        hero.parentElement.insertBefore(node, hero.nextSibling);
         setHost(node);
         return;
       }

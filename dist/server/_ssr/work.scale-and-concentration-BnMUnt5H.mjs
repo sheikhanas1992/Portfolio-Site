@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-3LbQMpa3.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-CILFcbDx.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-vQZorFOm.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-BnMUnt5H.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/scale-and-concentration";
 function ScaleAndConcentration() {
@@ -89,11 +89,11 @@ function ScaleAndConcentration() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Traffic roughly tripled while revenue grew more than tenfold."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Most of the growth came from converting visitors better, not from buying more of them. That gap is the difference between an account that scales and one that just spends."
 				})
 			]
@@ -120,11 +120,11 @@ function ScaleAndConcentration() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "The hero line ran at 15% ACOS, well inside target, through a period of fast-rising spend."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Reading it separately from the rest of the catalogue is what made that visible. Averaged into one account-wide number, the account's strongest performer would have looked ordinary."
 				})
 			]
@@ -143,11 +143,11 @@ function ScaleAndConcentration() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Three SKUs carried nearly three-quarters of revenue, which is what a hero product looks like when it lands."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "It also gives the account something most catalogues never get: a proven winner to protect and build outward from, instead of a flat spread of SKUs with no clear signal about where to invest."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -226,10 +226,10 @@ function ScaleAndConcentration() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
 			title: "What comes next",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "With the hero line established and featured offer share at 88.5%, the lever moves from proving demand to widening the base."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "The next twelve months are about turning that halo into second and third products that stand alone, using the flagship's rank and review velocity as the launch platform."
 			})]
 		}),

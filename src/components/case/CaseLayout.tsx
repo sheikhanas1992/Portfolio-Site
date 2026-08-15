@@ -24,11 +24,11 @@ export function CaseHeader({
         <h1 className="mt-5 max-w-[22ch] text-[clamp(2rem,5.4vw,3.6rem)] font-black leading-[1.05] tracking-[-0.02em] text-[#EDE8E0]">
           {headline}
         </h1>
-        <p className="mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#b4b4b8]">
+        <p className="mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#c7c7cc]">
           {label}
         </p>
         {note && (
-          <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-2 font-mono text-[0.66rem] font-medium uppercase tracking-[0.12em] text-[#9a9a9e]">
+          <p className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-2 font-mono text-[0.66rem] font-medium uppercase tracking-[0.12em] text-[#c7c7cc]">
             <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-[#F5C542]" />
             {note}
           </p>
@@ -74,7 +74,7 @@ export function CaseFooter() {
         <p className="text-[1.3rem] font-bold leading-snug text-[#EDE8E0] md:text-[1.5rem]">
           Want the version of this that applies to your account?
         </p>
-        <p className="mx-auto mt-3 max-w-[46ch] text-[0.95rem] font-medium text-[#b4b4b8]">
+        <p className="mx-auto mt-3 max-w-[46ch] text-[0.95rem] font-medium text-[#c7c7cc]">
           Twenty minutes, no pitch deck. Send me the account and I'll tell you what I'd look at first.
         </p>
         <Link
@@ -85,7 +85,7 @@ export function CaseFooter() {
           <span aria-hidden>→</span>
         </Link>
       </div>
-      <p className="mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#9a9a9e]">
+      <p className="mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#c7c7cc]">
         {DISCLOSURE_FOOTER}
       </p>
     </Reveal>

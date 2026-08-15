@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-3LbQMpa3.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.ceiling-and-efficiency-DupiZAmx.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-vQZorFOm.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.ceiling-and-efficiency-CrCtG9Ys.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/ceiling-and-efficiency";
 function CeilingAndEfficiency() {
@@ -79,11 +79,11 @@ function CeilingAndEfficiency() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "The account grew 10.6% while 82% of campaigns, including the largest, ran out of budget before the end of the day."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Every one of those caps is demonstrated headroom: proven demand, already converting at 3.79×, with no budget left to serve it. This is the rarest position an account can be in, because the growth lever is already identified and validated."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -116,11 +116,11 @@ function CeilingAndEfficiency() {
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "One product drove more than half of total brand sales."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "The conquest campaign targeting a competing brand ran at 15.5% ACOS, well below the account average, proving the brand can take share directly from a rival profitably. It was capped too."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -146,11 +146,11 @@ function CeilingAndEfficiency() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Featured offer share moved from 97.5% to 90.6% across the two months measured."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Catching it mattered, because a back-end pricing or stock issue quietly limits ad performance in a way no bid change can fix. Flagging it separately put it in front of the right team while it was still a small number."
 				})
 			]
@@ -222,10 +222,10 @@ function CeilingAndEfficiency() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
 			title: "What comes next",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "This account has the clearest scaling path of the three: demand is proven, the return is documented at 3.79×, and the only variable left is spend."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "Lifting the caps on the ranked campaigns is the next move, and it is the one that turns a 10.6% year into something considerably larger."
 			})]
 		}),

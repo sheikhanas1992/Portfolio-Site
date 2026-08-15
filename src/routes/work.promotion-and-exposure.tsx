@@ -55,11 +55,11 @@ function PromotionAndExposure() {
           <Bar label="Hero campaign ACOS, best" pct={10.4} />
           <Bar label="Hero campaign ACOS, second" pct={11.0} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Two campaigns held ACOS around 10%, roughly a 10× return on the spend driving the
           majority of direct sales.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           These were the account's engine. Everything else was measured against what they proved
           was possible.
         </p>
@@ -70,11 +70,11 @@ function PromotionAndExposure() {
           <Bar label="Video campaign ACOS" pct={37.8} />
           <Bar label="Hero campaign ACOS" pct={10.4} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The celebrity-fronted video campaign ran at 37.8%, and that is the correct number for
           it.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Awareness and direct response do different jobs. Reporting them separately meant the
           video was funded on reach rather than flagged as a leak by a blended figure.
         </p>
@@ -88,10 +88,10 @@ function PromotionAndExposure() {
           <Bar label="Share of period sales from the four-day promotion" pct={40.0} />
           <Bar label="Top three SKUs' share of total revenue" pct={49.0} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Forty percent of the year's sales landed inside a single four-day window.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           That is proof of a repeatable promotional engine, and of an account that knows how to
           convert at volume when it opens the taps. Just under half of revenue sat in the top
           three SKUs, giving a clear, funded core to scale from.
@@ -143,10 +143,10 @@ function PromotionAndExposure() {
       </Section>
 
       <Section title="What comes next">
-        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The promotional engine is proven.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The opportunity is spreading that intensity across more of the calendar, using the
           four-day playbook as the template for a second and third event rather than a single
           annual peak.

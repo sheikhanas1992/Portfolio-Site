@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-3LbQMpa3.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.promotion-and-exposure-DV9Z5ejS.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-vQZorFOm.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.promotion-and-exposure-BvVq97g1.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/promotion-and-exposure";
 function PromotionAndExposure() {
@@ -80,11 +80,11 @@ function PromotionAndExposure() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Two campaigns held ACOS around 10%, roughly a 10× return on the spend driving the majority of direct sales."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "These were the account's engine. Everything else was measured against what they proved was possible."
 				})
 			]
@@ -103,11 +103,11 @@ function PromotionAndExposure() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "The celebrity-fronted video campaign ran at 37.8%, and that is the correct number for it."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Awareness and direct response do different jobs. Reporting them separately meant the video was funded on reach rather than flagged as a leak by a blended figure."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -133,11 +133,11 @@ function PromotionAndExposure() {
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "Forty percent of the year's sales landed inside a single four-day window."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 					children: "That is proof of a repeatable promotional engine, and of an account that knows how to convert at volume when it opens the taps. Just under half of revenue sat in the top three SKUs, giving a clear, funded core to scale from."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -216,10 +216,10 @@ function PromotionAndExposure() {
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
 			title: "What comes next",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "The promotional engine is proven."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]",
+				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 				children: "The opportunity is spreading that intensity across more of the calendar, using the four-day playbook as the template for a second and third event rather than a single annual peak."
 			})]
 		}),

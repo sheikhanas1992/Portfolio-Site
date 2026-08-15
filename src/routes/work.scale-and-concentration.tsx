@@ -56,10 +56,10 @@ function ScaleAndConcentration() {
           <Bar label="Product page views, year over year" pct={35} note="+266%" />
           <Bar label="Revenue, year over year" pct={100} note="10.4×" />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Traffic roughly tripled while revenue grew more than tenfold.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Most of the growth came from converting visitors better, not from buying more of them.
           That gap is the difference between an account that scales and one that just spends.
         </p>
@@ -71,10 +71,10 @@ function ScaleAndConcentration() {
           <Bar label="Hero product line ACOS" pct={15.0} />
           <Bar label="Return on ad spend" pct={100} note="4.33×" />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The hero line ran at 15% ACOS, well inside target, through a period of fast-rising spend.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Reading it separately from the rest of the catalogue is what made that visible. Averaged
           into one account-wide number, the account's strongest performer would have looked
           ordinary.
@@ -86,11 +86,11 @@ function ScaleAndConcentration() {
           <Bar label="Top three SKUs' share of total revenue" pct={72} />
           <Bar label="Everything else, combined" pct={28} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Three SKUs carried nearly three-quarters of revenue, which is what a hero product looks
           like when it lands.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           It also gives the account something most catalogues never get: a proven winner to
           protect and build outward from, instead of a flat spread of SKUs with no clear signal
           about where to invest.
@@ -141,11 +141,11 @@ function ScaleAndConcentration() {
       </Section>
 
       <Section title="What comes next">
-        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           With the hero line established and featured offer share at 88.5%, the lever moves from
           proving demand to widening the base.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The next twelve months are about turning that halo into second and third products that
           stand alone, using the flagship's rank and review velocity as the launch platform.
         </p>

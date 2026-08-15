@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
-import { n as ContactRow, r as PageShell, t as CONTACT } from "./SiteChrome-C-JBbSCb.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/book-CrxthBBV.js
+import { n as ContactRow, r as PageShell, t as CONTACT } from "./SiteChrome-FFUh6CQl.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/book-CjxWDLpQ.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function BookPage() {
@@ -40,7 +40,7 @@ function BookPage() {
 				children: "Book a call"
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-6 max-w-[52ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]",
+				className: "mt-6 max-w-[52ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]",
 				children: "Twenty minutes. Tell me what you're working on and I'll tell you what I'd look at first."
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -60,14 +60,14 @@ function BookPage() {
 							"aria-hidden": true,
 							className: "h-8 w-8 animate-spin rounded-full border-2 border-white/15 border-t-[#F5C542]"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#b4b4b8]",
+							className: "font-mono text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#c7c7cc]",
 							children: "Loading calendar…"
 						})]
 					}),
 					status === "failed" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "flex min-h-[700px] flex-col items-center justify-center gap-5 px-6 text-center",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "max-w-[40ch] text-[0.98rem] font-medium text-[#b4b4b8]",
+							className: "max-w-[40ch] text-[0.98rem] font-medium text-[#c7c7cc]",
 							children: "The calendar couldn't load here. You can still book directly on Calendly."
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: CONTACT.calendly,

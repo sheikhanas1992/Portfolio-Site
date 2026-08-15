@@ -61,7 +61,7 @@ const inputClasses =
 const optionBase =
   "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
 const optionOn = "border-[#F5C542]/50 bg-[#F5C542]/[0.08] text-[#EDE8E0]";
-const optionOff = "border-white/[0.12] bg-[#151517] text-[#b4b4b8] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
+const optionOff = "border-white/[0.12] bg-[#151517] text-[#c7c7cc] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
 
 function CheckboxGrid({
   options,
@@ -401,7 +401,7 @@ function AuditPage() {
           <h1 className="mt-6 max-w-[20ch] text-[clamp(2.4rem,7vw,4.4rem)] font-black uppercase leading-[0.92] tracking-[-0.03em] text-[#EDE8E0]">
             Find out what's actually wrong with your account
           </h1>
-          <p className="mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]">
+          <p className="mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
             Most accounts I look at don't have a traffic problem. They have a structure problem:
             spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start
             being a cost. Before I take on any account, I run a free audit so you know exactly
@@ -456,14 +456,14 @@ function AuditPage() {
                   {s.step}
                 </span>
                 <h3 className="mt-4 text-[1.15rem] font-bold text-[#EDE8E0]">{s.title}</h3>
-                <p className="mt-3 text-[0.92rem] font-medium leading-relaxed text-[#b4b4b8]">
+                <p className="mt-3 text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]">
                   {s.copy}
                 </p>
               </Reveal>
             ))}
           </div>
           <Reveal>
-            <p className="mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]">
+            <p className="mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
               The audit itself covers PPC, listing copy, creative and overall account health,
               depending on what you ask for below. You'll get a clear read on ACOS control, TACOS
               stability and where the account's biggest opportunities actually are.
@@ -480,7 +480,7 @@ function AuditPage() {
               </h2>
             </div>
           </Reveal>
-          <p className="mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#b4b4b8]">
+          <p className="mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
             Fill this in and it opens a pre-filled email to me. I read every one myself and
             usually reply within a day or two.
           </p>

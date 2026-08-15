@@ -1,8 +1,8 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-import { r as PageShell } from "./SiteChrome-C-JBbSCb.mjs";
+import { r as PageShell } from "./SiteChrome-FFUh6CQl.mjs";
 import { i as usePrefersReducedMotion, n as Reveal, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-3LbQMpa3.js
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-vQZorFOm.js
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
 	caseC: {
@@ -41,11 +41,11 @@ function CaseHeader({ label, period, headline, note }) {
 				children: headline
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#b4b4b8]",
+				className: "mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#c7c7cc]",
 				children: label
 			}),
 			note && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
-				className: "mt-5 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-2 font-mono text-[0.66rem] font-medium uppercase tracking-[0.12em] text-[#9a9a9e]",
+				className: "mt-5 inline-flex items-center gap-2 rounded-full border border-white/[0.12] bg-white/[0.04] px-4 py-2 font-mono text-[0.66rem] font-medium uppercase tracking-[0.12em] text-[#c7c7cc]",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 					"aria-hidden": true,
 					className: "h-1.5 w-1.5 rounded-full bg-[#F5C542]"
@@ -95,7 +95,7 @@ function CaseFooter() {
 					children: "Want the version of this that applies to your account?"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-					className: "mx-auto mt-3 max-w-[46ch] text-[0.95rem] font-medium text-[#b4b4b8]",
+					className: "mx-auto mt-3 max-w-[46ch] text-[0.95rem] font-medium text-[#c7c7cc]",
 					children: "Twenty minutes, no pitch deck. Send me the account and I'll tell you what I'd look at first."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
@@ -108,7 +108,7 @@ function CaseFooter() {
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-			className: "mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#9a9a9e]",
+			className: "mt-8 max-w-[70ch] text-[0.82rem] font-medium leading-relaxed text-[#c7c7cc]",
 			children: DISCLOSURE_FOOTER
 		})]
 	});
@@ -131,7 +131,7 @@ function MetricStrip({ items }) {
 					suffix: m.suffix ?? ""
 				}) : m.value
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-				className: "mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#9a9a9e]",
+				className: "mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#c7c7cc]",
 				children: m.label
 			})]
 		}, m.label))
@@ -150,7 +150,7 @@ function Screenshot({ src, alt, caption }) {
 				className: "block w-full transition-transform duration-500 ease-out group-hover:scale-[1.02]"
 			})
 		}), caption && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
-			className: "border-t border-white/[0.08] px-6 py-4 text-[0.85rem] font-medium leading-relaxed text-[#9a9a9e]",
+			className: "border-t border-white/[0.08] px-6 py-4 text-[0.85rem] font-medium leading-relaxed text-[#c7c7cc]",
 			children: caption
 		})]
 	});

@@ -55,11 +55,11 @@ function CeilingAndEfficiency() {
           <Bar label="Campaigns flagged as budget-limited" pct={82} />
           <Bar label="Return on the spend that did go out" pct={100} note="3.79×" />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The account grew 10.6% while 82% of campaigns, including the largest, ran out of budget
           before the end of the day.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Every one of those caps is demonstrated headroom: proven demand, already converting at
           3.79×, with no budget left to serve it. This is the rarest position an account can be
           in, because the growth lever is already identified and validated.
@@ -75,10 +75,10 @@ function CeilingAndEfficiency() {
           <Bar label="Top three SKUs' share of total revenue" pct={79} />
           <Bar label="Competitor-conquest campaign ACOS" pct={15.5} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           One product drove more than half of total brand sales.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           The conquest campaign targeting a competing brand ran at 15.5% ACOS, well below the
           account average, proving the brand can take share directly from a rival profitably. It
           was capped too.
@@ -93,10 +93,10 @@ function CeilingAndEfficiency() {
           <Bar label="Buy Box share, earlier month" pct={97.5} />
           <Bar label="Buy Box share, later month" pct={90.6} />
         </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Featured offer share moved from 97.5% to 90.6% across the two months measured.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Catching it mattered, because a back-end pricing or stock issue quietly limits ad
           performance in a way no bid change can fix. Flagging it separately put it in front of
           the right team while it was still a small number.
@@ -143,11 +143,11 @@ function CeilingAndEfficiency() {
       </Section>
 
       <Section title="What comes next">
-        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           This account has the clearest scaling path of the three: demand is proven, the return is
           documented at 3.79×, and the only variable left is spend.
         </p>
-        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
           Lifting the caps on the ranked campaigns is the next move, and it is the one that turns
           a 10.6% year into something considerably larger.
         </p>

@@ -21,7 +21,7 @@ export function MetricStrip({
               m.value
             )}
           </div>
-          <div className="mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#9a9a9e]">
+          <div className="mt-3 text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-[#c7c7cc]">
             {m.label}
           </div>
         </Reveal>
@@ -43,7 +43,7 @@ export function Screenshot({ src, alt, caption }: { src: string; alt: string; ca
         />
       </div>
       {caption && (
-        <figcaption className="border-t border-white/[0.08] px-6 py-4 text-[0.85rem] font-medium leading-relaxed text-[#9a9a9e]">
+        <figcaption className="border-t border-white/[0.08] px-6 py-4 text-[0.85rem] font-medium leading-relaxed text-[#c7c7cc]">
           {caption}
         </figcaption>
       )}
