@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-DUTDloCh.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-BfWVEYX2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -85,7 +85,7 @@ function Cards() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[58ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]",
-					children: "Three of the twenty-plus accounts I manage. The rest are under NDA or still running."
+					children: "A sample of the accounts I've run, written up with the parts most case studies skip."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5",
@@ -170,7 +170,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-C-BEsI29.js";
+		script.src = "/assets/index-C4R-8SkR.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [

@@ -59,7 +59,7 @@ function Cards() {
           Case studies
         </h2>
         <p className="mt-6 max-w-[58ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
-          Three of the twenty-plus accounts I manage. The rest are under NDA or still running.
+          A sample of the accounts I've run, written up with the parts most case studies skip.
         </p>
         <div className="mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5">
           {CARDS.map((c, i) => (
