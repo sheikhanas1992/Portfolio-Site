@@ -2,7 +2,7 @@ import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { r as PageShell, t as CONTACT } from "./SiteChrome-FFUh6CQl.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-CUJnjkXj.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-CM45yuq5.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -398,20 +398,73 @@ function AuditPage() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]",
-					children: "Most accounts I look at don't have a traffic problem. They have a structure problem: spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start being a cost. Before I take on any account, I run a free audit so you know exactly what's working, what's wasting money, and what to fix first, with no obligation to hire me afterward."
+					children: "Most accounts I look at don't have a traffic problem. They have a structure problem: spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start being a cost."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]",
+					children: "Before I take on any account, I run a free audit so you know exactly what's working, what's wasting money, and what to fix first. No obligation to hire me afterward."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "mt-10",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 						href: "#request-form",
 						className: "inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
-						children: ["Request a audit", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						children: ["Request an audit", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 							"aria-hidden": true,
 							children: "→"
 						})]
 					})
 				})
 			] }),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-24 border-t border-white/[0.1] pt-14",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-3",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": true,
+						className: "h-px w-6 bg-[#F5C542]"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]",
+						children: "What I actually look at"
+					})]
+				}) }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-8 grid gap-6 sm:grid-cols-3",
+					children: [
+						{
+							step: "01",
+							title: "The structure",
+							copy: "Campaign architecture, match types, duplication, and where the same keyword is competing against itself. Most wasted spend in an Amazon account is structural, not a bidding mistake, and it does not show up in a dashboard summary."
+						},
+						{
+							step: "02",
+							title: "The spend",
+							copy: "Search term reports, bid history, placement data and budget caps. I separate spend that is genuinely unprofitable from spend that only looks unprofitable because it is being measured against the wrong target."
+						},
+						{
+							step: "03",
+							title: "The page it lands on",
+							copy: "Titles, bullets, images, A+ content and featured offer share. A campaign cannot fix a listing that does not convert, so I read the pages alongside the ads rather than treating them as someone else's problem."
+						}
+					].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+						delay: i * 90,
+						className: "group rounded-[20px] border border-white/[0.1] bg-[#151517] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C542]/30 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								className: "flex h-10 w-10 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.78rem] font-bold text-[#F5C542] transition-colors group-hover:bg-[#F5C542]/[0.2]",
+								children: s.step
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "mt-4 text-[1.15rem] font-bold text-[#EDE8E0]",
+								children: s.title
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]",
+								children: s.copy
+							})
+						]
+					}, s.step))
+				})]
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 				className: "mt-24 border-t border-white/[0.1] pt-14",
 				children: [
@@ -422,50 +475,69 @@ function AuditPage() {
 							className: "h-px w-6 bg-[#F5C542]"
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]",
-							children: "How I audit an account"
+							children: "What you get back"
 						})]
 					}) }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-8 grid gap-6 sm:grid-cols-3",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+						children: "A written document, not a call and a verbal summary. It covers:"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+						className: "mt-6 space-y-4",
 						children: [
-							{
-								step: "01",
-								title: "Audit",
-								copy: "I go through campaign structure, search-term reports, bid history, listing content and creative, and flag exactly where spend is being wasted and where it's under-funded."
-							},
-							{
-								step: "02",
-								title: "Fix",
-								copy: "Restructure campaigns, rebuild negative targeting, correct bid logic, and fix the listing and creative issues that are capping conversion before spend goes up."
-							},
-							{
-								step: "03",
-								title: "Scale",
-								copy: "Once ACOS and TACOS are stable, reallocate budget toward what's proven to convert and expand into new targeting with a system, not guesswork."
-							}
-						].map((s, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
-							delay: i * 90,
-							className: "group rounded-[20px] border border-white/[0.1] bg-[#151517] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C542]/30 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]",
-							children: [
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-									className: "flex h-10 w-10 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.78rem] font-bold text-[#F5C542] transition-colors group-hover:bg-[#F5C542]/[0.2]",
-									children: s.step
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-									className: "mt-4 text-[1.15rem] font-bold text-[#EDE8E0]",
-									children: s.title
-								}),
-								/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-									className: "mt-3 text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]",
-									children: s.copy
-								})
-							]
-						}, s.step))
+							"What's working, and should be funded harder, with the numbers that prove it.",
+							"What's costing you money, separated into what to stop now and what to restructure.",
+							"What to fix first, in priority order, with the reasoning behind the sequence.",
+							"What I'd need to know more about, because an honest audit says where the data ran out rather than guessing past it."
+						].map((point, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
+							delay: i * 60,
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+								className: "grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+									"aria-hidden": true,
+									className: "mt-[0.6em] h-[3px] w-3 rounded-full bg-[#F5C542]"
+								}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: point })]
+							})
+						}, point))
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
-						children: "The audit itself covers PPC, listing copy, creative and overall account health, depending on what you ask for below. You'll get a clear read on ACOS control, TACOS stability and where the account's biggest opportunities actually are."
+						className: "mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+						children: "You can act on it yourself, hand it to your current manager, or use it to decide whether to work with me. All three are fine."
 					}) })
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-24 border-t border-white/[0.1] pt-14",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "flex items-center gap-3",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+							"aria-hidden": true,
+							className: "h-px w-6 bg-[#F5C542]"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+							className: "font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]",
+							children: "What this isn't"
+						})]
+					}) }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+						children: "I will not tell you the account is broken if it isn't. If your PPC is already in good shape, the audit will say so, and it will say what I would do next rather than inventing a problem to solve."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-4 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+						children: "Free audits that always find a crisis are a sales tactic. This one is a read."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+						className: "mt-8",
+						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+							href: "#request-form",
+							className: "inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
+							children: ["Request an audit", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"aria-hidden": true,
+								children: "→"
+							})]
+						})
+					})
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

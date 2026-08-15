@@ -404,9 +404,11 @@ function AuditPage() {
           <p className="mt-6 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
             Most accounts I look at don't have a traffic problem. They have a structure problem:
             spend keeps climbing, ACOS drifts, and campaigns stop being a growth engine and start
-            being a cost. Before I take on any account, I run a free audit so you know exactly
-            what's working, what's wasting money, and what to fix first, with no obligation to hire
-            me afterward.
+            being a cost.
+          </p>
+          <p className="mt-4 max-w-[62ch] text-[1.05rem] font-medium leading-relaxed text-[#c7c7cc]">
+            Before I take on any account, I run a free audit so you know exactly what's working,
+            what's wasting money, and what to fix first. No obligation to hire me afterward.
           </p>
 
           <div className="mt-10">
@@ -414,7 +416,7 @@ function AuditPage() {
               href="#request-form"
               className="inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
             >
-              Request a audit
+              Request an audit
               <span aria-hidden>→</span>
             </a>
           </div>
@@ -425,7 +427,7 @@ function AuditPage() {
             <div className="flex items-center gap-3">
               <span aria-hidden className="h-px w-6 bg-[#F5C542]" />
               <h2 className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]">
-                How I audit an account
+                What I actually look at
               </h2>
             </div>
           </Reveal>
@@ -433,18 +435,18 @@ function AuditPage() {
             {[
               {
                 step: "01",
-                title: "Audit",
-                copy: "I go through campaign structure, search-term reports, bid history, listing content and creative, and flag exactly where spend is being wasted and where it's under-funded.",
+                title: "The structure",
+                copy: "Campaign architecture, match types, duplication, and where the same keyword is competing against itself. Most wasted spend in an Amazon account is structural, not a bidding mistake, and it does not show up in a dashboard summary.",
               },
               {
                 step: "02",
-                title: "Fix",
-                copy: "Restructure campaigns, rebuild negative targeting, correct bid logic, and fix the listing and creative issues that are capping conversion before spend goes up.",
+                title: "The spend",
+                copy: "Search term reports, bid history, placement data and budget caps. I separate spend that is genuinely unprofitable from spend that only looks unprofitable because it is being measured against the wrong target.",
               },
               {
                 step: "03",
-                title: "Scale",
-                copy: "Once ACOS and TACOS are stable, reallocate budget toward what's proven to convert and expand into new targeting with a system, not guesswork.",
+                title: "The page it lands on",
+                copy: "Titles, bullets, images, A+ content and featured offer share. A campaign cannot fix a listing that does not convert, so I read the pages alongside the ads rather than treating them as someone else's problem.",
               },
             ].map((s, i) => (
               <Reveal
@@ -462,13 +464,69 @@ function AuditPage() {
               </Reveal>
             ))}
           </div>
+        </div>
+
+        <div className="mt-24 border-t border-white/[0.1] pt-14">
           <Reveal>
-            <p className="mt-8 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
-              The audit itself covers PPC, listing copy, creative and overall account health,
-              depending on what you ask for below. You'll get a clear read on ACOS control, TACOS
-              stability and where the account's biggest opportunities actually are.
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-6 bg-[#F5C542]" />
+              <h2 className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]">
+                What you get back
+              </h2>
+            </div>
+          </Reveal>
+          <p className="mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+            A written document, not a call and a verbal summary. It covers:
+          </p>
+          <ul className="mt-6 space-y-4">
+            {[
+              "What's working, and should be funded harder, with the numbers that prove it.",
+              "What's costing you money, separated into what to stop now and what to restructure.",
+              "What to fix first, in priority order, with the reasoning behind the sequence.",
+              "What I'd need to know more about, because an honest audit says where the data ran out rather than guessing past it.",
+            ].map((point, i) => (
+              <Reveal key={point} delay={i * 60}>
+                <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+                  <span aria-hidden className="mt-[0.6em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
+                  <span>{point}</span>
+                </li>
+              </Reveal>
+            ))}
+          </ul>
+          <Reveal>
+            <p className="mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+              You can act on it yourself, hand it to your current manager, or use it to decide
+              whether to work with me. All three are fine.
             </p>
           </Reveal>
+        </div>
+
+        <div className="mt-24 border-t border-white/[0.1] pt-14">
+          <Reveal>
+            <div className="flex items-center gap-3">
+              <span aria-hidden className="h-px w-6 bg-[#F5C542]" />
+              <h2 className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-[#c7c7cc]">
+                What this isn't
+              </h2>
+            </div>
+          </Reveal>
+          <p className="mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+            I will not tell you the account is broken if it isn't. If your PPC is already in good
+            shape, the audit will say so, and it will say what I would do next rather than
+            inventing a problem to solve.
+          </p>
+          <p className="mt-4 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+            Free audits that always find a crisis are a sales tactic. This one is a read.
+          </p>
+          <div className="mt-8">
+            <a
+              href="#request-form"
+              className="inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
+            >
+              Request an audit
+              <span aria-hidden>→</span>
+            </a>
+          </div>
         </div>
 
         <div id="request-form" className="mt-24 scroll-mt-24 border-t border-white/[0.1] pt-14">

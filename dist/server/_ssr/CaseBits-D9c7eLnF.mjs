@@ -2,7 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as PageShell } from "./SiteChrome-FFUh6CQl.mjs";
 import { i as usePrefersReducedMotion, n as Reveal, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-vQZorFOm.js
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-D9c7eLnF.js
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
 	caseC: {
@@ -19,9 +19,9 @@ var disclosure = {
 	}
 };
 var ANON_LABELS = {
-	caseC: "a premium skincare brand scaling fast off one hero anti-aging line",
-	caseD: "a regenerative skincare brand built around a single flagship ampoule",
-	caseE: "a brand growing against a fixed daily ad budget"
+	caseC: "a dermatological skincare brand scaling on a hero cream line",
+	caseD: "a regenerative skincare brand built around two flagship ampoules",
+	caseE: "a pharmaceutical skincare brand growing against a fixed daily ad budget"
 };
 function clientLabel(key) {
 	const entry = disclosure[key];

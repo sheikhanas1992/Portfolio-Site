@@ -5,9 +5,9 @@ import { clientLabel } from "@/config/disclosure";
 
 const IMG = "/case-images/promotion-and-exposure";
 
-const TITLE = "42% revenue growth and a 4.50× return on ad spend";
+const TITLE = "42% revenue growth with hero campaigns running near a 10× return";
 const DESCRIPTION =
-  "A twelve-month Amazon growth read on a regenerative skincare brand that grew revenue 42% at a 4.50× return on ad spend.";
+  "A two-month Amazon growth read on a regenerative skincare brand built around two flagship ampoules, growing revenue 42% at a 4.50× return on ad spend.";
 
 export const Route = createFileRoute("/work/promotion-and-exposure")({
   head: () => ({
@@ -28,8 +28,8 @@ function PromotionAndExposure() {
     <CasePage>
       <CaseHeader
         label={clientLabel("caseD")}
-        period="12 months, measured against the prior year"
-        headline="42% revenue growth and a 4.50× return on ad spend"
+        period="Two months, measured against the same window last year"
+        headline="42% revenue growth with hero campaigns running near a 10× return"
         note="Managed as part of my work at Sohomax"
       />
 
@@ -41,42 +41,72 @@ function PromotionAndExposure() {
             { label: "Return on ad spend", value: "4.50×", countTo: 4.5, decimals: 2, suffix: "×" },
             { label: "Blended ACOS", value: "22.2%", countTo: 22.2, decimals: 1, suffix: "%" },
             { label: "Best hero campaign ACOS", value: "10.4%", countTo: 10.4, decimals: 1, suffix: "%" },
-            { label: "Share of period sales from one promotional event", value: "40%", countTo: 40 },
+            { label: "Share of store sales driven by ads", value: "~50%", countTo: 50 },
           ]}
         />
       </div>
 
-      <Section title="The daily sales trend" caption="Seller Central's own daily trend chart, unedited.">
-        <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
-      </Section>
-
-      <Section title="Hero campaigns running near a 10× return">
-        <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
-          <Bar label="Hero campaign ACOS, best" pct={10.4} />
-          <Bar label="Hero campaign ACOS, second" pct={11.0} />
-        </div>
-        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          Two campaigns held ACOS around 10%, roughly a 10× return on the spend driving the
-          majority of direct sales.
+      <Section title="Where the account stood">
+        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          In the same 61 days a year earlier, the brand sold 43,816 units for $1,957,835.
         </p>
         <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          These were the account's engine. Everything else was measured against what they proved
-          was possible.
+          This period it did $2,788,458 across 70,694 units and 65,941 order items, at an average
+          sales value of $42.29 per order item. That is the highest average order value of any
+          account in this set, on a catalogue built around premium ampoules rather than volume
+          SKUs.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          Advertising drove roughly half of total store sales in the window.
+        </p>
+      </Section>
+
+      <Section title="The daily sales trend">
+        <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
+        <p className="mt-4 max-w-[70ch] text-[0.9rem] italic leading-relaxed text-[#9a9a9e]">
+          Seller Central's own daily trend chart, unedited.
+        </p>
+        <p className="mt-5 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          Daily volume held a baseline of roughly $23,000 to $43,000 through both months, with one
+          clear step-change: a four-day promotional surge peaking at $378,016 and 10,743 units in
+          a single day.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          The baseline outside that window sat durably ahead of where the account was a year
+          earlier, which is the more sustainable signal than the promotional peak.
+        </p>
+      </Section>
+
+      <Section title="Two hero campaigns at a 9× return">
+        <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
+          <Bar label="First hero campaign" pct={10.4} note="10.4% ACOS, 9.6× ROAS" />
+          <Bar label="Second hero campaign" pct={11.0} note="11.0% ACOS, 9.1× ROAS" />
+        </div>
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          The account's two largest campaigns by spend were also its two most efficient.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          That is an unusual shape. In most accounts the biggest campaign is the one carrying the
+          loosest efficiency, and getting the largest line to also be the leanest is what let the
+          rest of the budget go toward reach without dragging the blended number out of range.
         </p>
       </Section>
 
       <Section title="Awareness spend, judged on the right terms">
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
-          <Bar label="Video campaign ACOS" pct={37.8} />
           <Bar label="Hero campaign ACOS" pct={10.4} />
+          <Bar label="Celebrity video campaign ACOS" pct={37.8} />
+          <Bar label="Sponsored Products overall" pct={21.0} note="21.0% ACOS, 4.76× ROAS" />
         </div>
         <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          The celebrity-fronted video campaign ran at 37.8%, and that is the correct number for
+          A celebrity-fronted video campaign ran at 37.8% ACOS, and that is the correct number for
           it.
         </p>
         <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          Awareness and direct response do different jobs. Reporting them separately meant the
-          video was funded on reach rather than flagged as a leak by a blended figure.
+          Awareness and direct response do different jobs. Reporting the video separately from
+          Sponsored Products meant it was funded on branded search lift rather than flagged as a
+          leak by a blended figure that would have made it look like the account's biggest
+          problem.
         </p>
         <div className="mt-6">
           <Screenshot src={`${IMG}/campaigns.png`} alt="Top PPC campaigns by sales" />
@@ -85,17 +115,49 @@ function PromotionAndExposure() {
 
       <Section title="A promotional playbook that works">
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
-          <Bar label="Share of period sales from the four-day promotion" pct={40.0} />
-          <Bar label="Top three SKUs' share of total revenue" pct={49.0} />
+          <Bar label="Share of period sales from the four-day event" pct={40.0} />
+          <Bar label="Sales generated in that window" pct={100} note="$1,106,701" />
+          <Bar label="Units in that window" pct={100} note="31,816" />
         </div>
         <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          Forty percent of the year's sales landed inside a single four-day window.
+          Forty percent of the period's revenue landed inside four days.
         </p>
         <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          That is proof of a repeatable promotional engine, and of an account that knows how to
-          convert at volume when it opens the taps. Just under half of revenue sat in the top
-          three SKUs, giving a clear, funded core to scale from.
+          That is proof of a repeatable promotional engine and of an account that knows how to
+          convert at volume when it opens the taps. Documenting exactly how the window performed
+          turned it from a spike into a template the brand can plan the rest of the calendar
+          around.
         </p>
+      </Section>
+
+      <Section title="The products carrying the brand">
+        <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
+          <Bar label="Top three SKUs' share of total revenue" pct={49} />
+          <Bar label="Everything else, combined" pct={51} />
+        </div>
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+          Three SKUs accounted for $1,377,522 of the brand's $2.79M.
+        </p>
+        <div className="mt-5 flex flex-col gap-4">
+          <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <strong className="font-bold text-[#EDE8E0]">The flagship ampoule</strong> did
+            $742,550, 26.6% of brand sales, on 16,826 units. Live since 2020, it carries $54,346
+            in ad spend returning $328,549 at a 16.5% ACOS, and holds a 99.28% featured offer
+            share.
+          </p>
+          <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <strong className="font-bold text-[#EDE8E0]">The second hero ampoule</strong> did
+            $513,788 on 12,004 units despite launching only sixteen months earlier. It is the
+            most ad-efficient of the three heroes at 14.9% ACOS and 6.71× ROAS, on a 96.14%
+            featured offer share.
+          </p>
+          <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <strong className="font-bold text-[#EDE8E0]">The larger-size variant</strong> is the
+            quiet winner in the catalogue. Launched three months before the window, it did
+            $240,458 at a 9.2% ACOS and 10.83× ROAS, the best efficiency of any SKU in the
+            portfolio, on only $16,426 of ad-attributed spend.
+          </p>
+        </div>
         <div className="mt-6">
           <Screenshot src={`${IMG}/top-products.png`} alt="Top products by ordered product sales" />
         </div>
@@ -114,29 +176,31 @@ function PromotionAndExposure() {
             <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
             <span>
               <strong className="font-bold text-[#EDE8E0]">
+                Reported the video campaign separately from direct response.
+              </strong>{" "}
+              Leadership could fund reach and efficiency on their own terms instead of one blended
+              ACOS pushing them to cut the spend feeding branded search.
+            </span>
+          </li>
+          <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
+            <span>
+              <strong className="font-bold text-[#EDE8E0]">
                 Compared on-promotion and off-promotion weeks directly.
               </strong>{" "}
-              This turned a sales spike into a documented pattern the account can plan around,
-              rather than a one-off it hopes to repeat.
+              That separated the promotional lift from the underlying baseline, and showed the
+              baseline itself had grown, which is the number that actually justifies next year's
+              budget.
             </span>
           </li>
           <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
             <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
             <span>
               <strong className="font-bold text-[#EDE8E0]">
-                Reported video separately from direct response.
+                Ranked SKUs by ad efficiency, not by revenue.
               </strong>{" "}
-              Leadership could fund each on its own terms instead of a blended ACOS pushing them
-              to cut the awareness spend feeding the peaks.
-            </span>
-          </li>
-          <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-            <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
-            <span>
-              <strong className="font-bold text-[#EDE8E0]">
-                Protected the hero campaigns' targets.
-              </strong>{" "}
-              Both stayed near 10% ACOS through a year of rising spend.
+              The best-converting product in the catalogue was ninth by sales and running at 9.2%
+              ACOS on a small spend base. Ranking by revenue alone would have kept it invisible.
             </span>
           </li>
         </ul>
@@ -144,12 +208,12 @@ function PromotionAndExposure() {
 
       <Section title="What comes next">
         <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          The promotional engine is proven.
+          The promotional engine is proven and the hero campaigns are running near a 9× return.
         </p>
         <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]">
-          The opportunity is spreading that intensity across more of the calendar, using the
-          four-day playbook as the template for a second and third event rather than a single
-          annual peak.
+          The nearest growth is funding the larger-size variant already converting at 9.2% ACOS,
+          and tightening the sheet-mask campaigns running at roughly double the ampoules'
+          efficiency.
         </p>
       </Section>
 
