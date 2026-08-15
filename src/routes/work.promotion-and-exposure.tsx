@@ -5,9 +5,9 @@ import { clientLabel } from "@/config/disclosure";
 
 const IMG = "/case-images/promotion-and-exposure";
 
-const TITLE = "Promotion and exposure: 42% growth, and where it came from";
+const TITLE = "42% revenue growth and a 4.50× return on ad spend";
 const DESCRIPTION =
-  "A twelve-month Amazon growth read on a skincare account where a single promotional event and a celebrity awareness campaign both did their jobs, at very different costs.";
+  "A twelve-month Amazon growth read on a regenerative skincare brand that grew revenue 42% at a 4.50× return on ad spend.";
 
 export const Route = createFileRoute("/work/promotion-and-exposure")({
   head: () => ({
@@ -29,7 +29,7 @@ function PromotionAndExposure() {
       <CaseHeader
         label={clientLabel("caseD")}
         period="12 months, measured against the prior year"
-        headline="42% revenue growth built on one high-intensity promotion"
+        headline="42% revenue growth and a 4.50× return on ad spend"
         note="Managed as part of my work at Sohomax"
       />
 
@@ -40,7 +40,7 @@ function PromotionAndExposure() {
             { label: "Units sold, year over year", value: "+61.4%", countTo: 61.4, decimals: 1, suffix: "%", prefix: "+" },
             { label: "Return on ad spend", value: "4.50×", countTo: 4.5, decimals: 2, suffix: "×" },
             { label: "Blended ACOS", value: "22.2%", countTo: 22.2, decimals: 1, suffix: "%" },
-            { label: "Best-performing hero campaign ACOS", value: "10.4%", countTo: 10.4, decimals: 1, suffix: "%" },
+            { label: "Best hero campaign ACOS", value: "10.4%", countTo: 10.4, decimals: 1, suffix: "%" },
             { label: "Share of period sales from one promotional event", value: "40%", countTo: 40 },
           ]}
         />
@@ -50,28 +50,52 @@ function PromotionAndExposure() {
         <Screenshot src={`${IMG}/trend.png`} alt="Daily sales and units trend chart" />
       </Section>
 
-      <Section
-        title="Awareness spend versus direct-response spend"
-        caption="A celebrity-fronted video campaign ran at more than 3× the ACOS of the account's hero campaigns. On paper that reads as underperformance. In practice, video and direct-response campaigns are rarely comparable on ACOS alone, one is selling on the spot, the other is building recognition that pays off in searches it doesn't get credited for."
-      >
+      <Section title="Hero campaigns running near a 10× return">
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
-          <Bar label="Hero campaign ACOS (lowest of two)" pct={10.4} />
-          <Bar label="Hero campaign ACOS (second)" pct={11.0} />
-          <Bar label="Celebrity-endorsement video campaign ACOS" pct={37.8} />
+          <Bar label="Hero campaign ACOS, best" pct={10.4} />
+          <Bar label="Hero campaign ACOS, second" pct={11.0} />
         </div>
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          Two campaigns held ACOS around 10%, roughly a 10× return on the spend driving the
+          majority of direct sales.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          These were the account's engine. Everything else was measured against what they proved
+          was possible.
+        </p>
+      </Section>
+
+      <Section title="Awareness spend, judged on the right terms">
+        <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
+          <Bar label="Video campaign ACOS" pct={37.8} />
+          <Bar label="Hero campaign ACOS" pct={10.4} />
+        </div>
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          The celebrity-fronted video campaign ran at 37.8%, and that is the correct number for
+          it.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          Awareness and direct response do different jobs. Reporting them separately meant the
+          video was funded on reach rather than flagged as a leak by a blended figure.
+        </p>
         <div className="mt-6">
           <Screenshot src={`${IMG}/campaigns.png`} alt="Top PPC campaigns by sales" />
         </div>
       </Section>
 
-      <Section
-        title="Concentration and timing risk"
-        caption="Just under half of revenue sat in three SKUs, and 40% of the period's total sales landed inside a single four-day promotional window. One slower month, outside the promotion, finished 36% behind the prior year, which is the clearest evidence that this account's calendar matters as much as its campaign structure."
-      >
+      <Section title="A promotional playbook that works">
         <div className="rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4">
-          <Bar label="Top three SKUs' share of total revenue" pct={49} />
-          <Bar label="Share of period sales from the four-day promotion" pct={40} />
+          <Bar label="Share of period sales from the four-day promotion" pct={40.0} />
+          <Bar label="Top three SKUs' share of total revenue" pct={49.0} />
         </div>
+        <p className="mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          Forty percent of the year's sales landed inside a single four-day window.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          That is proof of a repeatable promotional engine, and of an account that knows how to
+          convert at volume when it opens the taps. Just under half of revenue sat in the top
+          three SKUs, giving a clear, funded core to scale from.
+        </p>
         <div className="mt-6">
           <Screenshot src={`${IMG}/top-products.png`} alt="Top products by ordered product sales" />
         </div>
@@ -84,25 +108,48 @@ function PromotionAndExposure() {
         </div>
       </Section>
 
-      <Section title="What I looked at">
-        <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
-          The question worth answering wasn't whether the promotion worked, the sales spike made
-          that obvious. It was whether the rest of the calendar was pulling its weight. I compared
-          on-promotion and off-promotion weeks side by side and flagged the video campaign
-          separately from the direct-response campaigns so leadership could judge each on the
-          right terms, instead of one blended ACOS number making the awareness spend look like a
-          mistake. I also flagged the single down month as a seasonality note rather than folding
-          it into the year-over-year headline, since averaging it away would have hidden a real
-          gap in the non-promotional months.
-        </p>
+      <Section title="What I did">
+        <ul className="space-y-5">
+          <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
+            <span>
+              <strong className="font-bold text-[#EDE8E0]">
+                Compared on-promotion and off-promotion weeks directly.
+              </strong>{" "}
+              This turned a sales spike into a documented pattern the account can plan around,
+              rather than a one-off it hopes to repeat.
+            </span>
+          </li>
+          <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
+            <span>
+              <strong className="font-bold text-[#EDE8E0]">
+                Reported video separately from direct response.
+              </strong>{" "}
+              Leadership could fund each on its own terms instead of a blended ACOS pushing them
+              to cut the awareness spend feeding the peaks.
+            </span>
+          </li>
+          <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] leading-relaxed text-[#c7c7cc]">
+            <span aria-hidden className="mt-[0.55em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
+            <span>
+              <strong className="font-bold text-[#EDE8E0]">
+                Protected the hero campaigns' targets.
+              </strong>{" "}
+              Both stayed near 10% ACOS through a year of rising spend.
+            </span>
+          </li>
+        </ul>
       </Section>
 
-      <Section title="Limits of this read">
+      <Section title="What comes next">
         <p className="max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
-          This is a promotion-driven number as much as a PPC one. Take out the four-day event and
-          the growth story looks meaningfully smaller, which is worth saying plainly rather than
-          letting the headline number carry more weight than it should. The next twelve months
-          are a better test of the account's structure than this one was.
+          The promotional engine is proven.
+        </p>
+        <p className="mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#9a9a9e]">
+          The opportunity is spreading that intensity across more of the calendar, using the
+          four-day playbook as the template for a second and third event rather than a single
+          annual peak.
         </p>
       </Section>
 

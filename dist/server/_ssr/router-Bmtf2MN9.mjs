@@ -2,11 +2,11 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BANiSPY3.js
-var router_BANiSPY3_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-Bmtf2MN9.js
+var router_Bmtf2MN9_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-CSgAGudh.css";
+var styles_default = "/assets/styles-ByeIouoh.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -284,7 +284,7 @@ function RootComponent() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CustomCursor, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})]
 	});
 }
-var $$splitComponentImporter$5 = () => import("./routes-tnIdKDq7.mjs");
+var $$splitComponentImporter$5 = () => import("./routes-miX_esdh.mjs");
 var TITLE$5 = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
 var DESCRIPTION$5 = "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
 var Route$5 = createFileRoute("/")({
@@ -381,9 +381,9 @@ var Route$3 = createFileRoute("/book")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./work.ceiling-and-efficiency-rlruN86Y.mjs");
-var TITLE$2 = "Ceiling and efficiency: an efficient account capped by its own budget";
-var DESCRIPTION$2 = "A twelve-month Amazon growth read on a smaller skincare account where most campaigns were profitable and running out of daily budget before the day ended.";
+var $$splitComponentImporter$2 = () => import("./work.ceiling-and-efficiency-DupiZAmx.mjs");
+var TITLE$2 = "A 3.79× return delivered with 82% of campaigns still capped by budget";
+var DESCRIPTION$2 = "A twelve-month Amazon growth read on a brand growing against a fixed daily ad budget, delivering a 3.79× return on ad spend.";
 var Route$2 = createFileRoute("/work/ceiling-and-efficiency")({
 	head: () => ({ meta: [
 		{ title: TITLE$2 },
@@ -410,9 +410,9 @@ var Route$2 = createFileRoute("/work/ceiling-and-efficiency")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./work.promotion-and-exposure-BeEkWhfA.mjs");
-var TITLE$1 = "Promotion and exposure: 42% growth, and where it came from";
-var DESCRIPTION$1 = "A twelve-month Amazon growth read on a skincare account where a single promotional event and a celebrity awareness campaign both did their jobs, at very different costs.";
+var $$splitComponentImporter$1 = () => import("./work.promotion-and-exposure-DV9Z5ejS.mjs");
+var TITLE$1 = "42% revenue growth and a 4.50× return on ad spend";
+var DESCRIPTION$1 = "A twelve-month Amazon growth read on a regenerative skincare brand that grew revenue 42% at a 4.50× return on ad spend.";
 var Route$1 = createFileRoute("/work/promotion-and-exposure")({
 	head: () => ({ meta: [
 		{ title: TITLE$1 },
@@ -439,9 +439,9 @@ var Route$1 = createFileRoute("/work/promotion-and-exposure")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./work.scale-and-concentration-BEpUyvlT.mjs");
-var TITLE = "Scale and concentration: a 10.4× revenue year, and its risk";
-var DESCRIPTION = "A twelve-month Amazon growth read on a skincare account that grew 10.4× while three SKUs carried most of the revenue.";
+var $$splitComponentImporter = () => import("./work.scale-and-concentration-CILFcbDx.mjs");
+var TITLE = "10.4× revenue growth on one hero product line";
+var DESCRIPTION = "A twelve-month Amazon growth read on a skincare brand that grew revenue 10.4× behind one hero anti-aging line.";
 var Route = createFileRoute("/work/scale-and-concentration")({
 	head: () => ({ meta: [
 		{ title: TITLE },
@@ -511,4 +511,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_BANiSPY3_exports as t };
+export { getRouter, router_Bmtf2MN9_exports as t };

@@ -8,9 +8,9 @@ export const disclosure = {
 } as const;
 
 export const ANON_LABELS = {
-  caseC: "a Korean skincare brand scaling fast off one hero anti-aging line",
-  caseD: "a Korean regenerative-skincare brand built around a single flagship ampoule",
-  caseE: "a Korean skincare brand growing against a fixed daily ad budget",
+  caseC: "a premium skincare brand scaling fast off one hero anti-aging line",
+  caseD: "a regenerative skincare brand built around a single flagship ampoule",
+  caseE: "a brand growing against a fixed daily ad budget",
 } as const;
 
 export function clientLabel(key: keyof typeof disclosure): string {

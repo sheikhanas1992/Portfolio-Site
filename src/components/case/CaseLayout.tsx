@@ -24,7 +24,7 @@ export function CaseHeader({
         <h1 className="mt-5 max-w-[22ch] text-[clamp(2rem,5.4vw,3.6rem)] font-black leading-[1.05] tracking-[-0.02em] text-[#EDE8E0]">
           {headline}
         </h1>
-        <p className="mt-5 max-w-[56ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]">
+        <p className="mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#b4b4b8]">
           {label}
         </p>
         {note && (

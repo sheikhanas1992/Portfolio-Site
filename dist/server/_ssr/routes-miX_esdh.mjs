@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-tnIdKDq7.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-miX_esdh.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -52,19 +52,19 @@ var CARDS = [
 		to: "/work/scale-and-concentration",
 		period: "12 months, measured against the prior year",
 		headline: "How I turned $480K in Amazon sales into $5M, at a 4.33× return on ad spend.",
-		context: "Growth was real, but three SKUs out of a much larger catalogue carried 72% of it."
+		context: "Three SKUs carried 72% of it, the clearest sign of a hero product that's landed."
 	},
 	{
 		to: "/work/promotion-and-exposure",
 		period: "12 months, measured against the prior year",
 		headline: "How I grew an Amazon brand from $2M to $2.8M, turning every $1 in ads into $4.50.",
-		context: "40% of the period's sales landed inside a single four-day promotional window."
+		context: "A single four-day window drove 40% of the period's sales, proof of a repeatable promotional engine."
 	},
 	{
 		to: "/work/ceiling-and-efficiency",
 		period: "12 months, measured against the prior year",
 		headline: "How I hit $157K in Amazon sales at 3.79× ROAS, with 80% of campaigns budget-capped.",
-		context: "82% of campaigns, including the largest, were regularly capped by daily budget."
+		context: "82% of campaigns were capped by daily budget: proven demand with room still to grow."
 	}
 ];
 function Cards() {

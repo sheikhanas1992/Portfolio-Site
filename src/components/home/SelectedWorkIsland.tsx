@@ -29,19 +29,19 @@ const CARDS = [
     to: "/work/scale-and-concentration",
     period: "12 months, measured against the prior year",
     headline: "How I turned $480K in Amazon sales into $5M, at a 4.33× return on ad spend.",
-    context: "Growth was real, but three SKUs out of a much larger catalogue carried 72% of it.",
+    context: "Three SKUs carried 72% of it, the clearest sign of a hero product that's landed.",
   },
   {
     to: "/work/promotion-and-exposure",
     period: "12 months, measured against the prior year",
     headline: "How I grew an Amazon brand from $2M to $2.8M, turning every $1 in ads into $4.50.",
-    context: "40% of the period's sales landed inside a single four-day promotional window.",
+    context: "A single four-day window drove 40% of the period's sales, proof of a repeatable promotional engine.",
   },
   {
     to: "/work/ceiling-and-efficiency",
     period: "12 months, measured against the prior year",
     headline: "How I hit $157K in Amazon sales at 3.79× ROAS, with 80% of campaigns budget-capped.",
-    context: "82% of campaigns, including the largest, were regularly capped by daily budget.",
+    context: "82% of campaigns were capped by daily budget: proven demand with room still to grow.",
   },
 ];
 

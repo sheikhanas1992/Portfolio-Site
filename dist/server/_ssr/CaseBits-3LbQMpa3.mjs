@@ -2,7 +2,7 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
 import { r as PageShell } from "./SiteChrome-C-JBbSCb.mjs";
 import { i as usePrefersReducedMotion, n as Reveal, r as useInViewOnce, t as CountUp } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-BNa5C6ik.js
+//#region node_modules/.nitro/vite/services/ssr/assets/CaseBits-3LbQMpa3.js
 var import_jsx_runtime = require_jsx_runtime();
 var disclosure = {
 	caseC: {
@@ -19,9 +19,9 @@ var disclosure = {
 	}
 };
 var ANON_LABELS = {
-	caseC: "a Korean skincare brand scaling fast off one hero anti-aging line",
-	caseD: "a Korean regenerative-skincare brand built around a single flagship ampoule",
-	caseE: "a Korean skincare brand growing against a fixed daily ad budget"
+	caseC: "a premium skincare brand scaling fast off one hero anti-aging line",
+	caseD: "a regenerative skincare brand built around a single flagship ampoule",
+	caseE: "a brand growing against a fixed daily ad budget"
 };
 function clientLabel(key) {
 	const entry = disclosure[key];
@@ -41,7 +41,7 @@ function CaseHeader({ label, period, headline, note }) {
 				children: headline
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-5 max-w-[56ch] text-[1.05rem] font-medium leading-relaxed text-[#b4b4b8]",
+				className: "mt-5 max-w-[56ch] text-[1.05rem] font-medium italic leading-relaxed text-[#b4b4b8]",
 				children: label
 			}),
 			note && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
