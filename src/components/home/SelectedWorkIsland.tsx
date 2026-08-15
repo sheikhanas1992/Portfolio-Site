@@ -103,8 +103,9 @@ function Cards() {
 
 /**
  * The homepage is a prebuilt bundle that mounts itself into #root. This
- * component inserts a host node directly after the hero section and portals
- * the "Selected work" cards into it, without touching the bundle's own DOM.
+ * component inserts a host node directly after the split-intro section and
+ * portals the "Selected work" cards into it, without touching the bundle's
+ * own DOM.
  */
 export function SelectedWorkIsland() {
   const [host, setHost] = useState<HTMLElement | null>(null);
@@ -117,9 +118,9 @@ export function SelectedWorkIsland() {
 
     const attach = () => {
       if (cancelled) return;
-      const hero = document.querySelector("#root section");
-      if (hero?.parentElement) {
-        hero.parentElement.insertBefore(node, hero.nextSibling);
+      const intro = document.querySelector("#root #intro");
+      if (intro?.parentElement) {
+        intro.parentElement.insertBefore(node, intro.nextSibling);
         setHost(node);
         return;
       }

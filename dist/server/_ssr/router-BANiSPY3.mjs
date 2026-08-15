@@ -2,8 +2,8 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-BywGaijp.js
-var router_BywGaijp_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-BANiSPY3.js
+var router_BANiSPY3_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var styles_default = "/assets/styles-CSgAGudh.css";
@@ -284,7 +284,7 @@ function RootComponent() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CustomCursor, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})]
 	});
 }
-var $$splitComponentImporter$5 = () => import("./routes-CmBOOpbJ.mjs");
+var $$splitComponentImporter$5 = () => import("./routes-tnIdKDq7.mjs");
 var TITLE$5 = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
 var DESCRIPTION$5 = "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
 var Route$5 = createFileRoute("/")({
@@ -318,7 +318,7 @@ var Route$5 = createFileRoute("/")({
 		],
 		links: [{
 			rel: "stylesheet",
-			href: "/assets/index-BJkMaPo7.css"
+			href: "/assets/index-B6a7EoTk.css"
 		}]
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
@@ -511,4 +511,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_BywGaijp_exports as t };
+export { getRouter, router_BANiSPY3_exports as t };

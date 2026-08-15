@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CmBOOpbJ.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-tnIdKDq7.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -128,8 +128,9 @@ function Cards() {
 }
 /**
 * The homepage is a prebuilt bundle that mounts itself into #root. This
-* component inserts a host node directly after the hero section and portals
-* the "Selected work" cards into it, without touching the bundle's own DOM.
+* component inserts a host node directly after the split-intro section and
+* portals the "Selected work" cards into it, without touching the bundle's
+* own DOM.
 */
 function SelectedWorkIsland() {
 	const [host, setHost] = (0, import_react.useState)(null);
@@ -140,9 +141,9 @@ function SelectedWorkIsland() {
 		node.id = "selected-work-host";
 		const attach = () => {
 			if (cancelled) return;
-			const hero = document.querySelector("#root section");
-			if (hero?.parentElement) {
-				hero.parentElement.insertBefore(node, hero.nextSibling);
+			const intro = document.querySelector("#root #intro");
+			if (intro?.parentElement) {
+				intro.parentElement.insertBefore(node, intro.nextSibling);
 				setHost(node);
 				return;
 			}
@@ -163,7 +164,7 @@ function Index() {
 		script.id = "portfolio-bundle";
 		script.type = "module";
 		script.crossOrigin = "anonymous";
-		script.src = "/assets/index-CvwBBh1I.js";
+		script.src = "/assets/index-lHk5DsQJ.js";
 		document.body.appendChild(script);
 	}, []);
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
