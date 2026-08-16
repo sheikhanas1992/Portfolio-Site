@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AuditRouteImport } from './routes/audit'
 import { Route as BookRouteImport } from './routes/book'
+import { Route as BuildRouteImport } from './routes/build'
 import { Route as WorkCeilingAndEfficiencyRouteImport } from './routes/work.ceiling-and-efficiency'
 import { Route as WorkPromotionAndExposureRouteImport } from './routes/work.promotion-and-exposure'
 import { Route as WorkScaleAndConcentrationRouteImport } from './routes/work.scale-and-concentration'
@@ -29,6 +30,11 @@ const AuditRoute = AuditRouteImport.update({
 const BookRoute = BookRouteImport.update({
   id: '/book',
   path: '/book',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BuildRoute = BuildRouteImport.update({
+  id: '/build',
+  path: '/build',
   getParentRoute: () => rootRouteImport,
 } as any)
 const WorkCeilingAndEfficiencyRoute =
@@ -54,6 +60,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/build': typeof BuildRoute
   '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
   '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
@@ -62,6 +69,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/build': typeof BuildRoute
   '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
   '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
@@ -71,6 +79,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/audit': typeof AuditRoute
   '/book': typeof BookRoute
+  '/build': typeof BuildRoute
   '/work/ceiling-and-efficiency': typeof WorkCeilingAndEfficiencyRoute
   '/work/promotion-and-exposure': typeof WorkPromotionAndExposureRoute
   '/work/scale-and-concentration': typeof WorkScaleAndConcentrationRoute
@@ -81,6 +90,7 @@ export interface FileRouteTypes {
     | '/'
     | '/audit'
     | '/book'
+    | '/build'
     | '/work/ceiling-and-efficiency'
     | '/work/promotion-and-exposure'
     | '/work/scale-and-concentration'
@@ -89,6 +99,7 @@ export interface FileRouteTypes {
     | '/'
     | '/audit'
     | '/book'
+    | '/build'
     | '/work/ceiling-and-efficiency'
     | '/work/promotion-and-exposure'
     | '/work/scale-and-concentration'
@@ -97,6 +108,7 @@ export interface FileRouteTypes {
     | '/'
     | '/audit'
     | '/book'
+    | '/build'
     | '/work/ceiling-and-efficiency'
     | '/work/promotion-and-exposure'
     | '/work/scale-and-concentration'
@@ -106,6 +118,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AuditRoute: typeof AuditRoute
   BookRoute: typeof BookRoute
+  BuildRoute: typeof BuildRoute
   WorkCeilingAndEfficiencyRoute: typeof WorkCeilingAndEfficiencyRoute
   WorkPromotionAndExposureRoute: typeof WorkPromotionAndExposureRoute
   WorkScaleAndConcentrationRoute: typeof WorkScaleAndConcentrationRoute
@@ -132,6 +145,13 @@ declare module '@tanstack/react-router' {
       path: '/book'
       fullPath: '/book'
       preLoaderRoute: typeof BookRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/build': {
+      id: '/build'
+      path: '/build'
+      fullPath: '/build'
+      preLoaderRoute: typeof BuildRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/work/ceiling-and-efficiency': {
@@ -162,6 +182,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AuditRoute: AuditRoute,
   BookRoute: BookRoute,
+  BuildRoute: BuildRoute,
   WorkCeilingAndEfficiencyRoute: WorkCeilingAndEfficiencyRoute,
   WorkPromotionAndExposureRoute: WorkPromotionAndExposureRoute,
   WorkScaleAndConcentrationRoute: WorkScaleAndConcentrationRoute,

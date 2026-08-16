@@ -2,11 +2,11 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-DmOkNvJY.js
-var router_DmOkNvJY_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-qllPw0_U.js
+var router_qllPw0_U_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-C6m8nHLk.css";
+var styles_default = "/assets/styles-DT3w8T1n.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -219,7 +219,7 @@ function ErrorComponent({ error, reset }) {
 		})
 	});
 }
-var Route$6 = createRootRouteWithContext()({
+var Route$7 = createRootRouteWithContext()({
 	head: () => ({
 		meta: [
 			{ charSet: "utf-8" },
@@ -278,30 +278,30 @@ function RootShell({ children }) {
 	});
 }
 function RootComponent() {
-	const { queryClient } = Route$6.useRouteContext();
+	const { queryClient } = Route$7.useRouteContext();
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(QueryClientProvider, {
 		client: queryClient,
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CustomCursor, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})]
 	});
 }
-var $$splitComponentImporter$5 = () => import("./routes-DdUYJNvx.mjs");
-var TITLE$5 = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
-var DESCRIPTION$5 = "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
-var Route$5 = createFileRoute("/")({
+var $$splitComponentImporter$6 = () => import("./routes-C3U7sKB8.mjs");
+var TITLE$6 = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
+var DESCRIPTION$6 = "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
+var Route$6 = createFileRoute("/")({
 	head: () => ({
 		meta: [
-			{ title: TITLE$5 },
+			{ title: TITLE$6 },
 			{
 				name: "description",
-				content: DESCRIPTION$5
+				content: DESCRIPTION$6
 			},
 			{
 				property: "og:title",
-				content: TITLE$5
+				content: TITLE$6
 			},
 			{
 				property: "og:description",
-				content: DESCRIPTION$5
+				content: DESCRIPTION$6
 			},
 			{
 				property: "og:type",
@@ -318,15 +318,44 @@ var Route$5 = createFileRoute("/")({
 		],
 		links: [{
 			rel: "stylesheet",
-			href: "/assets/index-Dr1jzbLD.css"
+			href: "/assets/index-CzckRNr9.css"
 		}]
 	}),
+	component: lazyRouteComponent($$splitComponentImporter$6, "component")
+});
+var $$splitComponentImporter$5 = () => import("./audit-CM45yuq5.mjs");
+var TITLE$5 = "Free Amazon account audit: Sheikh Anas";
+var DESCRIPTION$5 = "Request a free Amazon PPC, listing, creative or full account audit. Tell me about your account and I'll tell you what I see in it.";
+var Route$5 = createFileRoute("/audit")({
+	head: () => ({ meta: [
+		{ title: TITLE$5 },
+		{
+			name: "description",
+			content: DESCRIPTION$5
+		},
+		{
+			property: "og:title",
+			content: TITLE$5
+		},
+		{
+			property: "og:description",
+			content: DESCRIPTION$5
+		},
+		{
+			property: "og:type",
+			content: "website"
+		},
+		{
+			name: "twitter:card",
+			content: "summary_large_image"
+		}
+	] }),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./audit-CM45yuq5.mjs");
-var TITLE$4 = "Free Amazon account audit: Sheikh Anas";
-var DESCRIPTION$4 = "Request a free Amazon PPC, listing, creative or full account audit. Tell me about your account and I'll tell you what I see in it.";
-var Route$4 = createFileRoute("/audit")({
+var $$splitComponentImporter$4 = () => import("./book-CjxWDLpQ.mjs");
+var TITLE$4 = "Book a call: Sheikh Anas, Amazon PPC";
+var DESCRIPTION$4 = "Book a twenty-minute call about Amazon PPC, account structure and profitable scaling.";
+var Route$4 = createFileRoute("/book")({
 	head: () => ({ meta: [
 		{ title: TITLE$4 },
 		{
@@ -352,10 +381,10 @@ var Route$4 = createFileRoute("/audit")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./book-CjxWDLpQ.mjs");
-var TITLE$3 = "Book a call: Sheikh Anas, Amazon PPC";
-var DESCRIPTION$3 = "Book a twenty-minute call about Amazon PPC, account structure and profitable scaling.";
-var Route$3 = createFileRoute("/book")({
+var $$splitComponentImporter$3 = () => import("./build-D_Af-ZHX.mjs");
+var TITLE$3 = "Build your package: Sheikh Anas";
+var DESCRIPTION$3 = "Tell me what you need and what you already have covered. I'll come back with scope and pricing, usually within two working days.";
+var Route$3 = createFileRoute("/build")({
 	head: () => ({ meta: [
 		{ title: TITLE$3 },
 		{
@@ -469,38 +498,43 @@ var Route = createFileRoute("/work/scale-and-concentration")({
 	component: lazyRouteComponent($$splitComponentImporter, "component")
 });
 var rootRouteChildren = {
-	IndexRoute: Route$5.update({
+	IndexRoute: Route$6.update({
 		id: "/",
 		path: "/",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
 	}),
-	AuditRoute: Route$4.update({
+	AuditRoute: Route$5.update({
 		id: "/audit",
 		path: "/audit",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
 	}),
-	BookRoute: Route$3.update({
+	BookRoute: Route$4.update({
 		id: "/book",
 		path: "/book",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
+	}),
+	BuildRoute: Route$3.update({
+		id: "/build",
+		path: "/build",
+		getParentRoute: () => Route$7
 	}),
 	WorkCeilingAndEfficiencyRoute: Route$2.update({
 		id: "/work/ceiling-and-efficiency",
 		path: "/work/ceiling-and-efficiency",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
 	}),
 	WorkPromotionAndExposureRoute: Route$1.update({
 		id: "/work/promotion-and-exposure",
 		path: "/work/promotion-and-exposure",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
 	}),
 	WorkScaleAndConcentrationRoute: Route.update({
 		id: "/work/scale-and-concentration",
 		path: "/work/scale-and-concentration",
-		getParentRoute: () => Route$6
+		getParentRoute: () => Route$7
 	})
 };
-var routeTree = Route$6._addFileChildren(rootRouteChildren)._addFileTypes();
+var routeTree = Route$7._addFileChildren(rootRouteChildren)._addFileTypes();
 var getRouter = () => {
 	const queryClient = new QueryClient();
 	return createRouter({
@@ -511,4 +545,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_DmOkNvJY_exports as t };
+export { getRouter, router_qllPw0_U_exports as t };
