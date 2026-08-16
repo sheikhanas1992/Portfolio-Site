@@ -20,6 +20,10 @@ dist-ssr
 .wrangler/
 .dev.vars
 
+# PHP SMTP test: contains a live mailbox password, never commit this
+public/phptest/config.php
+dist/public/phptest/config.php
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
