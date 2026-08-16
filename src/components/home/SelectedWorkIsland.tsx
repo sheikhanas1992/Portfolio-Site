@@ -66,7 +66,7 @@ function Cards() {
             <a
               key={c.to}
               href={c.to}
-              className="group relative block overflow-hidden rounded-[20px] border border-white/[0.16] bg-gradient-to-b from-[#1c1c1f] to-[#141416] p-7 shadow-[0_16px_36px_-18px_rgba(0,0,0,0.75)] transition-all duration-300 max-md:border-[#F5C542]/35 max-md:from-[#202023] max-md:to-[#161618] max-md:shadow-[0_20px_44px_-16px_rgba(0,0,0,0.8),0_0_36px_-14px_rgba(245,197,66,0.22)] hover:-translate-y-2 hover:border-[#F5C542]/60 hover:from-[#212124] hover:to-[#18181a] hover:shadow-[0_32px_64px_-18px_rgba(0,0,0,0.85),0_0_56px_-16px_rgba(245,197,66,0.35)]"
+              className="group relative block overflow-hidden rounded-[20px] border border-white/[0.16] bg-gradient-to-b from-[#1c1c1f] to-[#141416] p-7 shadow-[0_16px_36px_-18px_rgba(0,0,0,0.75)] transition-all duration-300 max-md:border-[#F5C542]/35! max-md:from-[#202023] max-md:to-[#161618] max-md:shadow-[0_20px_44px_-16px_rgba(0,0,0,0.8),0_0_36px_-14px_rgba(245,197,66,0.22)] hover:-translate-y-2 hover:border-[#F5C542]/60 hover:from-[#212124] hover:to-[#18181a] hover:shadow-[0_32px_64px_-18px_rgba(0,0,0,0.85),0_0_56px_-16px_rgba(245,197,66,0.35)]"
               style={{
                 opacity: shown ? 1 : 0,
                 transform: shown ? "none" : "translateY(18px)",

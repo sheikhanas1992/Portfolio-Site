@@ -1,7 +1,7 @@
 import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { g as require_react_dom } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CZAHiVh2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-DdUYJNvx.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var import_react_dom = require_react_dom();
@@ -91,7 +91,7 @@ function Cards() {
 					className: "mt-12 grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-5",
 					children: CARDS.map((c, i) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
 						href: c.to,
-						className: "group relative block overflow-hidden rounded-[20px] border border-white/[0.16] bg-gradient-to-b from-[#1c1c1f] to-[#141416] p-7 shadow-[0_16px_36px_-18px_rgba(0,0,0,0.75)] transition-all duration-300 max-md:border-[#F5C542]/35 max-md:from-[#202023] max-md:to-[#161618] max-md:shadow-[0_20px_44px_-16px_rgba(0,0,0,0.8),0_0_36px_-14px_rgba(245,197,66,0.22)] hover:-translate-y-2 hover:border-[#F5C542]/60 hover:from-[#212124] hover:to-[#18181a] hover:shadow-[0_32px_64px_-18px_rgba(0,0,0,0.85),0_0_56px_-16px_rgba(245,197,66,0.35)]",
+						className: "group relative block overflow-hidden rounded-[20px] border border-white/[0.16] bg-gradient-to-b from-[#1c1c1f] to-[#141416] p-7 shadow-[0_16px_36px_-18px_rgba(0,0,0,0.75)] transition-all duration-300 max-md:border-[#F5C542]/35! max-md:from-[#202023] max-md:to-[#161618] max-md:shadow-[0_20px_44px_-16px_rgba(0,0,0,0.8),0_0_36px_-14px_rgba(245,197,66,0.22)] hover:-translate-y-2 hover:border-[#F5C542]/60 hover:from-[#212124] hover:to-[#18181a] hover:shadow-[0_32px_64px_-18px_rgba(0,0,0,0.85),0_0_56px_-16px_rgba(245,197,66,0.35)]",
 						style: {
 							opacity: shown ? 1 : 0,
 							transform: shown ? "none" : "translateY(18px)",
