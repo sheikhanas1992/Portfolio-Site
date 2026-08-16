@@ -2,7 +2,8 @@ import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { r as PageShell, t as CONTACT } from "./SiteChrome-FFUh6CQl.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-CM45yuq5.js
+import { n as WEB3FORMS_ACCESS_KEY, t as HONEYPOT_STYLE } from "./web3forms-oW45I0ia.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-DFKuty5q.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -59,6 +60,15 @@ function FieldLabel({ children, required }) {
 	});
 }
 var inputClasses = "mt-2.5 w-full rounded-[12px] border border-white/[0.16] bg-[#151517] px-4 py-3.5 text-[0.95rem] font-medium text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60 focus:bg-[#1a1a1d]";
+var inputErrorClasses = "border-[#e08d74]/60 focus:border-[#e08d74]/60";
+function FieldError({ message }) {
+	if (!message) return null;
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+		role: "alert",
+		className: "mt-2 text-[0.85rem] font-semibold text-[#e08d74]",
+		children: message
+	});
+}
 var optionBase = "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
 var optionOn = "border-[#F5C542]/50 bg-[#F5C542]/[0.08] text-[#EDE8E0]";
 var optionOff = "border-white/[0.12] bg-[#151517] text-[#c7c7cc] hover:border-white/[0.25] hover:bg-[#1a1a1d]";
@@ -118,57 +128,128 @@ function AuditForm() {
 	const [otherImprovement, setOtherImprovement] = (0, import_react.useState)("");
 	const [notes, setNotes] = (0, import_react.useState)("");
 	const [contactMethod, setContactMethod] = (0, import_react.useState)("");
-	const [error, setError] = (0, import_react.useState)("");
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		if (!name || !email || !company || !storeUrl) {
-			setError("Fill in your name, email, brand name and store URL first.");
-			return;
-		}
-		if (marketplaces.length === 0) {
-			setError("Pick at least one Amazon marketplace.");
-			return;
-		}
-		if (!category || !asins) {
-			setError("Add your product category and number of ASINs.");
-			return;
-		}
-		if (auditTypes.length === 0) {
-			setError("Pick at least one thing you'd like audited.");
-			return;
-		}
-		if (!contactMethod) {
-			setError("Pick a preferred contact method.");
-			return;
-		}
-		setError("");
-		const lines = [
-			`Name: ${name}`,
-			`Email: ${email}`,
-			`Company / Brand name: ${company}`,
-			`Amazon store / brand URL: ${storeUrl}`,
-			"",
-			`Amazon marketplace(s): ${marketplaces.join(", ")}`,
-			`Product category: ${category}`,
-			`Number of ASINs: ${asins}`,
-			revenue && `Monthly Amazon revenue: ${revenue}`,
-			ppcSpend && `Monthly PPC spend: ${ppcSpend}`,
-			"",
-			`Audit(s) requested: ${auditTypes.join(", ")}`,
-			improvements.length > 0 && `Improvement goals: ${improvements.join(", ")}${otherImprovement ? `, Other: ${otherImprovement}` : ""}`,
-			"",
-			notes && `Anything specific to look at:\n${notes}`,
-			"",
-			`Preferred contact method: ${contactMethod}`
-		].filter(Boolean);
-		const subject = encodeURIComponent(`Amazon audit request: ${company}`);
-		const body = encodeURIComponent(lines.join("\n"));
-		window.location.href = `mailto:${CONTACT.emailAddress}?subject=${subject}&body=${body}`;
+	const [errors, setErrors] = (0, import_react.useState)({});
+	const [status, setStatus] = (0, import_react.useState)("idle");
+	const botcheckRef = (0, import_react.useRef)(null);
+	const clearError = (field) => {
+		setErrors((prev) => {
+			if (!prev[field]) return prev;
+			const next = { ...prev };
+			delete next[field];
+			return next;
+		});
 	};
+	const validate = () => {
+		const next = {};
+		if (!name.trim()) next.name = "Enter your name.";
+		if (!email.trim()) next.email = "Enter your email address.";
+		else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email address.";
+		if (!company.trim()) next.company = "Enter your company or brand name.";
+		if (!storeUrl.trim()) next.storeUrl = "Enter your Amazon store or brand URL.";
+		if (marketplaces.length === 0) next.marketplaces = "Pick at least one Amazon marketplace.";
+		if (!category.trim()) next.category = "Enter your product category.";
+		if (!asins.trim()) next.asins = "Enter your number of ASINs.";
+		if (auditTypes.length === 0) next.auditTypes = "Pick at least one thing you'd like audited.";
+		if (!contactMethod) next.contactMethod = "Pick a preferred contact method.";
+		return next;
+	};
+	const handleSubmit = async (e) => {
+		e.preventDefault();
+		const foundErrors = validate();
+		setErrors(foundErrors);
+		if (Object.keys(foundErrors).length > 0) return;
+		setStatus("loading");
+		try {
+			if ((await (await fetch("https://api.web3forms.com/submit", {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json"
+				},
+				body: JSON.stringify({
+					access_key: "d9b522b9-b4f8-482d-affc-d55accae0054",
+					subject: "New audit request from sheikhanas.com",
+					from_name: "sheikhanas.com",
+					botcheck: botcheckRef.current?.value ?? "",
+					name,
+					email,
+					company,
+					store_url: storeUrl,
+					marketplaces: marketplaces.join(", "),
+					category,
+					number_of_asins: asins,
+					monthly_revenue: revenue,
+					monthly_ppc_spend: ppcSpend,
+					audit_types: auditTypes.join(", "),
+					improvement_goals: improvements.join(", "),
+					other_improvement: otherImprovement,
+					notes,
+					preferred_contact_method: contactMethod
+				})
+			})).json().catch(() => null))?.success) setStatus("success");
+			else setStatus("error");
+		} catch {
+			setStatus("error");
+		}
+	};
+	if (status === "success") return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
+		className: "mt-10 rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 text-center shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"aria-live": "polite",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "text-[1.4rem] font-bold text-[#EDE8E0]",
+					children: "Got it. I'll be in touch within two working days."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+					children: "In the meantime, if you'd rather talk it through, you can book a call."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+					href: CONTACT.calendly,
+					target: "_blank",
+					rel: "noreferrer",
+					className: "mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]",
+					children: ["Book a call", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": true,
+						children: "→"
+					})]
+				})
+			]
+		})
+	});
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 		onSubmit: handleSubmit,
 		className: "mt-10 flex flex-col gap-6",
+		noValidate: true,
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "access_key",
+				value: WEB3FORMS_ACCESS_KEY,
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "subject",
+				value: "New audit request from sheikhanas.com",
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "from_name",
+				value: "sheikhanas.com",
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "text",
+				name: "botcheck",
+				ref: botcheckRef,
+				tabIndex: -1,
+				autoComplete: "off",
+				"aria-hidden": "true",
+				style: HONEYPOT_STYLE
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
 				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -180,44 +261,72 @@ function AuditForm() {
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-7 grid gap-5 sm:grid-cols-2",
 					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Name"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							className: inputClasses,
-							value: name,
-							onChange: (e) => setName(e.target.value),
-							placeholder: "Your name"
-						})] }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Email address"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							type: "email",
-							className: inputClasses,
-							value: email,
-							onChange: (e) => setEmail(e.target.value),
-							placeholder: "you@brand.com"
-						})] }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Company / brand name"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							className: inputClasses,
-							value: company,
-							onChange: (e) => setCompany(e.target.value),
-							placeholder: "Brand name"
-						})] }),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Amazon store / brand URL"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							type: "url",
-							className: inputClasses,
-							value: storeUrl,
-							onChange: (e) => setStoreUrl(e.target.value),
-							placeholder: "https://amazon.com/stores/..."
-						})] })
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Name"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								className: `${inputClasses} ${errors.name ? inputErrorClasses : ""}`,
+								value: name,
+								onChange: (e) => {
+									setName(e.target.value);
+									clearError("name");
+								},
+								placeholder: "Your name"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.name })
+						] }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Email address"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								type: "email",
+								className: `${inputClasses} ${errors.email ? inputErrorClasses : ""}`,
+								value: email,
+								onChange: (e) => {
+									setEmail(e.target.value);
+									clearError("email");
+								},
+								placeholder: "you@brand.com"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.email })
+						] }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Company / brand name"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								className: `${inputClasses} ${errors.company ? inputErrorClasses : ""}`,
+								value: company,
+								onChange: (e) => {
+									setCompany(e.target.value);
+									clearError("company");
+								},
+								placeholder: "Brand name"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.company })
+						] }),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Amazon store / brand URL"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								type: "url",
+								className: `${inputClasses} ${errors.storeUrl ? inputErrorClasses : ""}`,
+								value: storeUrl,
+								onChange: (e) => {
+									setStoreUrl(e.target.value);
+									clearError("storeUrl");
+								},
+								placeholder: "https://amazon.com/stores/..."
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.storeUrl })
+						] })
 					]
 				})]
 			}),
@@ -234,36 +343,57 @@ function AuditForm() {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-7",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Amazon marketplace"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
-							options: MARKETPLACES,
-							selected: marketplaces,
-							onToggle: (v) => setMarketplaces((s) => toggle(s, v))
-						})]
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Amazon marketplace"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
+								options: MARKETPLACES,
+								selected: marketplaces,
+								onToggle: (v) => {
+									setMarketplaces((s) => toggle(s, v));
+									clearError("marketplaces");
+								}
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.marketplaces })
+						]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-7 grid gap-5 sm:grid-cols-2",
-						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Product category"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							className: inputClasses,
-							value: category,
-							onChange: (e) => setCategory(e.target.value),
-							placeholder: "e.g. Skincare, home, supplements"
-						})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
-							required: true,
-							children: "Number of ASINs"
-						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
-							type: "number",
-							min: "1",
-							className: inputClasses,
-							value: asins,
-							onChange: (e) => setAsins(e.target.value),
-							placeholder: "e.g. 12"
-						})] })]
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Product category"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								className: `${inputClasses} ${errors.category ? inputErrorClasses : ""}`,
+								value: category,
+								onChange: (e) => {
+									setCategory(e.target.value);
+									clearError("category");
+								},
+								placeholder: "e.g. Skincare, home, supplements"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.category })
+						] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldLabel, {
+								required: true,
+								children: "Number of ASINs"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+								type: "number",
+								min: "1",
+								className: `${inputClasses} ${errors.asins ? inputErrorClasses : ""}`,
+								value: asins,
+								onChange: (e) => {
+									setAsins(e.target.value);
+									clearError("asins");
+								},
+								placeholder: "e.g. 12"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.asins })
+						] })]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 						className: "mt-7",
@@ -294,13 +424,16 @@ function AuditForm() {
 						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
 						children: "What would you like us to audit?"
 					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-7",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CheckboxGrid, {
 						options: AUDIT_TYPES,
 						selected: auditTypes,
-						onToggle: (v) => setAuditTypes((s) => toggle(s, v))
-					})
+						onToggle: (v) => {
+							setAuditTypes((s) => toggle(s, v));
+							clearError("auditTypes");
+						}
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.auditTypes })]
 				})]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
@@ -358,24 +491,40 @@ function AuditForm() {
 						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
 						children: "Preferred contact method"
 					})]
-				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-7",
-					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGrid, {
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(RadioGrid, {
 						name: "contactMethod",
 						options: CONTACT_METHODS,
 						selected: contactMethod,
-						onChange: setContactMethod
-					})
+						onChange: (v) => {
+							setContactMethod(v);
+							clearError("contactMethod");
+						}
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FieldError, { message: errors.contactMethod })]
 				})]
 			}),
-			error && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+			status === "error" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				role: "alert",
+				"aria-live": "polite",
 				className: "rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]",
-				children: error
+				children: [
+					"Something went wrong. Please try again, or email",
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: "mailto:ceo@cubifai.com",
+						className: "underline decoration-[#e08d74]/50 underline-offset-2",
+						children: "ceo@cubifai.com"
+					}),
+					" ",
+					"directly."
+				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
 				type: "submit",
-				className: "mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
-				children: "Request My Audit →"
+				disabled: status === "loading",
+				className: "mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100",
+				children: status === "loading" ? "Submitting…" : "Request My Audit →"
 			})
 		]
 	});
@@ -556,7 +705,7 @@ function AuditPage() {
 					}) }),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
-						children: "Fill this in and it opens a pre-filled email to me. I read every one myself and usually reply within a day or two."
+						children: "Fill this in and it comes straight to me. I read every one myself and usually reply within a day or two."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AuditForm, {})
 				]

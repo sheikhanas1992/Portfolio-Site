@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { PageShell } from "@/components/SiteChrome";
 import { Reveal } from "@/components/CountUp";
 import { CONTACT } from "@/config/contact";
+import { HONEYPOT_STYLE, WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "@/config/web3forms";
 
 const TITLE = "Build your package: Sheikh Anas";
 const DESCRIPTION =
@@ -21,10 +22,6 @@ export const Route = createFileRoute("/build")({
   }),
   component: BuildPage,
 });
-
-// TODO: replace with the real Formspree form endpoint before this goes live,
-// e.g. https://formspree.io/f/xxxxxxxx (create a form at formspree.io).
-const FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_FORM_ID";
 
 const NEEDS = [
   "Product Photography",
@@ -83,7 +80,11 @@ const optionOff = "border-white/[0.12] bg-[#151517] text-[#c7c7cc] hover:border-
 
 function FieldError({ message }: { message?: string | undefined }) {
   if (!message) return null;
-  return <p className="mt-2 text-[0.85rem] font-semibold text-[#e08d74]">{message}</p>;
+  return (
+    <p role="alert" className="mt-2 text-[0.85rem] font-semibold text-[#e08d74]">
+      {message}
+    </p>
+  );
 }
 
 function CheckboxGrid({
@@ -170,6 +171,7 @@ function BuildForm() {
 
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<Status>("idle");
+  const botcheckRef = useRef<HTMLInputElement>(null);
 
   const clearError = (field: keyof Errors) => {
     setErrors((prev) => {
@@ -199,22 +201,27 @@ function BuildForm() {
 
     setStatus("loading");
     try {
-      const res = await fetch(FORM_ENDPOINT, {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
         headers: { Accept: "application/json", "Content-Type": "application/json" },
         body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New custom package request from sheikhanas.com",
+          from_name: "sheikhanas.com",
+          botcheck: botcheckRef.current?.value ?? "",
           name,
           email,
           phone: phone ? `${countryCode} ${phone}` : "",
-          needs,
-          otherNeed: needs.includes("Other") ? otherNeed : "",
-          productCount,
-          asinOrUrl,
+          needs: needs.join(", "),
+          other_need: needs.includes("Other") ? otherNeed : "",
+          product_count: productCount,
+          asin_or_url: asinOrUrl,
           budget,
           comments,
         }),
       });
-      if (res.ok) {
+      const data = await res.json().catch(() => null);
+      if (data?.success) {
         setStatus("success");
       } else {
         setStatus("error");
@@ -227,25 +234,42 @@ function BuildForm() {
   if (status === "success") {
     return (
       <Reveal className={`${CARD_CLASSES} text-center`}>
-        <h2 className="text-[1.4rem] font-bold text-[#EDE8E0]">Got it. I'll be in touch within two working days.</h2>
-        <p className="mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
-          In the meantime, if you'd rather talk it through, you can book a call directly.
-        </p>
-        <a
-          href={CONTACT.calendly}
-          target="_blank"
-          rel="noreferrer"
-          className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]"
-        >
-          Book a call
-          <span aria-hidden>→</span>
-        </a>
+        <div aria-live="polite">
+          <h2 className="text-[1.4rem] font-bold text-[#EDE8E0]">
+            Got it. I'll come back with scope and pricing within two working days.
+          </h2>
+          <p className="mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+            If you'd rather talk it through first, you can book a call.
+          </p>
+          <a
+            href={CONTACT.calendly}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]"
+          >
+            Book a call
+            <span aria-hidden>→</span>
+          </a>
+        </div>
       </Reveal>
     );
   }
 
   return (
     <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6" noValidate>
+      <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} readOnly />
+      <input type="hidden" name="subject" value="New custom package request from sheikhanas.com" readOnly />
+      <input type="hidden" name="from_name" value="sheikhanas.com" readOnly />
+      <input
+        type="text"
+        name="botcheck"
+        ref={botcheckRef}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={HONEYPOT_STYLE}
+      />
+
       <Reveal className={CARD_CLASSES}>
         <div className="flex items-center gap-4">
           <StepNumber n="1" />
@@ -409,9 +433,16 @@ function BuildForm() {
       </Reveal>
 
       {status === "error" && (
-        <p className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]">
-          Something went wrong sending this. Nothing here has been cleared, so you can just try
-          submitting again, or email me directly at {CONTACT.emailAddress}.
+        <p
+          role="alert"
+          aria-live="polite"
+          className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]"
+        >
+          Something went wrong. Please try again, or email{" "}
+          <a href="mailto:ceo@cubifai.com" className="underline decoration-[#e08d74]/50 underline-offset-2">
+            ceo@cubifai.com
+          </a>{" "}
+          directly.
         </p>
       )}
 

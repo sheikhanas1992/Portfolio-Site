@@ -2,10 +2,10 @@ import { i as __toESM } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { r as PageShell, t as CONTACT } from "./SiteChrome-FFUh6CQl.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/build-D_Af-ZHX.js
+import { n as WEB3FORMS_ACCESS_KEY, t as HONEYPOT_STYLE } from "./web3forms-oW45I0ia.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/build-PVD4sEKZ.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var FORM_ENDPOINT = "https://formspree.io/f/REPLACE_WITH_FORM_ID";
 var NEEDS = [
 	"Product Photography",
 	"Full Listing Creatives",
@@ -81,6 +81,7 @@ var optionOff = "border-white/[0.12] bg-[#151517] text-[#c7c7cc] hover:border-wh
 function FieldError({ message }) {
 	if (!message) return null;
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+		role: "alert",
 		className: "mt-2 text-[0.85rem] font-semibold text-[#e08d74]",
 		children: message
 	});
@@ -140,6 +141,7 @@ function BuildForm() {
 	const [comments, setComments] = (0, import_react.useState)("");
 	const [errors, setErrors] = (0, import_react.useState)({});
 	const [status, setStatus] = (0, import_react.useState)("idle");
+	const botcheckRef = (0, import_react.useRef)(null);
 	const clearError = (field) => {
 		setErrors((prev) => {
 			if (!prev[field]) return prev;
@@ -165,57 +167,91 @@ function BuildForm() {
 		if (Object.keys(foundErrors).length > 0) return;
 		setStatus("loading");
 		try {
-			if ((await fetch(FORM_ENDPOINT, {
+			if ((await (await fetch("https://api.web3forms.com/submit", {
 				method: "POST",
 				headers: {
 					Accept: "application/json",
 					"Content-Type": "application/json"
 				},
 				body: JSON.stringify({
+					access_key: "d9b522b9-b4f8-482d-affc-d55accae0054",
+					subject: "New custom package request from sheikhanas.com",
+					from_name: "sheikhanas.com",
+					botcheck: botcheckRef.current?.value ?? "",
 					name,
 					email,
 					phone: phone ? `${countryCode} ${phone}` : "",
-					needs,
-					otherNeed: needs.includes("Other") ? otherNeed : "",
-					productCount,
-					asinOrUrl,
+					needs: needs.join(", "),
+					other_need: needs.includes("Other") ? otherNeed : "",
+					product_count: productCount,
+					asin_or_url: asinOrUrl,
 					budget,
 					comments
 				})
-			})).ok) setStatus("success");
+			})).json().catch(() => null))?.success) setStatus("success");
 			else setStatus("error");
 		} catch {
 			setStatus("error");
 		}
 	};
-	if (status === "success") return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
+	if (status === "success") return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, {
 		className: `${CARD_CLASSES} text-center`,
-		children: [
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-				className: "text-[1.4rem] font-bold text-[#EDE8E0]",
-				children: "Got it. I'll be in touch within two working days."
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-				className: "mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
-				children: "In the meantime, if you'd rather talk it through, you can book a call directly."
-			}),
-			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-				href: CONTACT.calendly,
-				target: "_blank",
-				rel: "noreferrer",
-				className: "mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]",
-				children: ["Book a call", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-					"aria-hidden": true,
-					children: "→"
-				})]
-			})
-		]
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			"aria-live": "polite",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "text-[1.4rem] font-bold text-[#EDE8E0]",
+					children: "Got it. I'll come back with scope and pricing within two working days."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]",
+					children: "If you'd rather talk it through first, you can book a call."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+					href: CONTACT.calendly,
+					target: "_blank",
+					rel: "noreferrer",
+					className: "mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]",
+					children: ["Book a call", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						"aria-hidden": true,
+						children: "→"
+					})]
+				})
+			]
+		})
 	});
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("form", {
 		onSubmit: handleSubmit,
 		className: "mt-10 flex flex-col gap-6",
 		noValidate: true,
 		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "access_key",
+				value: WEB3FORMS_ACCESS_KEY,
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "subject",
+				value: "New custom package request from sheikhanas.com",
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "hidden",
+				name: "from_name",
+				value: "sheikhanas.com",
+				readOnly: true
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+				type: "text",
+				name: "botcheck",
+				ref: botcheckRef,
+				tabIndex: -1,
+				autoComplete: "off",
+				"aria-hidden": "true",
+				style: HONEYPOT_STYLE
+			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
 				className: CARD_CLASSES,
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
@@ -423,11 +459,19 @@ function BuildForm() {
 				})]
 			}),
 			status === "error" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				role: "alert",
+				"aria-live": "polite",
 				className: "rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]",
 				children: [
-					"Something went wrong sending this. Nothing here has been cleared, so you can just try submitting again, or email me directly at ",
-					CONTACT.emailAddress,
-					"."
+					"Something went wrong. Please try again, or email",
+					" ",
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: "mailto:ceo@cubifai.com",
+						className: "underline decoration-[#e08d74]/50 underline-offset-2",
+						children: "ceo@cubifai.com"
+					}),
+					" ",
+					"directly."
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {

@@ -2,11 +2,11 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-CxRyHaOE.js
-var router_CxRyHaOE_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-B6QrZy8w.js
+var router_B6QrZy8w_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-DT3w8T1n.css";
+var styles_default = "/assets/styles-CG_QFICi.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -323,7 +323,7 @@ var Route$6 = createFileRoute("/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-var $$splitComponentImporter$5 = () => import("./audit-CM45yuq5.mjs");
+var $$splitComponentImporter$5 = () => import("./audit-DFKuty5q.mjs");
 var TITLE$5 = "Free Amazon account audit: Sheikh Anas";
 var DESCRIPTION$5 = "Request a free Amazon PPC, listing, creative or full account audit. Tell me about your account and I'll tell you what I see in it.";
 var Route$5 = createFileRoute("/audit")({
@@ -381,7 +381,7 @@ var Route$4 = createFileRoute("/book")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./build-D_Af-ZHX.mjs");
+var $$splitComponentImporter$3 = () => import("./build-PVD4sEKZ.mjs");
 var TITLE$3 = "Build your package: Sheikh Anas";
 var DESCRIPTION$3 = "Tell me what you need and what you already have covered. I'll come back with scope and pricing, usually within two working days.";
 var Route$3 = createFileRoute("/build")({
@@ -545,4 +545,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_CxRyHaOE_exports as t };
+export { getRouter, router_B6QrZy8w_exports as t };

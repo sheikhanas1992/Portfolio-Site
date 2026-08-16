@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { PageShell } from "@/components/SiteChrome";
 import { Reveal } from "@/components/CountUp";
 import { CONTACT } from "@/config/contact";
+import { HONEYPOT_STYLE, WEB3FORMS_ACCESS_KEY, WEB3FORMS_ENDPOINT } from "@/config/web3forms";
 
 const TITLE = "Free Amazon account audit: Sheikh Anas";
 const DESCRIPTION =
@@ -57,6 +58,17 @@ function FieldLabel({ children, required }: { children: string; required?: boole
 
 const inputClasses =
   "mt-2.5 w-full rounded-[12px] border border-white/[0.16] bg-[#151517] px-4 py-3.5 text-[0.95rem] font-medium text-[#EDE8E0] outline-none transition-colors placeholder:text-[#5c5c61] focus:border-[#F5C542]/60 focus:bg-[#1a1a1d]";
+
+const inputErrorClasses = "border-[#e08d74]/60 focus:border-[#e08d74]/60";
+
+function FieldError({ message }: { message?: string | undefined }) {
+  if (!message) return null;
+  return (
+    <p role="alert" className="mt-2 text-[0.85rem] font-semibold text-[#e08d74]">
+      {message}
+    </p>
+  );
+}
 
 const optionBase =
   "flex cursor-pointer items-center gap-3 rounded-[10px] border px-4 py-3.5 text-[0.92rem] font-medium transition-all duration-150";
@@ -132,6 +144,14 @@ function StepNumber({ n }: { n: string }) {
   );
 }
 
+type AuditErrors = Partial<
+  Record<
+    "name" | "email" | "company" | "storeUrl" | "marketplaces" | "category" | "asins" | "auditTypes" | "contactMethod",
+    string
+  >
+>;
+type AuditStatus = "idle" | "loading" | "success" | "error";
+
 function AuditForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -147,61 +167,115 @@ function AuditForm() {
   const [otherImprovement, setOtherImprovement] = useState("");
   const [notes, setNotes] = useState("");
   const [contactMethod, setContactMethod] = useState("");
-  const [error, setError] = useState("");
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+  const [errors, setErrors] = useState<AuditErrors>({});
+  const [status, setStatus] = useState<AuditStatus>("idle");
+  const botcheckRef = useRef<HTMLInputElement>(null);
 
-    if (!name || !email || !company || !storeUrl) {
-      setError("Fill in your name, email, brand name and store URL first.");
-      return;
-    }
-    if (marketplaces.length === 0) {
-      setError("Pick at least one Amazon marketplace.");
-      return;
-    }
-    if (!category || !asins) {
-      setError("Add your product category and number of ASINs.");
-      return;
-    }
-    if (auditTypes.length === 0) {
-      setError("Pick at least one thing you'd like audited.");
-      return;
-    }
-    if (!contactMethod) {
-      setError("Pick a preferred contact method.");
-      return;
-    }
-    setError("");
-
-    const lines = [
-      `Name: ${name}`,
-      `Email: ${email}`,
-      `Company / Brand name: ${company}`,
-      `Amazon store / brand URL: ${storeUrl}`,
-      "",
-      `Amazon marketplace(s): ${marketplaces.join(", ")}`,
-      `Product category: ${category}`,
-      `Number of ASINs: ${asins}`,
-      revenue && `Monthly Amazon revenue: ${revenue}`,
-      ppcSpend && `Monthly PPC spend: ${ppcSpend}`,
-      "",
-      `Audit(s) requested: ${auditTypes.join(", ")}`,
-      improvements.length > 0 &&
-        `Improvement goals: ${improvements.join(", ")}${otherImprovement ? `, Other: ${otherImprovement}` : ""}`,
-      "",
-      notes && `Anything specific to look at:\n${notes}`,
-      "",
-      `Preferred contact method: ${contactMethod}`,
-    ].filter(Boolean);
-
-    const subject = encodeURIComponent(`Amazon audit request: ${company}`);
-    const body = encodeURIComponent(lines.join("\n"));
-    window.location.href = `mailto:${CONTACT.emailAddress}?subject=${subject}&body=${body}`;
+  const clearError = (field: keyof AuditErrors) => {
+    setErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
   };
 
+  const validate = (): AuditErrors => {
+    const next: AuditErrors = {};
+    if (!name.trim()) next.name = "Enter your name.";
+    if (!email.trim()) next.email = "Enter your email address.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email address.";
+    if (!company.trim()) next.company = "Enter your company or brand name.";
+    if (!storeUrl.trim()) next.storeUrl = "Enter your Amazon store or brand URL.";
+    if (marketplaces.length === 0) next.marketplaces = "Pick at least one Amazon marketplace.";
+    if (!category.trim()) next.category = "Enter your product category.";
+    if (!asins.trim()) next.asins = "Enter your number of ASINs.";
+    if (auditTypes.length === 0) next.auditTypes = "Pick at least one thing you'd like audited.";
+    if (!contactMethod) next.contactMethod = "Pick a preferred contact method.";
+    return next;
+  };
+
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
+    const foundErrors = validate();
+    setErrors(foundErrors);
+    if (Object.keys(foundErrors).length > 0) return;
+
+    setStatus("loading");
+    try {
+      const res = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: "New audit request from sheikhanas.com",
+          from_name: "sheikhanas.com",
+          botcheck: botcheckRef.current?.value ?? "",
+          name,
+          email,
+          company,
+          store_url: storeUrl,
+          marketplaces: marketplaces.join(", "),
+          category,
+          number_of_asins: asins,
+          monthly_revenue: revenue,
+          monthly_ppc_spend: ppcSpend,
+          audit_types: auditTypes.join(", "),
+          improvement_goals: improvements.join(", "),
+          other_improvement: otherImprovement,
+          notes,
+          preferred_contact_method: contactMethod,
+        }),
+      });
+      const data = await res.json().catch(() => null);
+      if (data?.success) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
+  };
+
+  if (status === "success") {
+    return (
+      <Reveal className="mt-10 rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 text-center shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
+        <div aria-live="polite">
+          <h2 className="text-[1.4rem] font-bold text-[#EDE8E0]">Got it. I'll be in touch within two working days.</h2>
+          <p className="mt-4 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
+            In the meantime, if you'd rather talk it through, you can book a call.
+          </p>
+          <a
+            href={CONTACT.calendly}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-7 inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] active:scale-[0.98]"
+          >
+            Book a call
+            <span aria-hidden>→</span>
+          </a>
+        </div>
+      </Reveal>
+    );
+  }
+
   return (
-    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6">
+    <form onSubmit={handleSubmit} className="mt-10 flex flex-col gap-6" noValidate>
+      <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} readOnly />
+      <input type="hidden" name="subject" value="New audit request from sheikhanas.com" readOnly />
+      <input type="hidden" name="from_name" value="sheikhanas.com" readOnly />
+      <input
+        type="text"
+        name="botcheck"
+        ref={botcheckRef}
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        style={HONEYPOT_STYLE}
+      />
+
       <Reveal className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
         <div className="flex items-center gap-4">
           <StepNumber n="1" />
@@ -211,40 +285,56 @@ function AuditForm() {
           <div>
             <FieldLabel required>Name</FieldLabel>
             <input
-              className={inputClasses}
+              className={`${inputClasses} ${errors.name ? inputErrorClasses : ""}`}
               value={name}
-              onChange={(e) => setName(e.target.value)}
+              onChange={(e) => {
+                setName(e.target.value);
+                clearError("name");
+              }}
               placeholder="Your name"
             />
+            <FieldError message={errors.name} />
           </div>
           <div>
             <FieldLabel required>Email address</FieldLabel>
             <input
               type="email"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.email ? inputErrorClasses : ""}`}
               value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                clearError("email");
+              }}
               placeholder="you@brand.com"
             />
+            <FieldError message={errors.email} />
           </div>
           <div>
             <FieldLabel required>Company / brand name</FieldLabel>
             <input
-              className={inputClasses}
+              className={`${inputClasses} ${errors.company ? inputErrorClasses : ""}`}
               value={company}
-              onChange={(e) => setCompany(e.target.value)}
+              onChange={(e) => {
+                setCompany(e.target.value);
+                clearError("company");
+              }}
               placeholder="Brand name"
             />
+            <FieldError message={errors.company} />
           </div>
           <div>
             <FieldLabel required>Amazon store / brand URL</FieldLabel>
             <input
               type="url"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.storeUrl ? inputErrorClasses : ""}`}
               value={storeUrl}
-              onChange={(e) => setStoreUrl(e.target.value)}
+              onChange={(e) => {
+                setStoreUrl(e.target.value);
+                clearError("storeUrl");
+              }}
               placeholder="https://amazon.com/stores/..."
             />
+            <FieldError message={errors.storeUrl} />
           </div>
         </div>
       </Reveal>
@@ -260,30 +350,42 @@ function AuditForm() {
           <CheckboxGrid
             options={MARKETPLACES}
             selected={marketplaces}
-            onToggle={(v) => setMarketplaces((s) => toggle(s, v))}
+            onToggle={(v) => {
+              setMarketplaces((s) => toggle(s, v));
+              clearError("marketplaces");
+            }}
           />
+          <FieldError message={errors.marketplaces} />
         </div>
 
         <div className="mt-7 grid gap-5 sm:grid-cols-2">
           <div>
             <FieldLabel required>Product category</FieldLabel>
             <input
-              className={inputClasses}
+              className={`${inputClasses} ${errors.category ? inputErrorClasses : ""}`}
               value={category}
-              onChange={(e) => setCategory(e.target.value)}
+              onChange={(e) => {
+                setCategory(e.target.value);
+                clearError("category");
+              }}
               placeholder="e.g. Skincare, home, supplements"
             />
+            <FieldError message={errors.category} />
           </div>
           <div>
             <FieldLabel required>Number of ASINs</FieldLabel>
             <input
               type="number"
               min="1"
-              className={inputClasses}
+              className={`${inputClasses} ${errors.asins ? inputErrorClasses : ""}`}
               value={asins}
-              onChange={(e) => setAsins(e.target.value)}
+              onChange={(e) => {
+                setAsins(e.target.value);
+                clearError("asins");
+              }}
               placeholder="e.g. 12"
             />
+            <FieldError message={errors.asins} />
           </div>
         </div>
 
@@ -317,8 +419,12 @@ function AuditForm() {
           <CheckboxGrid
             options={AUDIT_TYPES}
             selected={auditTypes}
-            onToggle={(v) => setAuditTypes((s) => toggle(s, v))}
+            onToggle={(v) => {
+              setAuditTypes((s) => toggle(s, v));
+              clearError("auditTypes");
+            }}
           />
+          <FieldError message={errors.auditTypes} />
         </div>
       </Reveal>
 
@@ -368,22 +474,35 @@ function AuditForm() {
             name="contactMethod"
             options={CONTACT_METHODS}
             selected={contactMethod}
-            onChange={setContactMethod}
+            onChange={(v) => {
+              setContactMethod(v);
+              clearError("contactMethod");
+            }}
           />
+          <FieldError message={errors.contactMethod} />
         </div>
       </Reveal>
 
-      {error && (
-        <p className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]">
-          {error}
+      {status === "error" && (
+        <p
+          role="alert"
+          aria-live="polite"
+          className="rounded-[12px] border border-[#e08d74]/30 bg-[#e08d74]/[0.08] px-5 py-4 text-[0.95rem] font-semibold text-[#e08d74]"
+        >
+          Something went wrong. Please try again, or email{" "}
+          <a href="mailto:ceo@cubifai.com" className="underline decoration-[#e08d74]/50 underline-offset-2">
+            ceo@cubifai.com
+          </a>{" "}
+          directly.
         </p>
       )}
 
       <button
         type="submit"
-        className="mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
+        disabled={status === "loading"}
+        className="mt-2 self-start rounded-full bg-[#F5C542] px-9 py-[1.15rem] font-mono text-[0.82rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:scale-100"
       >
-        Request My Audit →
+        {status === "loading" ? "Submitting…" : "Request My Audit →"}
       </button>
     </form>
   );
@@ -539,8 +658,8 @@ function AuditPage() {
             </div>
           </Reveal>
           <p className="mt-5 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
-            Fill this in and it opens a pre-filled email to me. I read every one myself and
-            usually reply within a day or two.
+            Fill this in and it comes straight to me. I read every one myself and usually reply
+            within a day or two.
           </p>
           <AuditForm />
         </div>
