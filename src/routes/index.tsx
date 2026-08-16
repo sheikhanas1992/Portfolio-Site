@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
       { name: "theme-color", content: "#0d0d0f" },
     ],
-    links: [{ rel: "stylesheet", href: "/assets/index-AF_uK0OU.css" }],
+    links: [{ rel: "stylesheet", href: "/assets/index-BT5FVsg5.css" }],
   }),
   component: Index,
 });
@@ -32,7 +32,7 @@ function Index() {
     script.id = "portfolio-bundle";
     script.type = "module";
     script.crossOrigin = "anonymous";
-    script.src = "/assets/index-B7hQezvy.js";
+    script.src = "/assets/index-C4PDRJ1P.js";
     document.body.appendChild(script);
   }, []);
 
