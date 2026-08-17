@@ -657,15 +657,6 @@ function AuditPage() {
               Free audits that always find a crisis are a sales tactic. This one is a read.
             </p>
           </Reveal>
-          <div className="mt-8">
-            <a
-              href="#request-form"
-              className="inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]"
-            >
-              Request an audit
-              <span aria-hidden>→</span>
-            </a>
-          </div>
         </div>
 
         <div id="request-form" className="mt-24 scroll-mt-24 border-t border-white/[0.1] pt-14">

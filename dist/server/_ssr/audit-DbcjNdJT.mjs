@@ -3,7 +3,7 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { r as PageShell, t as CONTACT } from "./SiteChrome-BXKEnkdm.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
 import { n as WEB3FORMS_ACCESS_KEY, t as HONEYPOT_STYLE } from "./web3forms-oW45I0ia.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-BUbmeGgM.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-DbcjNdJT.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -695,18 +695,7 @@ function AuditPage() {
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Reveal, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-7 max-w-[52ch] border-l-2 border-[#F5C542]/50 pl-5 text-[1.25rem] font-bold italic leading-snug text-[#EDE8E0] md:text-[1.4rem]",
 						children: "Free audits that always find a crisis are a sales tactic. This one is a read."
-					}) }),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "mt-8",
-						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
-							href: "#request-form",
-							className: "inline-flex items-center gap-2 rounded-full bg-[#F5C542] px-8 py-4 font-mono text-[0.78rem] font-bold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_8px_24px_-8px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_10px_28px_-6px_rgba(245,197,66,0.6)] active:scale-[0.98]",
-							children: ["Request an audit", /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
-								"aria-hidden": true,
-								children: "→"
-							})]
-						})
-					})
+					}) })
 				]
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
