@@ -133,49 +133,20 @@ export function ContactRow() {
 
 export function SiteFooter() {
   return (
-    <footer className="mx-auto mt-24 flex max-w-[1100px] flex-col items-center gap-6 border-t border-white/[0.1] px-6 py-10 text-[0.8rem] font-semibold text-[#c7c7cc] md:flex-row md:justify-between md:px-10">
+    <footer className="mx-auto mt-24 flex max-w-[1100px] flex-col items-center gap-4 border-t border-white/[0.1] px-6 py-10 text-[0.8rem] font-semibold text-[#c7c7cc] md:flex-row md:justify-between md:px-10">
       <span className="font-mono uppercase tracking-[0.12em] text-[#c7c7cc]">
         © {new Date().getFullYear()} Sheikh Anas
       </span>
-      <div className="flex flex-wrap items-center gap-6 font-mono uppercase tracking-[0.12em]">
-        <Link to="/audit" className="transition-colors hover:text-[#F5C542]">
-          Get an audit
-        </Link>
-        <Link to="/book" className="transition-colors hover:text-[#F5C542]">
-          Book a call
-        </Link>
-        <a
-          href={CONTACT.phone}
-          aria-label="Call Sheikh Anas"
-          className="transition-colors hover:text-[#F5C542]"
-        >
-          Phone
+      <div className="flex gap-6 font-mono uppercase tracking-[0.12em]">
+        <a href={CONTACT.linkedin} {...ext} className="transition-colors hover:text-[#EDE8E0]">
+          LinkedIn
         </a>
-        <div className="flex items-center gap-2.5">
-          <a
-            href={CONTACT.linkedin}
-            {...ext}
-            aria-label="Sheikh Anas on LinkedIn"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#c7c7cc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
-          >
-            <LinkedInIcon className="h-[15px] w-[15px]" />
-          </a>
-          <a
-            href={CONTACT.email}
-            aria-label="Email Sheikh Anas"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#c7c7cc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
-          >
-            <GmailIcon className="h-[16px] w-[16px]" />
-          </a>
-          <a
-            href={CONTACT.whatsapp}
-            {...ext}
-            aria-label="Message Sheikh Anas on WhatsApp"
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-white/[0.16] text-[#c7c7cc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/60 hover:text-[#F5C542]"
-          >
-            <WhatsAppIcon className="h-[16px] w-[16px]" />
-          </a>
-        </div>
+        <a href={CONTACT.email} className="transition-colors hover:text-[#EDE8E0]">
+          Email
+        </a>
+        <a href={CONTACT.whatsapp} {...ext} className="transition-colors hover:text-[#EDE8E0]">
+          WhatsApp
+        </a>
       </div>
     </footer>
   );

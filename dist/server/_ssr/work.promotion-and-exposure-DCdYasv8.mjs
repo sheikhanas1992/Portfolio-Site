@@ -1,6 +1,6 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-D9c7eLnF.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.promotion-and-exposure-pty82XGj.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-ML-E4Vsh.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.promotion-and-exposure-DCdYasv8.js
 var import_jsx_runtime = require_jsx_runtime();
 var IMG = "/case-images/promotion-and-exposure";
 function PromotionAndExposure() {
