@@ -549,36 +549,46 @@ function AuditPage() {
               </h2>
             </div>
           </Reveal>
-          <div className="mt-8 grid gap-6 sm:grid-cols-3">
+          <div className="mt-10 divide-y divide-white/[0.08] border-y border-white/[0.08]">
             {[
               {
                 step: "01",
                 title: "The structure",
                 copy: "Campaign architecture, match types, duplication, and where the same keyword is competing against itself. Most wasted spend in an Amazon account is structural, not a bidding mistake, and it does not show up in a dashboard summary.",
+                color: "#9BE6B4",
               },
               {
                 step: "02",
                 title: "The spend",
                 copy: "Search term reports, bid history, placement data and budget caps. I separate spend that is genuinely unprofitable from spend that only looks unprofitable because it is being measured against the wrong target.",
+                color: "#F5C542",
               },
               {
                 step: "03",
                 title: "The page it lands on",
                 copy: "Titles, bullets, images, A+ content and featured offer share. A campaign cannot fix a listing that does not convert, so I read the pages alongside the ads rather than treating them as someone else's problem.",
+                color: "#8FB8E8",
               },
             ].map((s, i) => (
-              <Reveal
-                key={s.step}
-                delay={i * 90}
-                className="group rounded-[20px] border border-white/[0.1] bg-[#151517] p-6 transition-all duration-200 hover:-translate-y-1 hover:border-[#F5C542]/30 hover:shadow-[0_12px_28px_-12px_rgba(0,0,0,0.6)]"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#F5C542]/[0.12] font-mono text-[0.78rem] font-bold text-[#F5C542] transition-colors group-hover:bg-[#F5C542]/[0.2]">
-                  {s.step}
-                </span>
-                <h3 className="mt-4 text-[1.15rem] font-bold text-[#EDE8E0]">{s.title}</h3>
-                <p className="mt-3 text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]">
-                  {s.copy}
-                </p>
+              <Reveal key={s.step} delay={i * 90}>
+                <div className="group grid grid-cols-[3.2rem_1fr] items-start gap-5 py-8 sm:grid-cols-[5rem_1fr] sm:gap-8 md:py-10">
+                  <span
+                    aria-hidden
+                    className="select-none font-mono text-[2.6rem] font-black leading-none transition-colors duration-300 sm:text-[3.4rem]"
+                    style={{
+                      color: "transparent",
+                      WebkitTextStroke: `1.5px ${s.color}80`,
+                    }}
+                  >
+                    {s.step}
+                  </span>
+                  <div>
+                    <h3 className="text-[1.25rem] font-bold text-[#EDE8E0] md:text-[1.45rem]">{s.title}</h3>
+                    <p className="mt-3 max-w-[60ch] text-[0.96rem] font-medium leading-relaxed text-[#c7c7cc]">
+                      {s.copy}
+                    </p>
+                  </div>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -596,17 +606,26 @@ function AuditPage() {
           <p className="mt-6 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
             A written document, not a call and a verbal summary. It covers:
           </p>
-          <ul className="mt-6 space-y-4">
+          <ul className="mt-6 space-y-5">
             {[
-              "What's working, and should be funded harder, with the numbers that prove it.",
-              "What's costing you money, separated into what to stop now and what to restructure.",
-              "What to fix first, in priority order, with the reasoning behind the sequence.",
-              "What I'd need to know more about, because an honest audit says where the data ran out rather than guessing past it.",
+              { text: "What's working, and should be funded harder, with the numbers that prove it.", color: "#9BE6B4" },
+              { text: "What's costing you money, separated into what to stop now and what to restructure.", color: "#F5C542" },
+              { text: "What to fix first, in priority order, with the reasoning behind the sequence.", color: "#8FB8E8" },
+              {
+                text: "What I'd need to know more about, because an honest audit says where the data ran out rather than guessing past it.",
+                color: "#9BE6B4",
+              },
             ].map((point, i) => (
-              <Reveal key={point} delay={i * 60}>
-                <li className="grid grid-cols-[auto_1fr] gap-3 text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
-                  <span aria-hidden className="mt-[0.6em] h-[3px] w-3 rounded-full bg-[#F5C542]" />
-                  <span>{point}</span>
+              <Reveal key={point.text} delay={i * 60}>
+                <li className="grid grid-cols-[auto_1fr] items-start gap-4 text-[1rem] font-medium leading-relaxed text-[#EDE8E0]">
+                  <span
+                    aria-hidden
+                    className="mt-1 flex h-6 w-6 shrink-0 items-center justify-center rounded-full font-mono text-[0.68rem] font-bold"
+                    style={{ backgroundColor: `${point.color}1f`, color: point.color }}
+                  >
+                    {i + 1}
+                  </span>
+                  <span>{point.text}</span>
                 </li>
               </Reveal>
             ))}
@@ -633,9 +652,11 @@ function AuditPage() {
             shape, the audit will say so, and it will say what I would do next rather than
             inventing a problem to solve.
           </p>
-          <p className="mt-4 max-w-[62ch] text-[0.98rem] font-medium leading-relaxed text-[#c7c7cc]">
-            Free audits that always find a crisis are a sales tactic. This one is a read.
-          </p>
+          <Reveal>
+            <p className="mt-7 max-w-[52ch] border-l-2 border-[#F5C542]/50 pl-5 text-[1.25rem] font-bold italic leading-snug text-[#EDE8E0] md:text-[1.4rem]">
+              Free audits that always find a crisis are a sales tactic. This one is a read.
+            </p>
+          </Reveal>
           <div className="mt-8">
             <a
               href="#request-form"

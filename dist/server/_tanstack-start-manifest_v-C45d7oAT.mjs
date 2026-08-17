@@ -1,4 +1,4 @@
-//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CqzL-ISB.js
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-C45d7oAT.js
 var tsrStartManifest = () => ({ routes: {
 	__root__: {
 		filePath: "/workspace/portfolio-site/src/routes/__root.tsx",
@@ -11,57 +11,57 @@ var tsrStartManifest = () => ({ routes: {
 			"/work/promotion-and-exposure",
 			"/work/scale-and-concentration"
 		],
-		preloads: ["/assets/index-BYG6nALk.js"],
+		preloads: ["/assets/index-evzC26d7.js"],
 		scripts: [{ attrs: {
 			type: "module",
 			async: !0,
-			src: "/assets/index-BYG6nALk.js"
+			src: "/assets/index-evzC26d7.js"
 		} }]
 	},
 	"/": {
 		filePath: "/workspace/portfolio-site/src/routes/index.tsx",
 		children: void 0,
-		preloads: ["/assets/routes-C6F59Z_y.js"]
+		preloads: ["/assets/routes-Bc6NFCzr.js"]
 	},
 	"/audit": {
 		filePath: "/workspace/portfolio-site/src/routes/audit.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/audit-CY2oubzh.js",
-			"/assets/SiteChrome-CKdWQow2.js",
-			"/assets/CountUp-CxSQK_5y.js",
+			"/assets/audit-CJt-8zLp.js",
+			"/assets/SiteChrome-Djgj1DMP.js",
+			"/assets/CountUp-CDuLePzi.js",
 			"/assets/web3forms-B1E0ScAO.js"
 		]
 	},
 	"/book": {
 		filePath: "/workspace/portfolio-site/src/routes/book.tsx",
 		children: void 0,
-		preloads: ["/assets/book-DLWWZr0H.js", "/assets/SiteChrome-CKdWQow2.js"]
+		preloads: ["/assets/book-C36Ae4Uv.js", "/assets/SiteChrome-Djgj1DMP.js"]
 	},
 	"/build": {
 		filePath: "/workspace/portfolio-site/src/routes/build.tsx",
 		children: void 0,
 		preloads: [
-			"/assets/build-B5uN8bvX.js",
-			"/assets/SiteChrome-CKdWQow2.js",
-			"/assets/CountUp-CxSQK_5y.js",
+			"/assets/build-C7fGyurX.js",
+			"/assets/SiteChrome-Djgj1DMP.js",
+			"/assets/CountUp-CDuLePzi.js",
 			"/assets/web3forms-B1E0ScAO.js"
 		]
 	},
 	"/work/ceiling-and-efficiency": {
 		filePath: "/workspace/portfolio-site/src/routes/work.ceiling-and-efficiency.tsx",
 		children: void 0,
-		preloads: ["/assets/work.ceiling-and-efficiency-CVYCyYC5.js", "/assets/CaseBits-Cv0p3BAq.js"]
+		preloads: ["/assets/work.ceiling-and-efficiency-Bp_4y7NL.js", "/assets/CaseBits-xIRVkyUz.js"]
 	},
 	"/work/promotion-and-exposure": {
 		filePath: "/workspace/portfolio-site/src/routes/work.promotion-and-exposure.tsx",
 		children: void 0,
-		preloads: ["/assets/work.promotion-and-exposure-Cg6r8zaS.js", "/assets/CaseBits-Cv0p3BAq.js"]
+		preloads: ["/assets/work.promotion-and-exposure-CcZGizFF.js", "/assets/CaseBits-xIRVkyUz.js"]
 	},
 	"/work/scale-and-concentration": {
 		filePath: "/workspace/portfolio-site/src/routes/work.scale-and-concentration.tsx",
 		children: void 0,
-		preloads: ["/assets/work.scale-and-concentration-Bcd22R1h.js", "/assets/CaseBits-Cv0p3BAq.js"]
+		preloads: ["/assets/work.scale-and-concentration-DnBex-NH.js", "/assets/CaseBits-xIRVkyUz.js"]
 	}
 } });
 //#endregion
