@@ -3,7 +3,7 @@ import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tan
 import { r as PageShell, t as CONTACT } from "./SiteChrome-BXKEnkdm.mjs";
 import { n as Reveal } from "./CountUp-DQydTuNi.mjs";
 import { n as WEB3FORMS_ACCESS_KEY, t as HONEYPOT_STYLE } from "./web3forms-oW45I0ia.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/audit-CZxC_Fpt.js
+//#region node_modules/.nitro/vite/services/ssr/assets/audit-DQ0XbBrx.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var MARKETPLACES = [
@@ -252,12 +252,9 @@ function AuditForm() {
 			}),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Reveal, {
 				className: "rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9",
-				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "flex items-center gap-4",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "1" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
-						children: "Client information"
-					})]
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "1" })
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-7 grid gap-5 sm:grid-cols-2",
 					children: [
@@ -422,7 +419,7 @@ function AuditForm() {
 					className: "flex items-center gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "3" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
-						children: "What would you like us to audit?"
+						children: "What would you like me to audit?"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-7",
@@ -444,7 +441,7 @@ function AuditForm() {
 						className: "flex items-center gap-4",
 						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "4" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "text-[1.1rem] font-bold text-[#EDE8E0]",
-							children: "What would you like us to improve?"
+							children: "What would you like me to improve?"
 						})]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -473,7 +470,7 @@ function AuditForm() {
 					className: "flex items-center gap-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(StepNumber, { n: "5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "text-[1.1rem] font-bold text-[#EDE8E0]",
-						children: "Anything specific you want us to look at?"
+						children: "Anything specific you want me to look at?"
 					})]
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("textarea", {
 					className: `${inputClasses} mt-7 min-h-[140px] resize-y`,

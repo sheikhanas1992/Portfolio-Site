@@ -279,7 +279,6 @@ function AuditForm() {
       <Reveal className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
         <div className="flex items-center gap-4">
           <StepNumber n="1" />
-          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Client information</h2>
         </div>
         <div className="mt-7 grid gap-5 sm:grid-cols-2">
           <div>
@@ -413,7 +412,7 @@ function AuditForm() {
       <Reveal delay={90} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
         <div className="flex items-center gap-4">
           <StepNumber n="3" />
-          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like us to audit?</h2>
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like me to audit?</h2>
         </div>
         <div className="mt-7">
           <CheckboxGrid
@@ -431,7 +430,7 @@ function AuditForm() {
       <Reveal delay={120} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
         <div className="flex items-center gap-4">
           <StepNumber n="4" />
-          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like us to improve?</h2>
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">What would you like me to improve?</h2>
         </div>
         <div className="mt-7">
           <CheckboxGrid
@@ -454,7 +453,7 @@ function AuditForm() {
       <Reveal delay={150} className="rounded-[20px] border border-white/[0.1] bg-[#131315] p-7 shadow-[0_1px_0_rgba(255,255,255,0.03)_inset] md:p-9">
         <div className="flex items-center gap-4">
           <StepNumber n="5" />
-          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Anything specific you want us to look at?</h2>
+          <h2 className="text-[1.1rem] font-bold text-[#EDE8E0]">Anything specific you want me to look at?</h2>
         </div>
         <textarea
           className={`${inputClasses} mt-7 min-h-[140px] resize-y`}
