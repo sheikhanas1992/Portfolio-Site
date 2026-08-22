@@ -2,11 +2,11 @@ import { i as __toESM, n as __exportAll } from "../_runtime.mjs";
 import { n as require_jsx_runtime, r as require_react, t as QueryClientProvider } from "../_libs/react+tanstack__react-query.mjs";
 import { _ as useRouter, c as HeadContent, d as Outlet, f as lazyRouteComponent, h as Link, m as createRootRouteWithContext, p as createFileRoute, s as Scripts, u as createRouter } from "../_libs/@tanstack/react-router+[...].mjs";
 import { t as QueryClient } from "../_libs/tanstack__query-core.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/router-eD5z1Ouz.js
-var router_eD5z1Ouz_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
+//#region node_modules/.nitro/vite/services/ssr/assets/router-CLKa1c4G.js
+var router_CLKa1c4G_exports = /* @__PURE__ */ __exportAll({ getRouter: () => getRouter });
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
-var styles_default = "/assets/styles-ZSomBeJJ.css";
+var styles_default = "/assets/styles-CHftqdz8.css";
 function reportLovableError(error, context = {}) {
 	if (typeof window === "undefined") return;
 	window.__lovableEvents?.captureException?.(error, {
@@ -284,7 +284,7 @@ function RootComponent() {
 		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CustomCursor, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Outlet, {})]
 	});
 }
-var $$splitComponentImporter$6 = () => import("./routes-Cw4JRyf2.mjs");
+var $$splitComponentImporter$6 = () => import("./routes-D_XQfIpx.mjs");
 var TITLE$6 = "Sheikh Anas: Amazon PPC Management for 6 to 8 Figure Brands";
 var DESCRIPTION$6 = "Amazon PPC management and account scaling for 6 to 8 figure brands. Campaign structure, ACOS control and profitable growth.";
 var Route$6 = createFileRoute("/")({
@@ -323,7 +323,7 @@ var Route$6 = createFileRoute("/")({
 	}),
 	component: lazyRouteComponent($$splitComponentImporter$6, "component")
 });
-var $$splitComponentImporter$5 = () => import("./audit-DbcjNdJT.mjs");
+var $$splitComponentImporter$5 = () => import("./audit-BiHtscyc.mjs");
 var TITLE$5 = "Free Amazon account audit: Sheikh Anas";
 var DESCRIPTION$5 = "Request a free Amazon PPC, listing, creative or full account audit. Tell me about your account and I'll tell you what I see in it.";
 var Route$5 = createFileRoute("/audit")({
@@ -352,7 +352,7 @@ var Route$5 = createFileRoute("/audit")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$5, "component")
 });
-var $$splitComponentImporter$4 = () => import("./book-CiVjnX3e.mjs");
+var $$splitComponentImporter$4 = () => import("./book-B-VDqd_w.mjs");
 var TITLE$4 = "Book a call: Sheikh Anas, Amazon PPC";
 var DESCRIPTION$4 = "Book a twenty-minute call about Amazon PPC, account structure and profitable scaling.";
 var Route$4 = createFileRoute("/book")({
@@ -381,7 +381,7 @@ var Route$4 = createFileRoute("/book")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$4, "component")
 });
-var $$splitComponentImporter$3 = () => import("./build-Nd0TRFsa.mjs");
+var $$splitComponentImporter$3 = () => import("./build-BHhX-QXj.mjs");
 var TITLE$3 = "Build your package: Sheikh Anas";
 var DESCRIPTION$3 = "Tell me what you need and what you already have covered. I'll come back with scope and pricing, usually within two working days.";
 var Route$3 = createFileRoute("/build")({
@@ -410,7 +410,7 @@ var Route$3 = createFileRoute("/build")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$3, "component")
 });
-var $$splitComponentImporter$2 = () => import("./work.ceiling-and-efficiency-BogRNVmm.mjs");
+var $$splitComponentImporter$2 = () => import("./work.ceiling-and-efficiency-08KMyIdf.mjs");
 var TITLE$2 = "A 3.79× return delivered with 82% of campaigns capped by budget";
 var DESCRIPTION$2 = "A two-month Amazon growth read on a pharmaceutical skincare brand growing against a fixed daily ad budget, delivering a 3.79× return on ad spend.";
 var Route$2 = createFileRoute("/work/ceiling-and-efficiency")({
@@ -439,7 +439,7 @@ var Route$2 = createFileRoute("/work/ceiling-and-efficiency")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$2, "component")
 });
-var $$splitComponentImporter$1 = () => import("./work.promotion-and-exposure-DCdYasv8.mjs");
+var $$splitComponentImporter$1 = () => import("./work.promotion-and-exposure-CPdQxi-F.mjs");
 var TITLE$1 = "42% revenue growth with hero campaigns running near a 10× return";
 var DESCRIPTION$1 = "A two-month Amazon growth read on a regenerative skincare brand built around two flagship ampoules, growing revenue 42% at a 4.50× return on ad spend.";
 var Route$1 = createFileRoute("/work/promotion-and-exposure")({
@@ -468,7 +468,7 @@ var Route$1 = createFileRoute("/work/promotion-and-exposure")({
 	] }),
 	component: lazyRouteComponent($$splitComponentImporter$1, "component")
 });
-var $$splitComponentImporter = () => import("./work.scale-and-concentration-DyxvQlQx.mjs");
+var $$splitComponentImporter = () => import("./work.scale-and-concentration-BEr6Mxz-.mjs");
 var TITLE = "10.4× revenue growth, held at a 4.33× return on ad spend";
 var DESCRIPTION = "A two-month Amazon growth read on a dermatological skincare brand that grew revenue 10.4× behind one hero cream line, at a 4.33× return on ad spend.";
 var Route = createFileRoute("/work/scale-and-concentration")({
@@ -545,4 +545,4 @@ var getRouter = () => {
 	});
 };
 //#endregion
-export { getRouter, router_eD5z1Ouz_exports as t };
+export { getRouter, router_CLKa1c4G_exports as t };
