@@ -1,6 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import type { ReactNode, SVGProps } from "react";
 import { CONTACT } from "@/config/contact";
+
+const NAV_LINKS = [
+  { href: "/#work", label: "Work" },
+  { href: "/#about", label: "About" },
+  { href: "/#experience", label: "Experience" },
+] as const;
 
 const ext = { target: "_blank", rel: "noopener noreferrer" } as const;
 
@@ -30,6 +38,8 @@ function WhatsAppIcon(props: SVGProps<SVGSVGElement>) {
 }
 
 export function SiteHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/[0.08] bg-[#0d0d0f]/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10">
@@ -40,24 +50,15 @@ export function SiteHeader() {
           S. Anas
         </a>
         <div className="hidden items-center gap-2 md:flex">
-          <a
-            href="/#work"
-            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
-          >
-            Work
-          </a>
-          <a
-            href="/#about"
-            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
-          >
-            About
-          </a>
-          <a
-            href="/#experience"
-            className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
-          >
-            Experience
-          </a>
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
+            >
+              {link.label}
+            </a>
+          ))}
           <Link
             to="/audit"
             className="rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]"
@@ -65,13 +66,51 @@ export function SiteHeader() {
             Get an audit
           </Link>
         </div>
-        <Link
-          to="/book"
-          className="rounded-full bg-[#F5C542] px-5 py-2.5 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_4px_14px_-4px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]"
-        >
-          Book a call
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/book"
+            className="rounded-full bg-[#F5C542] px-5 py-2.5 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_4px_14px_-4px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]"
+          >
+            Book a call
+          </Link>
+          <button
+            type="button"
+            onClick={() => setMenuOpen((open) => !open)}
+            aria-expanded={menuOpen}
+            aria-controls="mobile-nav"
+            aria-label={menuOpen ? "Close menu" : "Open menu"}
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.12] text-[#EDE8E0] transition-colors duration-200 hover:border-[#F5C542]/50 hover:text-[#F5C542] md:hidden"
+          >
+            {menuOpen ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+          </button>
+        </div>
       </nav>
+      {menuOpen && (
+        <div
+          id="mobile-nav"
+          className="border-t border-white/[0.08] bg-[#0d0d0f]/95 px-6 py-3 backdrop-blur-md md:hidden"
+        >
+          <div className="flex flex-col gap-1">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className="rounded-lg px-3 py-3 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-colors duration-150 hover:bg-white/[0.05] hover:text-[#F5C542]"
+              >
+                {link.label}
+              </a>
+            ))}
+            <Link
+              to="/audit"
+              onClick={() => setMenuOpen(false)}
+              className="rounded-lg px-3 py-3 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-colors duration-150 hover:bg-white/[0.05] hover:text-[#F5C542]"
+            >
+              Get an audit
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 }

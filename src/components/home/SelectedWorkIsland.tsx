@@ -27,21 +27,15 @@ function Headline({ text }: { text: string }) {
 const CARDS = [
   {
     to: "/work/scale-and-concentration",
-    period: "Two months, measured against the same window last year",
     headline: "How I turned $480K in Amazon sales into $5M, at a 4.33× return on ad spend.",
-    context: "Three SKUs carried $3.58M of $5.01M in sales, the clearest sign of a hero product that's landed.",
   },
   {
     to: "/work/promotion-and-exposure",
-    period: "Two months, measured against the same window last year",
     headline: "How I grew an Amazon brand from $2M to $2.8M, turning every $1 in ads into $4.50.",
-    context: "A single four-day window drove 40% of the period's revenue, proof of a repeatable promotional engine.",
   },
   {
     to: "/work/ceiling-and-efficiency",
-    period: "Two months, measured against the same window last year",
     headline: "How I hit $157K in Amazon sales at 3.79× ROAS, with 80% of campaigns budget-capped.",
-    context: "41 of 50 campaigns ran out of budget daily: proven demand with room still to grow.",
   },
 ];
 
@@ -81,15 +75,9 @@ function Cards() {
                 aria-hidden
                 className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-[#F5C542]/0 blur-3xl transition-colors duration-500 max-md:bg-[#F5C542]/[0.07] group-hover:bg-[#F5C542]/10"
               />
-              <div className="font-mono text-[0.62rem] font-semibold uppercase tracking-[0.14em] text-[#F5C542]">
-                {c.period}
-              </div>
-              <h3 className="mt-4 text-[clamp(1.1rem,4.2vw,1.35rem)] font-bold normal-case leading-[1.35] text-[#EDE8E0]">
+              <h3 className="text-[clamp(1.1rem,4.2vw,1.35rem)] font-bold normal-case leading-[1.35] text-[#EDE8E0]">
                 <Headline text={c.headline} />
               </h3>
-              <p className="mt-4 max-w-[46ch] text-[0.92rem] font-medium leading-relaxed text-[#c7c7cc]">
-                {c.context}
-              </p>
               <span className="mt-7 inline-flex items-center gap-2 rounded-full border border-[#F5C542]/45 bg-[#F5C542]/[0.08] px-5 py-2.5 font-mono text-[0.7rem] font-bold uppercase tracking-[0.12em] text-[#F5C542] transition-all duration-300 max-md:border-[#F5C542]/70 max-md:bg-[#F5C542]/[0.14] group-hover:gap-3 group-hover:border-[#F5C542] group-hover:bg-[#F5C542] group-hover:text-[#0d0d0f] group-hover:shadow-[0_12px_28px_-8px_rgba(245,197,66,0.55)]">
                 Read the case study
                 <span aria-hidden className="transition-transform duration-300 group-hover:translate-x-1">
