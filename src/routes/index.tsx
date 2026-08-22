@@ -32,7 +32,7 @@ function Index() {
     script.id = "portfolio-bundle";
     script.type = "module";
     script.crossOrigin = "anonymous";
-    script.src = "/assets/index-CGvQAk5k.js";
+    script.src = "/assets/index-Dz8qR2wM.js";
     document.body.appendChild(script);
   }, []);
 

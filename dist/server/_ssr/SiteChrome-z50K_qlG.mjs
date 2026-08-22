@@ -1,6 +1,9 @@
-import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
 import { h as Link } from "../_libs/@tanstack/react-router+[...].mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/SiteChrome-BXKEnkdm.js
+import { n as Menu, t as X } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/SiteChrome-z50K_qlG.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 var CONTACT = {
 	linkedin: "https://www.linkedin.com/in/muhammad-anas-amz-brand-manager-ppc-expert/",
@@ -11,6 +14,20 @@ var CONTACT = {
 	phoneDisplay: "+92 317 7748484",
 	calendly: "https://calendly.com/sheikhanas1992/30min"
 };
+var NAV_LINKS = [
+	{
+		href: "/#work",
+		label: "Work"
+	},
+	{
+		href: "/#about",
+		label: "About"
+	},
+	{
+		href: "/#experience",
+		label: "Experience"
+	}
+];
 var ext = {
 	target: "_blank",
 	rel: "noopener noreferrer"
@@ -52,9 +69,10 @@ function WhatsAppIcon(props) {
 	});
 }
 function SiteHeader() {
-	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
+	const [menuOpen, setMenuOpen] = (0, import_react.useState)(false);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("header", {
 		className: "fixed inset-x-0 top-0 z-40 border-b border-white/[0.08] bg-[#0d0d0f]/80 backdrop-blur-md",
-		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
 			className: "mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-10",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
@@ -64,36 +82,51 @@ function SiteHeader() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "hidden items-center gap-2 md:flex",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							href: "/#work",
-							className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
-							children: "Work"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							href: "/#about",
-							className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
-							children: "About"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-							href: "/#experience",
-							className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
-							children: "Experience"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-							to: "/audit",
-							className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
-							children: "Get an audit"
-						})
-					]
+					children: [NAV_LINKS.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: link.href,
+						className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
+						children: link.label
+					}, link.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/audit",
+						className: "rounded-full border border-white/[0.12] px-4 py-2 font-mono text-[0.68rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-all duration-200 hover:-translate-y-0.5 hover:border-[#F5C542]/50 hover:bg-[#F5C542]/[0.08] hover:text-[#F5C542]",
+						children: "Get an audit"
+					})]
 				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
-					to: "/book",
-					className: "rounded-full bg-[#F5C542] px-5 py-2.5 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_4px_14px_-4px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]",
-					children: "Book a call"
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-2",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+						to: "/book",
+						className: "rounded-full bg-[#F5C542] px-5 py-2.5 font-mono text-[0.64rem] font-semibold uppercase tracking-[0.14em] text-[#0d0d0f] shadow-[0_4px_14px_-4px_rgba(245,197,66,0.5)] transition-transform duration-200 hover:scale-[1.05] active:scale-[0.97]",
+						children: "Book a call"
+					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+						type: "button",
+						onClick: () => setMenuOpen((open) => !open),
+						"aria-expanded": menuOpen,
+						"aria-controls": "mobile-nav",
+						"aria-label": menuOpen ? "Close menu" : "Open menu",
+						className: "flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/[0.12] text-[#EDE8E0] transition-colors duration-200 hover:border-[#F5C542]/50 hover:text-[#F5C542] md:hidden",
+						children: menuOpen ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(X, { className: "h-4 w-4" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Menu, { className: "h-4 w-4" })
+					})]
 				})
 			]
-		})
+		}), menuOpen && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			id: "mobile-nav",
+			className: "border-t border-white/[0.08] bg-[#0d0d0f]/95 px-6 py-3 backdrop-blur-md md:hidden",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "flex flex-col gap-1",
+				children: [NAV_LINKS.map((link) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					href: link.href,
+					onClick: () => setMenuOpen(false),
+					className: "rounded-lg px-3 py-3 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-colors duration-150 hover:bg-white/[0.05] hover:text-[#F5C542]",
+					children: link.label
+				}, link.href)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+					to: "/audit",
+					onClick: () => setMenuOpen(false),
+					className: "rounded-lg px-3 py-3 font-mono text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[#d8d8dc] transition-colors duration-150 hover:bg-white/[0.05] hover:text-[#F5C542]",
+					children: "Get an audit"
+				})]
+			})
+		})]
 	});
 }
 function ContactRow() {

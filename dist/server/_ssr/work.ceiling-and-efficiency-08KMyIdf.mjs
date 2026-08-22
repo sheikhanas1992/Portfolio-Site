@@ -1,14 +1,14 @@
 import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
-import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-ML-E4Vsh.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/work.scale-and-concentration-DyxvQlQx.js
+import { a as MetricStrip, c as clientLabel, i as CasePage, n as CaseFooter, o as Screenshot, r as CaseHeader, s as Section, t as Bar } from "./CaseBits-B-M0mDQs.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/work.ceiling-and-efficiency-08KMyIdf.js
 var import_jsx_runtime = require_jsx_runtime();
-var IMG = "/case-images/scale-and-concentration";
-function ScaleAndConcentration() {
+var IMG = "/case-images/ceiling-and-efficiency";
+function CeilingAndEfficiency() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(CasePage, { children: [
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseHeader, {
-			label: clientLabel("caseC"),
+			label: clientLabel("caseE"),
 			period: "Two months, measured against the same window last year",
-			headline: "10.4× revenue growth, held at a 4.33× return on ad spend",
+			headline: "A 3.79× return delivered with 82% of campaigns capped by budget",
 			note: "Managed as part of my work at Sohomax"
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
@@ -16,45 +16,45 @@ function ScaleAndConcentration() {
 			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MetricStrip, { items: [
 				{
 					label: "Revenue growth, year over year",
-					value: "10.4×",
-					countTo: 10.4,
+					value: "+10.6%",
+					countTo: 10.6,
 					decimals: 1,
-					suffix: "×"
+					suffix: "%",
+					prefix: "+"
 				},
 				{
 					label: "Units sold, year over year",
-					value: "11.7×",
-					countTo: 11.7,
+					value: "+9.1%",
+					countTo: 9.1,
 					decimals: 1,
-					suffix: "×"
+					suffix: "%",
+					prefix: "+"
 				},
 				{
 					label: "Return on ad spend",
-					value: "4.33×",
-					countTo: 4.33,
+					value: "3.79×",
+					countTo: 3.79,
 					decimals: 2,
 					suffix: "×"
 				},
 				{
 					label: "Blended ACOS",
-					value: "23.12%",
-					countTo: 23.12,
-					decimals: 2,
-					suffix: "%"
-				},
-				{
-					label: "Featured offer share",
-					value: "88.5%",
-					countTo: 88.5,
+					value: "26.4%",
+					countTo: 26.4,
 					decimals: 1,
 					suffix: "%"
 				},
 				{
-					label: "Product page views, year over year",
-					value: "+266%",
-					countTo: 266,
-					suffix: "%",
-					prefix: "+"
+					label: "Campaigns limited by daily budget",
+					value: "82%",
+					countTo: 82
+				},
+				{
+					label: "ACOS on the largest campaign in the account",
+					value: "15.5%",
+					countTo: 15.5,
+					decimals: 1,
+					suffix: "%"
 				}
 			] })
 		}),
@@ -63,15 +63,15 @@ function ScaleAndConcentration() {
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "In the same 61 days a year earlier, the brand sold 16,887 units for $480,197."
+					children: "In the same 61 days a year earlier, the brand sold 5,783 units for $142,036."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "This period it did $5.01M across 197,431 units and 187,848 order items, at an average order value of $26.68. The account was now doing in a single week roughly what it had done across the entire comparable window twelve months before."
+					children: "This period it did $157,046 across 6,311 units and 5,986 order items, at an average sales value of $26.24. Advertising covered roughly 29% of total store sales, across a catalogue of 29 actively advertised products."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "June was the strongest month on record for the brand at $3.18M, with a four-day promotional event pushing one day past $455,000 and 21,000 units."
+					children: "The account ran 50 campaigns. Eight were delivering without a budget constraint."
 				})
 			]
 		}),
@@ -88,99 +88,139 @@ function ScaleAndConcentration() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-5 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Daily volume held a baseline of roughly $45,000 to $70,000 through most of both months, with two clear step-changes: the four-day promotional surge, and a sustained halo through the following week as the lift carried forward."
+					children: "Daily volume held a baseline of roughly $1,300 to $3,800, with a four-day promotional run peaking at $16,642 and 797 units in a single day."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "The baseline itself grew month over month outside those windows, which is the more durable signal than the spike."
+					children: "That window alone generated $45,045 in sales, about 29% of the entire 61-day total."
 				})
 			]
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
-			title: "Traffic grew 3.7×. Revenue grew 4.6×.",
+			title: "Profitable growth with the handbrake on",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Page views, July on July",
-							pct: 69,
-							note: "+266%"
+							label: "Campaigns flagged as budget-limited",
+							pct: 82,
+							note: "82.0% (41 of 50)"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Ordered product sales, July on July",
-							pct: 92,
-							note: "+356%"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Units sold, July on July",
+							label: "Return on the spend that did go out",
 							pct: 100,
-							note: "+386%"
+							note: "3.79×"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+							label: "Campaigns delivering unconstrained",
+							pct: 100,
+							note: "8"
 						})
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Comparing July to July, traffic grew 266% while sales grew 356% and units grew 386%."
+					children: "The account grew while 41 of 50 campaigns, including the single largest, ran out of budget before the end of the day."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Revenue outpaced traffic by a wide margin, which means most of the growth came from converting visitors better rather than simply buying more of them. That gap is the difference between an account that scales and one that only spends."
+					children: "Every one of those caps is demonstrated headroom: proven demand, already converting at 3.79×, with no budget left to serve it. This is the rarest position an account can be in, because the growth lever is identified and validated before a dollar of new spend is committed."
 				})
 			]
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
-			title: "Efficiency held while spend scaled",
+			title: "The largest campaign was also one of the leanest",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
 					children: [
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Blended ACOS",
-							pct: 23.12
+							label: "Competitor-conquest campaign",
+							pct: 15.5,
+							note: "15.5% ACOS, 6.46× ROAS"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Return on ad spend",
+							label: "Sales from that campaign",
 							pct: 100,
-							note: "4.33×"
+							note: "$7,162 on $1,108 spend"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-							label: "Best-performing line campaign ACOS",
-							pct: 14.14
+							label: "Blended account ACOS",
+							pct: 26.4
 						})
 					]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Advertising delivered $2,079,770 in attributed sales on $480,845 of spend across 48.5M impressions and 439,854 clicks, converting 75,525 purchases at a 0.91% CTR."
+					children: "The biggest campaign in the account, a conquest play targeting a rival brand's search terms, ran at 15.5% ACOS against a 26.4% account average."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "The newer product line ran considerably tighter than the account average: 15.62% ACOS at 6.40× on Sponsored Products, and 14.14% ACOS at 7.07× on Sponsored Brands. Both sat well inside target while the account's absolute spend was still climbing."
+					children: "It was out of budget. A campaign taking share directly from a competitor at better than twice the account's blended efficiency was being switched off by a daily cap every afternoon."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "mt-6",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Screenshot, {
+						src: `${IMG}/campaigns.png`,
+						alt: "Top PPC campaigns by sales, including the competitor-conquest campaign"
+					})
 				})
 			]
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
-			title: "Featured offer share improved 1,763 basis points",
+			title: "The most efficient placement was a $98 test",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-						label: "Featured offer share, this period",
-						pct: 88.5
+						label: "Video test campaign",
+						pct: 8.9,
+						note: "8.9% ACOS, 11.19× ROAS"
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-						label: "Year-over-year improvement",
+						label: "Total spend on it",
 						pct: 100,
-						note: "+1,763 bps"
+						note: "$98.68"
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Buy Box share improved by more than seventeen percentage points year over year."
+					children: "A small Sponsored Brands Video test converted at 8.9% ACOS and 11.19× return."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "On an account growing this fast, that is not a cosmetic number. Every point of featured offer share is a point of demand the brand captures itself rather than handing to a reseller, and it compounds against every advertising dollar spent driving traffic to the listing."
+					children: "At under a hundred dollars of spend it contributed almost nothing to the account's totals, which is exactly why it needed flagging. The most efficient placement in the entire account was invisible in every summary view, and it was the clearest scaling candidate on the list."
+				})
+			]
+		}),
+		/* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Section, {
+			title: "Featured offer share, caught early",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+							label: "Featured offer share, June",
+							pct: 97.5
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+							label: "Featured offer share, July",
+							pct: 90.6
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
+							label: "Days below 80%",
+							pct: 100,
+							note: "7"
+						})
+					]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
+					children: "Featured offer share dropped nearly seven points across the two months, with seven individual days falling below 80% and a low of 68%."
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
+					children: "Catching it mattered, because a back-end pricing or stock issue quietly caps ad performance in a way no bid change can fix. Flagging it separately from PPC put it in front of the team that could act on it while it was still a small number."
 				})
 			]
 		}),
@@ -190,16 +230,16 @@ function ScaleAndConcentration() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "rounded-[20px] border border-white/[0.08] bg-[#151517] px-7 py-4",
 					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-						label: "Top three SKUs' share of total revenue",
-						pct: 72
+						label: "Flagship SKU's share of all brand sales",
+						pct: 60
 					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bar, {
-						label: "Everything else, combined",
-						pct: 28
+						label: "Top three SKUs' share of total revenue",
+						pct: 79
 					})]
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 					className: "mt-6 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-					children: "Three SKUs carried $3.58M of the brand's $5.01M in sales."
+					children: "Three SKUs carried $124,642 of the brand's $157,046."
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 					className: "mt-5 flex flex-col gap-4",
@@ -209,21 +249,21 @@ function ScaleAndConcentration() {
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
 								children: "The flagship cream"
-							}), " did $1,831,063, 37% of brand sales, on 81,768 units. It also carried the largest single advertising investment in the account: $142,579 in spend returning $527,034 in attributed sales across 20,552 ad-driven orders."]
+							}), " did $93,836 on 3,659 units, holding a 95.81% featured offer share and drawing 656,998 impressions and 6,099 clicks. It carries the account's largest per-SKU ad investment at $6,522, returning $25,342 across 942 ad-driven orders at a 25.7% ACOS."]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 							className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
-								children: "The newest hero SKU"
-							}), " did $980,960, 20% of brand sales, despite only becoming available seven months earlier. It holds a 96.7% featured offer share, the highest of any high-volume SKU in the portfolio, and converts at 4.28× ROAS."]
+								children: "The newer variant"
+							}), " did $18,419 since launching sixteen months earlier, at a 27.9% ACOS. It also holds the lowest featured offer share of any top SKU at 93.28%, which was worth surfacing given how much revenue rides on it."]
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
 							className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
-								children: "The premium-tier product"
-							}), " did $772,254 at a 96.1% featured offer share and 4.39× ROAS, on lower unit velocity than the top two. It wins on price point and margin quality rather than volume, which makes it the most efficient candidate for incremental Sponsored Brands investment."]
+								children: "The refill SKU"
+							}), " is the efficiency story. At $11,421 in sales it is only fourth by revenue, but it converts at a 13.7% ACOS and 7.28× ROAS on a 97.30% featured offer share. As an attach product riding the flagship's install base, it is the strongest incremental candidate in the catalogue."]
 						})
 					]
 				}),
@@ -263,10 +303,10 @@ function ScaleAndConcentration() {
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
-								children: "Split reporting by product line rather than by campaign type."
+								children: "Ranked all 50 campaigns by cap frequency and efficiency while capped."
 							}),
 							" ",
-							"The newer line's 14 to 16% ACOS was invisible inside a 23.12% blended figure. Separating it is what justified moving incremental budget toward it."
+							"Any budget increase could go to the campaigns already proving they would use it well, rather than being spread evenly across the account."
 						] })]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -277,10 +317,10 @@ function ScaleAndConcentration() {
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
-								children: "Read traffic growth against revenue growth, not in isolation."
+								children: "Attached a return to every line before requesting budget."
 							}),
 							" ",
-							"A 266% traffic increase looks like an advertising win. Sitting it next to a 356% sales increase showed the conversion side was doing more of the work, and redirected the optimisation effort onto listings and creative."
+							"A vague ask for more spend became a prioritised list where each row carried a documented ROAS. The conquest campaign at 15.5% and the video test at 8.9% led it."
 						] })]
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
@@ -291,10 +331,10 @@ function ScaleAndConcentration() {
 						}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [
 							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("strong", {
 								className: "font-bold text-[#EDE8E0]",
-								children: "Flagged featured offer share as a growth metric, not a health metric."
+								children: "Separated the featured offer share drop from PPC reporting."
 							}),
 							" ",
-							"Two mid-tier SKUs were sitting at 78% and 86% against the top three's 96%. That gap was the clearest unlocked revenue in the catalogue and it had nothing to do with bids."
+							"It went to the team that could actually fix it, instead of being read as an advertising problem and chased with bid changes that would not have moved it."
 						] })]
 					})
 				]
@@ -304,14 +344,14 @@ function ScaleAndConcentration() {
 			title: "What comes next",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-				children: "With the top three established and featured offer share at 88.5%, the lever moves from proving demand to widening the base."
+				children: "Demand is proven, the return is documented at 3.79×, and the only variable left is spend."
 			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 				className: "mt-4 max-w-[70ch] text-[0.98rem] leading-relaxed text-[#c7c7cc]",
-				children: "The two mid-tier SKUs reaching the same featured offer consistency as the top three is the nearest available growth, followed by continuing to shift incremental spend toward the newer line converting at 14 to 16%."
+				children: "Lifting the caps on the ranked campaigns is the next move, starting with the conquest campaign and the video test, both of which are converting at better than twice the account average on budgets that run out before the day does."
 			})]
 		}),
 		/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CaseFooter, {})
 	] });
 }
 //#endregion
-export { ScaleAndConcentration as component };
+export { CeilingAndEfficiency as component };
